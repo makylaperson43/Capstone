@@ -18,8 +18,14 @@ from django.contrib import admin
 from django.urls import path
 
 from HUB import views
+from HUB.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home-page')
+    path('', views.home, name='home-page'),
+    path('order/', views.order, name='order-page'),
+    path('cart/', views.cart, name='cart-page'),
+    path('register/', views.register, name="register"),
+    path('login/', views.loginPage, name="login"),
+    path('logout/', views.logoutUser, name="logout"),
 ]

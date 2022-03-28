@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {%block content%}
+
+    <body>
+    <header class="main-header">
+      <nav class="main-nav nav">
+        
+      </nav>
+     
+    </header>
+    
+
+        <select class="selectme">
+        <option value="0">None</option>
+        <option value="1">Winter</option>
+        <option value="2">Spring</option>
+        <option value="3">Summer</option>
+        </select>
+    
+        <h2 class="section-header" id="select-name"></h2>
+        <div id="divid">
+            <div class="shop-items">
+            
+
+        
+    
+                <div class="shop-items spring-cloth"></div>
+        
+                </section>
+            
+            </div> 
+        </div>
+    <section class="container content-section">
+      <h2 class="section-header">CART</h2>
+      <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+      </div>
+      <button class="btn btn-primary btn-purchase" type="button">
+        PURCHASE
+      </button>
+    </section>
+    <footer class="main-footer">
+      <div class="container main-footer-container">
+        <h3 class="band-name">Weather or Not</h3>
+        <ul class="nav footer-nav">
+          
+          <li>
+
+          
+          </li>
+        </ul>
+      </div>
+      
+    </footer>
+  </body>
+   
+  
+{%endblock%}

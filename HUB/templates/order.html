@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {%block content%}
+<h1>Order Page</h1>
+<a href="{%url 'home-page'%}">Home</a>
+
+<form method="POST">
+  {% csrf_token %} {{form.as_p}}
+  <input type="submit" name="submit" />
+</form>
+
+{% endblock %}

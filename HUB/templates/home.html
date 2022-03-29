@@ -1,13 +1,14 @@
 {% extends 'base.html' %} {%block content%}
 <div>
   <h1>Home Page</h1>
+  <p>Welcome, {{user}}</p>
 </div>
 
 <div>
   <a href="{%url 'order-page'%}">Order</a>
   <a href="{%url 'cart-page'%}">Store</a>
-  <a href="{%url 'login'%}">Login</a>
-  <a href="{%url 'register'%}">Register</a>
+  <a href="{%url 'login-page'%}">Login</a>
+  <a href="{%url 'register-page'%}">Register</a>
   <a href="{%url 'logout'%}">Logout</a>
 </div>
 {% endblock %}

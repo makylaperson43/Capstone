@@ -1,3 +1,9 @@
+body {
+  background-image: url("images/IMG_6255.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 .nav ul {
   margin: 0;
 }
@@ -152,33 +158,6 @@
   margin-bottom: 1em;
 }
 
-.tour-row:last-child {
-  border: none;
-}
-
-.tour-item {
-  display: inline-block;
-  padding-right: 0.5em;
-}
-
-.tour-date {
-  color: #555;
-  width: 11%;
-  font-weight: bold;
-}
-
-.tour-city {
-  width: 24%;
-}
-
-.tour-arena {
-  width: 42%;
-}
-
-.tour-btn {
-  max-width: 19%;
-}
-
 .shop-item {
   margin: 30px;
 }
@@ -326,4 +305,9 @@
   width: 20em;
   height: 2em;
   margin-left: 14em;
+}
+
+.navbar {
+  background-color: black;
+  color: white;
 }

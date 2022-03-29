@@ -10,7 +10,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import Group
 from django.contrib.auth.forms import UserCreationForm
-from HUB.decorators import unauthenticated_user, allowed_users
+from HUB.decorators import unauthenticated_user
+from HUB.models import Product
 
 # Create your views here.
 def home(request):
@@ -18,6 +19,7 @@ def home(request):
     context = {}
     return render(request, 'home.html', context)
 
+@login_required(login_url='login-page')
 def order(request):
     form = OrderForm()
     if request.method == 'POST':
@@ -31,9 +33,11 @@ def order(request):
     return render(request, 'order.html', context)
 
 def cart(request):
-    context = {}
+    all_products = Product.objects.all()
+    context = {'all_products': all_products}
     return render(request, 'store.html', context)
 
+#User Authentication
 @unauthenticated_user
 def registerPage(request):
     form = CreateUserForm()

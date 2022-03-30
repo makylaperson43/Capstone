@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <div class="navBackground">
+      <a href="{%url 'order-page'%}">Order</a>
+      <a href="{%url 'cart-page'%}">Menu</a>
+      <a href="{%url 'login-page'%}">Associate Login</a>
+      <a href="{%url 'register-page'%}">Associate Register</a>
+      <a href="{%url 'logout'%}">Logout</a>
+    </div>
     <script src="{%static 'store.js' %}" async></script>
     {%block content%}{% endblock %}
   </body>

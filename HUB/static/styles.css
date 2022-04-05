@@ -19,7 +19,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  /* padding: 14px 16px; */
   text-decoration: none;
 }
 
@@ -31,19 +31,14 @@ li a:hover:not(.active) {
   background-color: #04aa6d;
 }
 
-/* .navBackground {
-   background-color: #83c7c0; 
+.navBackground {
+  background-color: #83c7c0;
   top: 0;
   bottom: 0;
-  position: absolute;
+  position: sticky;
   right: 0;
   left: 0;
 }
-
-.navbar {
-  background-color: #83c7c0;
-  color: white;
-}  */
 
 .orderBack {
   background-color: white;
@@ -54,8 +49,9 @@ li a:hover:not(.active) {
 }
 
 .homehours {
-  width: 20em;
-  padding: 1em;
+  width: 16em;
+  padding: 1em 1em;
   background-color: white;
-  margin-top: 5em;
+  margin-top: 18em;
+  margin-left: 950px;
 }

@@ -1,4 +1,5 @@
 from email.policy import default
+from os import name
 from django.db.models.deletion import CASCADE
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -23,3 +24,94 @@ class Order(models.Model):
 
     def __str__(self):
         return self.user.username + ": " + str(self.date_created)
+
+#Coffee Models
+#--------------------------------
+#Brewed Coffees
+class brewed_types(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+class brewed_sizes(models.Model):
+    name = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.name
+
+class Brewed(models.Model):
+    type = models.OneToOneField(brewed_types, on_delete=CASCADE, null=True)
+    size = models.OneToOneField(brewed_sizes, on_delete=CASCADE, null=True)
+    desc = models.TextField(max_length=200)
+
+    def __str__(self):
+        return self.type + " " + self.size
+
+#--------------------------------
+#Espresso
+class espresso_types(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+class espresso_sizes(models.Model):
+    name = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.name
+
+class Espresso(models.Model):
+    type = models.OneToOneField(espresso_types, on_delete=CASCADE, null=True)
+    size = models.OneToOneField(espresso_sizes, on_delete=CASCADE, null=True)
+    desc = models.TextField(max_length=200)
+
+    def __str__(self):
+        return self.type + " " + self.size
+
+#--------------------------------
+#Blended Coffees
+class blended_types(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+class blended_sizes(models.Model):
+    name = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.name
+
+class Blended(models.Model):
+    type = models.OneToOneField(blended_types, on_delete=CASCADE, null=True)
+    size = models.OneToOneField(blended_sizes, on_delete=CASCADE, null=True)
+    desc = models.TextField(max_length=200)
+
+    def __str__(self):
+        return self.type + " " + self.size
+
+#--------------------------------
+#Specialty Drinks
+class specialty_types(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+class specialty_sizes(models.Model):
+    name = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.name
+
+class Specialty(models.Model):
+    type = models.OneToOneField(specialty_types, on_delete=CASCADE, null=True)
+    size = models.OneToOneField(specialty_sizes, on_delete=CASCADE, null=True)
+    desc = models.TextField(max_length=200)
+
+    def __str__(self):
+        return self.type + " " + self.size
+#-----------------------------------------
+#Other Item Models \/

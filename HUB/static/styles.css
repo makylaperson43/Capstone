@@ -3,9 +3,36 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-
-.navBackground {
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   background-color: #83c7c0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #83c7c0;
+}
+
+.active {
+  background-color: #04aa6d;
+}
+
+/* .navBackground {
+   background-color: #83c7c0; 
   top: 0;
   bottom: 0;
   position: absolute;
@@ -14,6 +41,21 @@ body {
 }
 
 .navbar {
-  background-color: black;
+  background-color: #83c7c0;
   color: white;
+}  */
+
+.orderBack {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  margin: 5px;
+}
+
+.homehours {
+  width: 20em;
+  padding: 1em;
+  background-color: white;
+  margin-top: 5em;
 }

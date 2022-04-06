@@ -76,15 +76,115 @@ a {
   margin-bottom: -30px;
 }
 
-.galleryimg {
-  margin-top: 10em;
-  width: 10em;
-  height: 10em;
-}
-
 .reviewsBackground {
   background-color: #83c7c0;
   color: white;
   padding: 10px;
   margin-top: 200px;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: top;
+  width: 700px;
+  height: 466px;
+  border-radius: 25px;
+}
+
+.slideshow-container {
+  max-width: 700px;
+  max-height: 466px;
+
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-top: 10em;
+  border: solid 2px black;
+  border-radius: 25px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  border-radius: 25px;
+  width: auto;
+  margin-left: 0.5em;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+
+  user-select: none;
+}
+
+.next {
+  right: 20.5em;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: white;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }

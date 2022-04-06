@@ -34,6 +34,14 @@ def cart(request):
     context = {'all_products': all_products, "products": {"burrito"}}
     return render(request, 'store.html', context)
 
+def addToCart(request):
+
+    return render(request, 'store.html', context)
+
+def removeFromCart(request):
+
+    return render(request, 'store.html', context)
+
 def gallery(request):
 
     context = {}

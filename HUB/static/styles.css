@@ -88,3 +88,18 @@ a {
   padding: 10px;
   margin-top: 200px;
 }
+
+/* cart prototype stuff */
+.row {
+  margin: 2em;
+}
+
+.box-element {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: white;
+  margin: 2em;
+  padding: 10px;
+  border-radius: 20px;
+}

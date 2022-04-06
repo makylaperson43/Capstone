@@ -4,6 +4,8 @@ from django.template import context
 
 
 from HUB.forms import *
+from HUB.square import *
+from HUB.models import *
 from django.contrib import messages
 
 from django.contrib.auth.decorators import login_required
@@ -11,7 +13,13 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import Group
 from django.contrib.auth.forms import UserCreationForm
 from HUB.decorators import unauthenticated_user
-from HUB.models import Product
+from dataclasses import dataclass
+
+# @dataclass
+# class Product:
+#     name: str
+#     img: str
+#     price: int
 
 # Create your views here.
 def home(request):
@@ -19,23 +27,17 @@ def home(request):
     context = {}
     return render(request, 'home.html', context)
 
-@login_required(login_url='login-page')
-def order(request):
-    form = OrderForm()
-    if request.method == 'POST':
-        form = OrderForm(request.POST)
-        if form.is_valid():
-            instance = form.save()
-            instance.user = request.user
-            instance.save()
-
-    context = {'form':form}
-    return render(request, 'order.html', context)
-
 def cart(request):
+    
+
     all_products = Product.objects.all()
-    context = {'all_products': all_products}
+    context = {'all_products': all_products, "products": {"burrito"}}
     return render(request, 'store.html', context)
+
+def gallery(request):
+
+    context = {}
+    return render(request, 'gallery.html', context)
 
 #User Authentication
 @unauthenticated_user

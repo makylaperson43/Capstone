@@ -2,29 +2,20 @@ body {
   background-image: url("images/IMG_625.jpg");
   background-attachment: fixed;
   background-size: cover;
+  margin: 0;
 }
-ul {
-  list-style-type: none;
+
+a {
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #83c7c0;
-}
-
-li {
-  float: left;
-}
-
-li a {
   display: block;
   color: white;
-  text-align: center;
-  /* padding: 14px 16px; */
+  /* text-align: right; */
+  padding: 14px 16px;
   text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #83c7c0;
+  float: right;
 }
 
 .active {
@@ -32,12 +23,11 @@ li a:hover:not(.active) {
 }
 
 .navBackground {
+  overflow: hidden;
   background-color: #83c7c0;
+  position: fixed;
   top: 0;
-  bottom: 0;
-  position: sticky;
-  right: 0;
-  left: 0;
+  width: 100%;
 }
 
 .orderBack {
@@ -49,9 +39,52 @@ li a:hover:not(.active) {
 }
 
 .homehours {
+  text-align: center;
   width: 16em;
   padding: 1em 1em;
   background-color: white;
   margin-top: 18em;
   margin-left: 950px;
+}
+
+.facebookImage {
+  height: 4.5em;
+  margin-left: 8em;
+  margin-bottom: -1em;
+}
+
+.followus {
+  color: white;
+  margin-bottom: -2.5em;
+  margin-left: -4em;
+}
+
+.contactimage {
+  background-color: #83c7c0;
+  padding-left: 4em;
+  padding: 1em;
+  margin-left: -1em;
+  margin-right: -1em;
+  margin-bottom: -1em;
+}
+
+.theHubWord {
+  font-family: niconne, fantasy;
+  font-size: 50px;
+  margin-left: 230px;
+  margin-top: 40px;
+  margin-bottom: -30px;
+}
+
+.galleryimg {
+  margin-top: 10em;
+  width: 10em;
+  height: 10em;
+}
+
+.reviewsBackground {
+  background-color: #83c7c0;
+  color: white;
+  padding: 10px;
+  margin-top: 200px;
 }

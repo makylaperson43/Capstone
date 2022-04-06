@@ -1,13 +1,34 @@
 {% extends 'base.html' %} {%block content%}
 <body>
+  <div>
+    {%for product in all_products%} {%if product.category == 'Espresso'%}
+    <p>{{product.name}}</p>
+    {% endif %} {% endfor %}
+  </div>
+
   <header class="main-header">
     <nav class="main-nav nav"></nav>
     <h1 class="band-name band-name-large"></h1>
   </header>
+  <h2>Brewed Coffee</h2>
+  <div>
+    <div class="shop-items">
+      <div class="shop-item">
+        <span class="shop-item-title">burro</span>
+        <img class="shop-item-image" src="" />
+        <div class="shop-item-details">
+          <span class="shop-item-price">$4.50</span>
+          <button class="btn btn-primary shop-item-button" type="button">
+            ADD TO CART
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   <section class="container content-section">
     <div class="shop-items">
       <div class="shop-item">
-        <span class="shop-item-title">Cinnabun as</span>
+        <span class="shop-item-title">Cinnabun</span>
         <img class="shop-item-image" src="" />
         <div class="shop-item-details">
           <span class="shop-item-price">$12.99</span>

@@ -23,7 +23,7 @@ from HUB.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home-page'),
-    path('order/', views.order, name='order-page'),
+    path('gallery/', views.gallery, name='gallery-page'),
     path('cart/', views.cart, name='cart-page'),
     path('register/', views.registerPage, name="register-page"),
     path('login/', views.loginPage, name="login-page"),

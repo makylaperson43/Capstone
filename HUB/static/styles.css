@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 
-a {
+.navBackground a {
   background-color: #83c7c0;
   display: block;
   color: white;
@@ -13,10 +13,6 @@ a {
   padding: 14px 16px;
   text-decoration: none;
   float: right;
-}
-
-.active {
-  background-color: #04aa6d;
 }
 
 .navBackground {
@@ -80,64 +76,6 @@ a {
   padding: 10px;
   margin-top: 200px;
 }
-<<<<<<< HEAD
-
-.whatPeopleSay {
-  font-size: 46px;
-  color: #6b3b17;
-  text-align: center;
-}
-
-.reviewsNameTina {
-  font-size: 18px;
-  color: #6b3b17;
-  text-align: left;
-}
-
-.reviewsNameKatie {
-  font-size: 18px;
-  color: #6b3b17;
-  text-align: center;
-}
-
-.reviewsNameDeana {
-  font-size: 18px;
-  color: #6b3b17;
-  text-align: right;
-}
-
-.tinaReviewParagraph {
-  text-align: left;
-  margin-left: -500px;
-}
-
-/* .katieReviewParagraph{
-  text-align: center;
-}
-.deanaReviewParagraph{
-  text-align: right;
-} */
-
-.footer {
-  background-color: #83c7c0;
-  bottom: 0px;
-  width: 100%;
-  overflow: hidden;
-  margin-top: 200px;
-}
-
-.copy {
-  font-size: 10px;
-  text-align: center;
-}
-
-.footerWords {
-  font-size: 20px;
-  font-family: cursive;
-  text-align: center;
-}
-=======
->>>>>>> c1b06b2f0dd5c5b6044e9f4dbe7023dfb27fc79a
 .mySlides {
   display: none;
 }
@@ -251,13 +189,9 @@ img {
     opacity: 1;
   }
 }
-<<<<<<< HEAD
-/* cart prototype stuff */
-=======
 
 /*Cart Prototype stuff*/
 
->>>>>>> c1b06b2f0dd5c5b6044e9f4dbe7023dfb27fc79a
 .row {
   margin: 2em;
 }

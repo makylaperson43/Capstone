@@ -27,12 +27,14 @@ class Product(models.Model):
         return self.category + " - " + self.name
 
 class Coffees(Product):
-    price = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
-    add_in = models.CharField(max_length=30)
+    price1 = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+    price2 = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+    price3 = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+    add_in = models.CharField(max_length=30, null=True, blank=True)
 
 class Food(Product):
     price = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
-    add_ins = models.CharField(max_length=30)
+    add_ins = models.CharField(max_length=30, null=True, blank=True)
 
 class OrderItem(models.Model):
     coffee = models.ForeignKey(Coffees, on_delete=models.CASCADE, null=True)

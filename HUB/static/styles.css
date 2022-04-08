@@ -82,7 +82,7 @@ a {
   padding: 10px;
   margin-top: 200px;
 }
-<<<<<<< HEAD
+
 .mySlides {
   display: none;
 }
@@ -188,7 +188,7 @@ img {
   to {
     opacity: 1;
   }
-=======
+}
 
 /* cart prototype stuff */
 .row {
@@ -203,5 +203,4 @@ img {
   margin: 2em;
   padding: 10px;
   border-radius: 20px;
->>>>>>> 49950a7221c1002da5e6c5f7dc0d1806d59e5073
 }

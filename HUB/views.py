@@ -81,3 +81,8 @@ def loginPage(request):
 def logoutUser(request):
     logout(request)
     return redirect('login-page')
+
+
+def aboutUs(request):
+    context = {}
+    return render(request, 'about.html', context)

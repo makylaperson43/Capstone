@@ -1,14 +1,11 @@
 body {
-  background-image: url("images/IMG_625.jpg");
+  background-image: url("images/blurredCrop.jpg");
   background-attachment: fixed;
   background-size: cover;
   margin: 0;
 }
 
 a {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   background-color: #83c7c0;
   display: block;
   color: white;
@@ -82,7 +79,61 @@ a {
   padding: 10px;
   margin-top: 200px;
 }
-<<<<<<< HEAD
+
+.whatPeopleSay {
+  font-size: 46px;
+  color: #6b3b17;
+  text-align: center;
+}
+
+.reviewsNameTina {
+  font-size: 18px;
+  color: #6b3b17;
+  text-align: left;
+}
+
+.reviewsNameKatie {
+  font-size: 18px;
+  color: #6b3b17;
+  text-align: center;
+}
+
+.reviewsNameDeana {
+  font-size: 18px;
+  color: #6b3b17;
+  text-align: right;
+}
+
+.tinaReviewParagraph {
+  text-align: left;
+  margin-left: -500px;
+}
+
+/* .katieReviewParagraph{
+  text-align: center;
+}
+.deanaReviewParagraph{
+  text-align: right;
+} */
+
+.footer {
+  background-color: #83c7c0;
+  bottom: 0px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 200px;
+}
+
+.copy {
+  font-size: 10px;
+  text-align: center;
+}
+
+.footerWords {
+  font-size: 20px;
+  font-family: cursive;
+  text-align: center;
+}
 .mySlides {
   display: none;
 }
@@ -188,8 +239,7 @@ img {
   to {
     opacity: 1;
   }
-=======
-
+}
 /* cart prototype stuff */
 .row {
   margin: 2em;
@@ -203,5 +253,4 @@ img {
   margin: 2em;
   padding: 10px;
   border-radius: 20px;
->>>>>>> 49950a7221c1002da5e6c5f7dc0d1806d59e5073
 }

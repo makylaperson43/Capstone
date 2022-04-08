@@ -6,9 +6,30 @@
       <div class="box-element">
         <h4>{{product.name}}</h4>
         <p>{{product.desc}}</p>
-        <p><i>{{product.price1}}</i></p>
-        <p><i>{{product.price2}}</i></p>
-        <p><i>{{product.price3}}</i></p>
+        <input
+          type="checkbox"
+          value="{{product.price1}}"
+          name="12oz"
+          class="size-check"
+          onclick="selectSize(this.id)"
+          id="check1"
+        />
+        <input
+          type="checkbox"
+          value="{{product.price2}}"
+          name="16oz"
+          class="size-check"
+          onclick="selectSize(this.id)"
+          id="check2"
+        />
+        <input
+          type="checkbox"
+          value="{{product.price3}}"
+          name="20oz"
+          class="size-check"
+          onclick="selectSize(this.id)"
+          id="check3"
+        />
 
         <button data-product="{{product.id}}" data-action="add" class="addBttn">
           Add
@@ -19,6 +40,7 @@
   </div>
 
   <div class="row">
+    <h4>Cart</h4>
     <div class="col-lg-12">
       <div class="box-element"></div>
     </div>

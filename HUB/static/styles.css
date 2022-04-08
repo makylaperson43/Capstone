@@ -46,6 +46,7 @@ a {
 
 .facebookImage {
   height: 4.5em;
+  width: 7em;
   margin-left: 8em;
   margin-bottom: -1em;
 }
@@ -79,6 +80,7 @@ a {
   padding: 10px;
   margin-top: 200px;
 }
+<<<<<<< HEAD
 
 .whatPeopleSay {
   font-size: 46px;
@@ -134,6 +136,8 @@ a {
   font-family: cursive;
   text-align: center;
 }
+=======
+>>>>>>> c1b06b2f0dd5c5b6044e9f4dbe7023dfb27fc79a
 .mySlides {
   display: none;
 }
@@ -146,14 +150,18 @@ img {
 
 .slideshow-container {
   max-width: 700px;
-  max-height: 466px;
-
+  max-height: 200em;
+  background-color: #83c7c0;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   margin-top: 10em;
   border: solid 2px black;
   border-radius: 25px;
+}
+
+.galleryimg {
+  height: 50em;
 }
 
 .prev,
@@ -174,8 +182,11 @@ img {
   user-select: none;
 }
 
+.prev {
+  left: 19em;
+}
 .next {
-  right: 20.5em;
+  right: 19.4em;
 }
 
 .prev:hover,
@@ -240,7 +251,13 @@ img {
     opacity: 1;
   }
 }
+<<<<<<< HEAD
 /* cart prototype stuff */
+=======
+
+/*Cart Prototype stuff*/
+
+>>>>>>> c1b06b2f0dd5c5b6044e9f4dbe7023dfb27fc79a
 .row {
   margin: 2em;
 }

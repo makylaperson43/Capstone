@@ -29,9 +29,9 @@ def home(request):
 
 def cart(request):
     
-
-    all_products = Product.objects.all()
-    context = {'all_products': all_products, "products": {"burrito"}}
+    all_food = Food.objects.all()
+    all_coffee = Coffees.objects.all()
+    context = {'all_products': all_coffee, 'all_food': all_food}
     return render(request, 'store.html', context)
 
 def addToCart(request):

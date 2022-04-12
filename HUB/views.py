@@ -28,19 +28,20 @@ def home(request):
     return render(request, 'home.html', context)
 
 def cart(request):
-    
+    #Queries
     all_food = Food.objects.all()
     all_coffee = Coffees.objects.all()
-    context = {'all_products': all_coffee, 'all_food': all_food}
+
+    context = {'all_coffee': all_coffee, 'all_food': all_food}
     return render(request, 'store.html', context)
 
-def addToCart(request):
+# def addToCart(request):
 
-    return render(request, 'store.html', context)
+#     return render(request, 'store.html', context)
 
-def removeFromCart(request):
+# def removeFromCart(request):
 
-    return render(request, 'store.html', context)
+#     return render(request, 'store.html', context)
 
 def gallery(request):
 

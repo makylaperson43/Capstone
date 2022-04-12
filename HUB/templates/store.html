@@ -1,39 +1,27 @@
 {% extends 'base.html' %} {%block content%}
 <body>
   <div class="row">
-    {%for product in all_products%}
+    {%for coffee in all_coffee%}
     <div class="col-lg-4">
       <div class="box-element">
-        <h4>{{product.name}}</h4>
-        <p>{{product.desc}}</p>
-        <input
-          type="checkbox"
-          value="{{product.price1}}"
-          name="12oz"
-          class="size-check"
-          onclick="selectSize(this.id)"
-          id="check1"
-        />
-        <input
-          type="checkbox"
-          value="{{product.price2}}"
-          name="16oz"
-          class="size-check"
-          onclick="selectSize(this.id)"
-          id="check2"
-        />
-        <input
-          type="checkbox"
-          value="{{product.price3}}"
-          name="20oz"
-          class="size-check"
-          onclick="selectSize(this.id)"
-          id="check3"
-        />
+        <h4>{{coffee.name}}</h4>
+        <p>{{coffee.desc}}</p>
+        <form method="POST">
+          {% csrf_token %}
+          <select id="size-select">
+            <option value="{{coffee.price1}}">12oz - {{coffee.price1}}</option>
+            <option value="{{coffee.price2}}">16oz - {{coffee.price2}}</option>
+            <option value="{{coffee.price3}}">20oz - {{coffee.price3}}</option>
+          </select>
 
-        <button data-product="{{product.id}}" data-action="add" class="addBttn">
-          Add
-        </button>
+          <button
+            data-product="{{product.id}}"
+            data-action="add"
+            class="addBttn"
+          >
+            Add
+          </button>
+        </form>
       </div>
     </div>
     {% endfor %}

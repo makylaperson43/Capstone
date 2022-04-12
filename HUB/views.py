@@ -7,9 +7,7 @@ from HUB.forms import *
 from HUB.square import *
 from HUB.models import *
 from django.contrib import messages
-
 from django.contrib.auth import authenticate, login, logout
-
 from HUB.decorators import unauthenticated_user
 
 # Create your views here.
@@ -18,7 +16,7 @@ def home(request):
     context = {}
     return render(request, 'home.html', context)
 
-def menu(request, pk):
+def menu(request):
     #Queries
     all_food = Food.objects.all()
     all_coffee = Coffees.objects.all()

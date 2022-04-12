@@ -86,3 +86,8 @@ def logoutUser(request):
 def aboutUs(request):
     context = {}
     return render(request, 'about.html', context)
+
+
+def cart(request):
+    context = {}
+    return render(request, 'cart.html', context)

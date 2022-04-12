@@ -201,7 +201,8 @@ img {
   flex-direction: column;
   flex-wrap: wrap;
   background-color: white;
-  margin: 2em;
+  margin-bottom: -10em;
+
   padding: 10px;
   border-radius: 20px;
 }

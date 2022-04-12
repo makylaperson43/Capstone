@@ -13,4 +13,4 @@ class CreateUserForm(UserCreationForm):
 class OrderItemForm(forms.Form):
     class Meta:
         model = OrderItem
-        fields = ['']
+        fields = ['__all__']

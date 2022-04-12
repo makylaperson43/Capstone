@@ -1,35 +1,16 @@
 {% extends 'base.html' %} {%block content%}
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Login</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-      crossorigin="anonymous"
-    />
+
 
     <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background: #83c7c0;
-      }
+    
       .user_card {
-        width: 500px;
-        height: 30em;
+        width: 900px;
+        height: 39em;
         margin-top: auto;
         margin-bottom: auto;
+        margin-right: auto;
+        margin-left: auto;
         background: black;
         position: relative;
         display: flex;
@@ -51,10 +32,16 @@
 
       #form-title {
         color: #fff;
+        text-align: center;
       }
 
       .login_btn {
-        width: 100%;
+        height: 2em;
+        width: 50%;
+        border-radius: 5%;
+        border: solid 3px salmon;
+        margin-top: 1em;
+        margin-left: 16em;
         background: white;
         color: black;
       }
@@ -91,14 +78,16 @@
         border: solid 6px black;
         border-radius: 10em;
         height: 40em;
-        margin-top: 5em;
+        margin-top: 10em;
+        
       }
       .paslog {
         color: white;
-        margin-left: -1em;
+        text-align: left;
       }
       .colorl {
         color: blue;
+        text-decoration: None;
       }
       .colorl:hover {
         color: white;
@@ -106,7 +95,9 @@
       }
       .tb {
         height: 3em;
-        width: 15em;
+        width: 65em;
+        margin-left: 1em;
+     
         border-radius: 3em;
       }
     </style>
@@ -141,14 +132,12 @@
             {% for message in messages%}
             <p id="messages">{{message}}</p>
             {% endfor %}
-            <div class="mt-4">
+            <div >
              
                 <a href="{% url 'register-page' %}" class="ml-2"
-                  >
               
-              <div class="d-flex justify-content-center links colorl">
-                Don't have an account?
-                
+              <div class="d-flex justify-content-center links colorl">Don't have an account?</a>
+              </div>
             </div>
           </div>
         </div>

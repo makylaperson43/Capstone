@@ -8,18 +8,9 @@ from HUB.square import *
 from HUB.models import *
 from django.contrib import messages
 
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import Group
-from django.contrib.auth.forms import UserCreationForm
-from HUB.decorators import unauthenticated_user
-from dataclasses import dataclass
 
-# @dataclass
-# class Product:
-#     name: str
-#     img: str
-#     price: int
+from HUB.decorators import unauthenticated_user
 
 # Create your views here.
 def home(request):
@@ -27,21 +18,37 @@ def home(request):
     context = {}
     return render(request, 'home.html', context)
 
-def cart(request):
+def menu(request, pk):
     #Queries
     all_food = Food.objects.all()
     all_coffee = Coffees.objects.all()
+    
+    #forms
+    order_item_form = OrderItemForm()
 
-    context = {'all_coffee': all_coffee, 'all_food': all_food}
-    return render(request, 'store.html', context)
+    #OrderItem Logic
+    if request.method == 'POST':
+        obj = request.POST.get('id')
+        OI_form = order_item_form(request.POST)
+        if OI_form.is_valid():
+            instance = OI_form.save()
+            if obj in all_coffee:
+                instance.coffee = obj
+            elif obj in all_food:
+                instance.food = obj
+            instance.save()
+            return redirect('cart-page')
 
-# def addToCart(request):
+    context = {
+        'all_coffee': all_coffee, 
+        'all_food': all_food
+        }
+    return render(request, 'menu.html', context)
 
-#     return render(request, 'store.html', context)
+def cart(request):
 
-# def removeFromCart(request):
-
-#     return render(request, 'store.html', context)
+    context = {}
+    return render(request, 'cart.html', context)
 
 def gallery(request):
 

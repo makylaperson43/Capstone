@@ -43,7 +43,7 @@ class Food(Product):
 class OrderItem(models.Model):
     coffee = models.ForeignKey(Coffees, on_delete=models.CASCADE, null=True)
     food = models.ForeignKey(Food, on_delete=models.CASCADE, null=True)
-    quantity = models.IntegerField(default=0, null=True, blank=True)
+    quantity = models.IntegerField(default=1, null=True, blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
 
 class Order(models.Model):

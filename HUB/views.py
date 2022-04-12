@@ -44,8 +44,15 @@ def menu(request):
     return render(request, 'menu.html', context)
 
 def cart(request):
+    #Query
+    cart_items = OrderItem.objects.all()
 
-    context = {}
+    #form
+    order_form = OrderForm()
+
+    context = {
+        'cart_items': cart_items
+    }
     return render(request, 'cart.html', context)
 
 def gallery(request):

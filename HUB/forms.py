@@ -14,3 +14,8 @@ class OrderItemForm(forms.Form):
     class Meta:
         model = OrderItem
         fields = ['__all__']
+
+class OrderForm(forms.Form):
+    class Meta:
+        model = Order
+        fields = ['__all__']

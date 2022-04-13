@@ -1,5 +1,4 @@
-from attr import fields
-from django import forms
+from django.forms import ModelForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
@@ -10,12 +9,12 @@ class CreateUserForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
-class OrderItemForm(forms.Form):
+class OrderItemForm(ModelForm):
     class Meta:
         model = OrderItem
-        fields = ['__all__']
+        fields = '__all__'
 
-class OrderForm(forms.Form):
+class OrderForm(ModelForm):
     class Meta:
         model = Order
-        fields = ['__all__']
+        fields = '__all__'

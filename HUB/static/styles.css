@@ -61,8 +61,6 @@ body {
   margin-bottom: -1em;
 }
 
-
-
 .reviewsBackground {
   background-color: #83c7c0;
   color: white;
@@ -182,6 +180,11 @@ img {
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
+.theHubWord {
+  width: 20%;
+  height: 50%;
+}
 @-webkit-keyframes fade {
   from {
     opacity: 0.4;
@@ -205,14 +208,10 @@ img {
   height: 10px;
 }
 
-
-
 .loginBackground {
   background-color: white;
   background-image: none;
 }
-
-
 
 /*Cart Prototype stuff*/
 

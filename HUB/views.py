@@ -8,18 +8,9 @@ from HUB.square import *
 from HUB.models import *
 from django.contrib import messages
 
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import Group
-from django.contrib.auth.forms import UserCreationForm
-from HUB.decorators import unauthenticated_user
-from dataclasses import dataclass
 
-# @dataclass
-# class Product:
-#     name: str
-#     img: str
-#     price: int
+from HUB.decorators import unauthenticated_user
 
 # Create your views here.
 def home(request):
@@ -27,20 +18,44 @@ def home(request):
     context = {}
     return render(request, 'home.html', context)
 
-def cart(request):
-    
+def menu(request):
+    #Queries
     all_food = Food.objects.all()
     all_coffee = Coffees.objects.all()
-    context = {'all_products': all_coffee, 'all_food': all_food}
-    return render(request, 'store.html', context)
+    
+    #forms
+    order_item_form = OrderItemForm()
 
-def addToCart(request):
+    #OrderItem Logic
+    if request.method == 'POST':
+        obj = request.POST.get('id')
+        OI_form = order_item_form(request.POST)
+        if OI_form.is_valid():
+            instance = OI_form.save()
+            if obj in all_coffee:
+                instance.coffee = obj
+            elif obj in all_food:
+                instance.food = obj
+            instance.save()
+            return redirect('cart-page')
 
-    return render(request, 'store.html', context)
+    context = {
+        'all_coffee': all_coffee, 
+        'all_food': all_food
+        }
+    return render(request, 'menu.html', context)
 
-def removeFromCart(request):
+def cart(request):
+    #Query
+    cart_items = OrderItem.objects.all()
 
-    return render(request, 'store.html', context)
+    #form
+    order_form = OrderForm()
+
+    context = {
+        'cart_items': cart_items
+    }
+    return render(request, 'cart.html', context)
 
 def gallery(request):
 
@@ -83,7 +98,7 @@ def logoutUser(request):
     return redirect('login-page')
 
 
-def aboutUs(request):
+def about(request):
     context = {}
     return render(request, 'about.html', context)
 

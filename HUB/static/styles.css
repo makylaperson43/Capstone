@@ -6,7 +6,7 @@ body {
 }
 
 .navBackground a {
-  background-color: #83c7c0;
+  background-color: black;
   display: block;
   color: white;
   padding: 14px 16px;
@@ -64,9 +64,9 @@ body {
 .reviewsBackground {
   background-color: #83c7c0;
   color: white;
-  padding: 10px;
-  margin-top: 200px;
-  margin-bottom: 500px;
+  padding: 10px 0 120px 0;
+  margin-top: 150px;
+  margin-bottom: 200px;
 }
 
 .whatPeopleSay {
@@ -203,9 +203,9 @@ img {
   }
 }
 
-.cartImage img {
-  width: 10px;
-  height: 10px;
+.cartImage {
+  width: 1.8em;
+  height: 14px;
 }
 
 .loginBackground {
@@ -220,11 +220,37 @@ img {
 }
 
 .box-element {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   background-color: white;
-  margin: 2em;
-  padding: 10px;
+  margin-top: 10em;
+  padding: 1em;
   border-radius: 20px;
+}
+
+.reviewsName {
+  color: #6b3b17;
+  text-align: center;
+}
+
+.divBox1 {
+  width: 300px;
+  padding: 50px;
+  margin: -60px 0 0 70px;
+}
+
+.divBox2 {
+  width: 300px;
+  padding: 50px;
+  margin: -364px 0 0 520px;
+}
+
+.divBox3 {
+  width: 300px;
+  padding: 50px;
+  margin: -457px 0 0 970px;
+}
+
+.quotationSize {
+  width: 60px;
+  height: 50px;
+  margin-left: 100px;
 }

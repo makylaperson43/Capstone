@@ -1,5 +1,11 @@
 {%load static %}%}
 <!DOCTYPE html>
+<<<<<<< HEAD
+
+
+    <style>
+    
+=======
 <html>
   <head>
     <title>Login</title>
@@ -19,6 +25,9 @@
     />
 
     <style>
+<<<<<<< HEAD
+     
+=======
       {% comment %} body,
       html {
         margin: 0;
@@ -26,11 +35,14 @@
         height: 100%;
         background: #83c7c0;
       }
+>>>>>>> 2c79368e0353b39bc5f79a3ca0c82fa9648ca3aa
       .user_card {
-        width: 500px;
-        height: 30em;
+        width: 900px;
+        height: 39em;
         margin-top: auto;
         margin-bottom: auto;
+        margin-right: auto;
+        margin-left: auto;
         background: black;
         position: relative;
         display: flex;
@@ -52,10 +64,16 @@
 
       #form-title {
         color: #fff;
+        text-align: center;
       }
 
       .login_btn {
-        width: 100%;
+        height: 2em;
+        width: 50%;
+        border-radius: 5%;
+        border: solid 3px salmon;
+        margin-top: 1em;
+        margin-left: 16em;
         background: white;
         color: black;
       }
@@ -92,14 +110,16 @@
         border: solid 6px black;
         border-radius: 10em;
         height: 40em;
-        margin-top: 5em;
+        margin-top: 10em;
+        
       }
       .paslog {
         color: white;
-        margin-left: -1em;
+        text-align: left;
       }
       .colorl {
         color: blue;
+        text-decoration: None;
       }
       .colorl:hover {
         color: white;
@@ -107,14 +127,17 @@
       }
       .tb {
         height: 3em;
-        width: 15em;
+        width: 65em;
+        margin-left: 1em;
+     
         border-radius: 3em;
       } {% endcomment %}
+>>>>>>> bba8f029a4c456be502fe679bddb9d6350c91ee5
     </style>
   </head>
   <body>
     <div class="navBackground">
-      <img class="theHubWord" src="static/images/hubLogo.png" />
+      <img class="theHubWord" src="static/images/blurredCrop.jpg" />
     </div>
     <div class="container h-100">
       <div class="box1">
@@ -145,14 +168,12 @@
             {% for message in messages%}
             <p id="messages">{{message}}</p>
             {% endfor %}
-            <div class="mt-4">
+            <div >
              
                 <a href="{% url 'register-page' %}" class="ml-2"
-                  >
               
-              <div class="d-flex justify-content-center links colorl">
-                Don't have an account?
-                
+              <div class="d-flex justify-content-center links colorl">Don't have an account?</a>
+              </div>
             </div>
           </div>
         </div>

@@ -9,9 +9,7 @@ from HUB.forms import *
 from HUB.square import *
 from HUB.models import *
 from django.contrib import messages
-
 from django.contrib.auth import authenticate, login, logout
-
 from HUB.decorators import unauthenticated_user
 
 # Create your views here.

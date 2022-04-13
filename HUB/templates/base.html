@@ -12,25 +12,19 @@
   <body class="bodybody">
     <div class="navBackground">
       <p class="theHubWord">The Hub</p>
-      {% comment %}
-      <div class="cartImage">
-        <a href="{%url 'cart-page'%}">
-          <img src="static/images/shoppingcart2.0.png" />
-        </a>
-      </div>
-      {% endcomment %}
+      <a href="{%url 'menu-page'%}"
+        ><img class="cartImage" src="/static/images/cart.png"
+      /></a>
+
       <a href="{%url 'logout'%}">Logout</a>
       <a href="{%url 'register-page'%}">Register</a>
       <a href="{%url 'login-page'%}">Login</a>
       <a href="{%url 'gallery-page'%}">Gallery</a>
-<<<<<<< HEAD
       <a href="{%url 'menu-page'%}">Menu</a>
-      <a href="{%url ''%}"><img src="" /></a>
 
-=======
       <a href="{%url 'cart-page'%}">Menu</a>
       <a href="{%url 'about-page'%}">About Us</a>
->>>>>>> 2c79368e0353b39bc5f79a3ca0c82fa9648ca3aa
+
       <a href="{%url 'home-page'%}">Home</a>
     </div>
     <script src="{%static 'store.js' %}" async></script>

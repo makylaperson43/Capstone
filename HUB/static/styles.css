@@ -203,9 +203,9 @@ img {
   }
 }
 
-.cartImage img {
-  width: 10px;
-  height: 10px;
+.cartImage {
+  width: 1.8em;
+  height: 14px;
 }
 
 .loginBackground {

@@ -34,6 +34,7 @@ def menu(request):
             instance = OI_form.save()
             if obj in all_coffee:
                 instance.coffee = obj
+                instance.price = request.GET['size-select']
             elif obj in all_food:
                 instance.food = obj
             instance.save()
@@ -101,8 +102,3 @@ def logoutUser(request):
 def about(request):
     context = {}
     return render(request, 'about.html', context)
-
-
-def cart(request):
-    context = {}
-    return render(request, 'cart.html', context)

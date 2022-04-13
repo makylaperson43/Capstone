@@ -38,12 +38,14 @@ class Food(Product):
 
     category = models.TextField(choices=CATEGORIES)
     price = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+    price2 = MoneyField(max_digits=10, decimal_places=2, default_currency='USD', null=True)
     add_ins = models.CharField(max_length=30, null=True, blank=True)
 
 class OrderItem(models.Model):
     coffee = models.ForeignKey(Coffees, on_delete=models.CASCADE, null=True)
     food = models.ForeignKey(Food, on_delete=models.CASCADE, null=True)
     quantity = models.IntegerField(default=1, null=True, blank=True)
+    price = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
     date_added = models.DateTimeField(auto_now_add=True)
 
 class Order(models.Model):

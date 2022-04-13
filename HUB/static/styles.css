@@ -1,5 +1,5 @@
 body {
-  background-image: url("images/blurredCrop.jpg");
+  background: url("images/blurredCrop.jpg");
   background-attachment: fixed;
   background-size: cover;
   margin: 0;
@@ -9,7 +9,6 @@ body {
   background-color: #83c7c0;
   display: block;
   color: white;
-  /* text-align: right; */
   padding: 14px 16px;
   text-decoration: none;
   float: right;
@@ -62,20 +61,31 @@ body {
   margin-bottom: -1em;
 }
 
-.theHubWord {
-  font-family: niconne, fantasy;
-  font-size: 50px;
-  margin-left: 230px;
-  margin-top: 40px;
-  margin-bottom: -30px;
-}
+
 
 .reviewsBackground {
   background-color: #83c7c0;
   color: white;
   padding: 10px;
   margin-top: 200px;
+  margin-bottom: 500px;
 }
+
+.whatPeopleSay {
+  color: #6b3b17;
+  font-size: 46px;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #83c7c0;
+  text-align: center;
+}
+
 .mySlides {
   display: none;
 }
@@ -189,6 +199,20 @@ img {
     opacity: 1;
   }
 }
+
+.cartImage img {
+  width: 10px;
+  height: 10px;
+}
+
+
+
+.loginBackground {
+  background-color: white;
+  background-image: none;
+}
+
+
 
 /*Cart Prototype stuff*/
 

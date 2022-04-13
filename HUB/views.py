@@ -98,6 +98,11 @@ def logoutUser(request):
     return redirect('login-page')
 
 
-def aboutUs(request):
+def about(request):
     context = {}
     return render(request, 'about.html', context)
+
+
+def cart(request):
+    context = {}
+    return render(request, 'cart.html', context)

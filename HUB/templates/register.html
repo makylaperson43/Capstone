@@ -1,8 +1,75 @@
-{% extends 'base.html' %} {%block content%}
-<h1>Register</h1>
-<form method="POST">
-  {% csrf_token %} {{form.as_p}}
-  <input type="submit" />
-</form>
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'register.css' %}" />
+    <title>Document</title>
+  </head>
 
-{% endblock %}
+  <body>
+    <div class="navBackground">
+      <p class="theHubWord">The Hub</p>
+    </div>
+    <div>
+      <div>
+        <div class="user_card_register">
+          <div>
+            <h3 class="register_word">CREATE AN ACCOUNT</h3>
+          </div>
+          <div>
+            <form method="POST" action="">
+              {% csrf_token %}
+              <div class="register_text_box">
+                <p placeholder="Username">{{form.username}}</p>
+              </div>
+              <div class="register_text_box">{{form.email}}</div>
+              <div class="register_text_box">{{form.password1}}</div>
+              <div class="register_text_box">{{form.password2}}</div>
+
+              <div class="register_button">
+                <input type="submit" value="Create Account" />
+              </div>
+            </form>
+          </div>
+
+          {{form.errors}}
+
+          <div>
+            <div class="message_form">
+              Already have an account?
+              <a href="{% url 'login-page' %}">Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var form_fields = document.getElementsByTagName("input");
+      form_fields[1].placeholder = "Username";
+      form_fields[2].placeholder = "Email";
+      form_fields[3].placeholder = "Enter password";
+      form_fields[4].placeholder = "Re-enter Password";
+
+      for (var field in form_fields) {
+        form_fields[field].className += " form-control";
+      }
+    </script>
+    {% comment %}
+    <script src="{%static 'store.js' %}" async></script>
+    {%block content%}{% endblock %} {% endcomment %} {% comment %}
+    <h1>Register</h1>
+    <form method="POST" class="register">
+      {% csrf_token %} {{form.as_p}}
+      <input type="submit" />
+    </form>
+    {% endcomment %}
+  </body>
+
+  <footer class="footer">
+    <p class="footerWords">The Hub Bistro & Coffee House</p>
+    <p class="copy">©Makyla Person, Dylan Goad, and Justin Ashmore</p>
+  </footer>
+</html>

@@ -1,7 +1,7 @@
 from django.contrib import admin
-from HUB.models import Coffees, Food, Order, OrderItem 
+from HUB.models import Coffee, CoffeeOrder, Food, FoodOrder
 
+admin.site.register(Coffee)
+admin.site.register(CoffeeOrder)
 admin.site.register(Food)
-admin.site.register(Coffees)
-admin.site.register(Order)
-admin.site.register(OrderItem)
+admin.site.register(FoodOrder)

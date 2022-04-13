@@ -27,15 +27,16 @@ def menu(request):
     #OrderItem Logic
     if request.method == 'POST':
         obj = request.POST.get('id')
-        OI_form = order_item_form(request.POST)
+        OI_form = OrderItemForm(request.POST)
         if OI_form.is_valid():
             instance = OI_form.save()
             if obj in all_coffee:
                 instance.coffee = obj
+                instance.price = request.GET['size-select']
             elif obj in all_food:
                 instance.food = obj
             instance.save()
-            return redirect('cart-page')
+            return redirect('menu-page')
 
     context = {
         'all_coffee': all_coffee, 
@@ -48,7 +49,7 @@ def cart(request):
     cart_items = OrderItem.objects.all()
 
     #form
-    order_form = OrderForm()
+    # order_form = OrderForm()
 
     context = {
         'cart_items': cart_items
@@ -96,6 +97,6 @@ def logoutUser(request):
     return redirect('login-page')
 
 
-def aboutUs(request):
+def about(request):
     context = {}
     return render(request, 'about.html', context)

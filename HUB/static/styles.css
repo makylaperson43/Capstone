@@ -197,12 +197,8 @@ img {
 }
 
 .box-element {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   background-color: white;
-  margin-bottom: -10em;
-
-  padding: 10px;
+  margin-top: 10em;
+  padding: 1em;
   border-radius: 20px;
 }

@@ -1,11 +1,10 @@
-{%load static %}%}
+{% extends 'base.html' %} {%block content%} {%load static %}
 <!DOCTYPE html>
-<<<<<<< HEAD
 
 
-    <style>
+
     
-=======
+
 <html>
   <head>
     <title>Login</title>
@@ -24,116 +23,12 @@
       crossorigin="anonymous"
     />
 
-    <style>
-      {% comment %} body,
-      html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background: #83c7c0;
-      }
->>>>>>> 2c79368e0353b39bc5f79a3ca0c82fa9648ca3aa
-      .user_card {
-        width: 900px;
-        height: 39em;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-right: auto;
-        margin-left: auto;
-        background: black;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 5px;
-      }
-
-      .form_container {
-        margin-top: 20px;
-      }
-
-      #form-title {
-        color: #fff;
-        text-align: center;
-      }
-
-      .login_btn {
-        height: 2em;
-        width: 50%;
-        border-radius: 5%;
-        border: solid 3px salmon;
-        margin-top: 1em;
-        margin-left: 16em;
-        background: white;
-        color: black;
-      }
-      .login_btn:hover {
-        background: #83c7c0;
-      }
-      .login_btn:focus {
-        box-shadow: none ;
-        outline: 0px ;
-      }
-      .login_container {
-        padding: 0 2rem;
-      }
-      .input-group-text {
-        background: #f7ba5b ;
-        color: white;
-        border: 0 ;
-        border-radius: 0.25rem 1 1 0.5rem;
-      }
-      .input_user,
-      .input_pass:focus {
-        box-shadow: none;
-        outline: 0px;
-      }
-
-      #messages {
-        background-color: grey;
-        color: #fff;
-        padding: 10px;
-        margin-top: 10px;
-      }
-      .box1 {
-        background: salmon;
-        border: solid 6px black;
-        border-radius: 10em;
-        height: 40em;
-        margin-top: 10em;
-        
-      }
-      .paslog {
-        color: white;
-        text-align: left;
-      }
-      .colorl {
-        color: blue;
-        text-decoration: None;
-      }
-      .colorl:hover {
-        color: white;
-        text-decoration: none;
-      }
-      .tb {
-        height: 3em;
-        width: 65em;
-        margin-left: 1em;
-     
-        border-radius: 3em;
-      } {% endcomment %}
-    </style>
+   
+ 
   </head>
   <body>
     <div class="navBackground">
-      <img class="theHubWord" src="static/images/hubLogo.png" />
+      <img class="theHubWord" src="/static/images/hub.png" />
     </div>
     <div class="container h-100">
       <div class="box1">
@@ -177,3 +72,4 @@
     </div>
   </body>
 </html>
+{% endblock %}

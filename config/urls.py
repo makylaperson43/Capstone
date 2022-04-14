@@ -29,5 +29,5 @@ urlpatterns = [
     path('login/', views.loginPage, name="login-page"),
     path('about/', views.about, name="about-page"),
     path('logout/', views.logoutUser, name="logout"),
-    path('cart/', views.cart1, name="cart")
+    path('cart/', views.cart1, name="cart-page")
 ]

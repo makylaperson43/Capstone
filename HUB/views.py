@@ -93,3 +93,9 @@ def logoutUser(request):
     logout(request)
     return redirect('login-page')
 
+    
+
+def cart1(request):
+
+    context = {}
+    return render(request, 'cart.html', context)

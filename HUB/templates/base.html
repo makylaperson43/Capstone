@@ -9,23 +9,18 @@
     <title>Document</title>
   </head>
 
-  <body class="bodybody">
+  <body>
     <div class="navBackground">
-      <img class="theHubWord" src="static/images/hubLogo.png" />
-      {% comment %}
-      <div class="cartImage">
-        <a href="{%url 'cart-page'%}">
-          <img src="static/images/shoppingcart2.0.png" />
-        </a>
-      </div>
-      {% endcomment %}
+      <img class="theHubWord" src="/static/images/hub.png" />
+      <a href="{%url 'menu-page'%}"
+        ><img class="cartImage" src="/static/images/cart.png"
+      /></a>
       <a href="{%url 'logout'%}">Logout</a>
       <a href="{%url 'register-page'%}">Register</a>
       <a href="{%url 'login-page'%}">Login</a>
       <a href="{%url 'gallery-page'%}">Gallery</a>
       <a href="{%url 'menu-page'%}">Menu</a>
 
-      <a href="{%url 'cart-page'%}">Menu</a>
       <a href="{%url 'about-page'%}">About Us</a>
 
       <a href="{%url 'home-page'%}">Home</a>

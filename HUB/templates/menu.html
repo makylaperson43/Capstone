@@ -8,19 +8,19 @@
         <p>{{coffee.desc}}</p>
         <form method="POST">
           {% csrf_token %}
-          <select id="size-select">
-            <option value="{{coffee.price1}}">12oz - {{coffee.price1}}</option>
-            <option value="{{coffee.price2}}">16oz - {{coffee.price2}}</option>
-            <option value="{{coffee.price3}}">20oz - {{coffee.price3}}</option>
-          </select>
+          <fieldset>
+            <legend>Sizes</legend>
+            <input type="radio" id="small" value="small" name="size" />
+            <label for="small">Small</label><br />
 
-          <button
-            data-product="{{product.id}}"
-            data-action="add"
-            class="addBttn"
-          >
-            Add
-          </button>
+            <input type="radio" id="medium" value="medium" name="size" />
+            <label for="medium">Medium</label><br />
+
+            <input type="radio" id="large" value="large" name="size" />
+            <label for="large">Large</label><br />
+          </fieldset>
+
+          <a href="{%url 'menu-page/'%}"
         </form>
       </div>
     </div>

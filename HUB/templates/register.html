@@ -11,26 +11,37 @@
 
   <body>
     <div class="navBackground">
+<<<<<<< HEAD
+      <img
+        class="theHubWord"
+        src="{%static 'images/hubLogo.png'%}"
+        alt="The Hub Logo"
+      />
+=======
       <img class="theHubWord" src="/static/images/hub.png" />
+>>>>>>> 076148c30412cab9b47a8758a868e0fb287604ce
     </div>
     <div>
       <div>
+        <div>
+          <h3 class="register_word">CREATE AN ACCOUNT</h3>
+        </div>
         <div class="user_card_register">
-          <div>
-            <h3 class="register_word">CREATE AN ACCOUNT</h3>
-          </div>
+          <p>* required field</p>
           <div>
             <form method="POST" action="">
               {% csrf_token %}
-              <div class="register_text_box">
-                <p placeholder="Username">{{form.username}}</p>
-              </div>
+              <div class="register_text_box">{{form.username}}</div>
               <div class="register_text_box">{{form.email}}</div>
               <div class="register_text_box">{{form.password1}}</div>
               <div class="register_text_box">{{form.password2}}</div>
 
-              <div class="register_button">
-                <input type="submit" value="Create Account" />
+              <div class="buttonContainer">
+                <input
+                  class="register_button"
+                  type="submit"
+                  value="Create Account"
+                />
               </div>
             </form>
           </div>
@@ -48,10 +59,10 @@
     </div>
     <script>
       var form_fields = document.getElementsByTagName("input");
-      form_fields[1].placeholder = "Username";
-      form_fields[2].placeholder = "Email";
-      form_fields[3].placeholder = "Enter password";
-      form_fields[4].placeholder = "Re-enter Password";
+      form_fields[1].placeholder = "*Username";
+      form_fields[2].placeholder = "*Email";
+      form_fields[3].placeholder = "*Enter password";
+      form_fields[4].placeholder = "*Re-enter Password";
 
       for (var field in form_fields) {
         form_fields[field].className += " form-control";

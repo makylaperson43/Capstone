@@ -1,6 +1,8 @@
 from telnetlib import LOGOUT
 from django.shortcuts import render, redirect
 from django.template import context
+from django.views.generic import View
+from requests import request
 
 
 from HUB.forms import *
@@ -16,50 +18,45 @@ def home(request):
     context = {}
     return render(request, 'home.html', context)
 
-def menu(request):
-    #Queries
-    all_food = Food.objects.all()
-    all_coffee = Coffees.objects.all()
-    
+class MenuView(View):
     #forms
-    order_item_form = OrderItemForm()
+    coffee_form = CoffeeOrderForm()
+    # food_form = FoodOrderForm()
 
-    #OrderItem Logic
-    if request.method == 'POST':
+    def get(self, request, *args, **kwargs):
+        all_coffee = Coffee.objects.all()
+        all_food = Food.objects.all()
+        context = {
+            'all_coffee': all_coffee,
+            'all_food': all_food
+        }
+        return render(request, 'menu.html', context)
+
+    def Coffee_post(self, request, *args, **kwargs):
         obj = request.POST.get('id')
-        OI_form = OrderItemForm(request.POST)
-        if OI_form.is_valid():
-            instance = OI_form.save()
-            if obj in all_coffee:
-                instance.coffee = obj
-                instance.price = request.GET['size-select']
-            elif obj in all_food:
-                instance.food = obj
+        CForm = CoffeeOrderForm(request.POST)
+        if CForm.is_valid():
+            instance = CForm.save()
+            if CForm.size == 'small':
+                instance.price = obj.s_price
+            elif CForm.size == 'medium':
+                instance.price = obj.m_price
+            elif CForm.size == 'large':
+                instance.price = obj.l_price
             instance.save()
+            messages.info(request, "Added to Cart")
             return redirect('menu-page')
 
-    context = {
-        'all_coffee': all_coffee, 
-        'all_food': all_food
-        }
-    return render(request, 'menu.html', context)
 
-def cart(request):
-    #Query
-    cart_items = OrderItem.objects.all()
-
-    #form
-    # order_form = OrderForm()
-
-    context = {
-        'cart_items': cart_items
-    }
-    return render(request, 'cart.html', context)
 
 def gallery(request):
 
     context = {}
     return render(request, 'gallery.html', context)
+
+def about(request):
+    context = {}
+    return render(request, 'about.html', context)
 
 #User Authentication
 @unauthenticated_user
@@ -96,7 +93,9 @@ def logoutUser(request):
     logout(request)
     return redirect('login-page')
 
+    
 
-def about(request):
+def cart1(request):
+
     context = {}
-    return render(request, 'about.html', context)
+    return render(request, 'cart.html', context)

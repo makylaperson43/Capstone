@@ -1,8 +1,5 @@
 
-from os import name
-from tkinter import CASCADE
 from django.db import models
-from django.forms import DateField, DateTimeField
 from djmoney.models.fields import MoneyField
 from django.conf import settings
 
@@ -81,7 +78,7 @@ class OrderItem(models.Model):
 
 class Order(models.Model):
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     items = models.ManyToManyField(OrderItem)
     total = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
 

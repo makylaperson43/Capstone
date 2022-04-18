@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.template import context
 from django.views.generic import View
 from requests import request
-
+from django.contrib.auth.forms import UserCreationForm
 
 from HUB.forms import *
 from HUB.square import *
@@ -35,10 +35,10 @@ def about(request):
 #User Authentication
 @unauthenticated_user
 def registerPage(request):
-    form = CreateUserForm()
+    form = UserCreationForm()
 
     if request.method == 'POST':
-        form = CreateUserForm(request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('login-page')

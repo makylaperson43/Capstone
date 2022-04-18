@@ -10,24 +10,354 @@ function ready() {
     var button = removeCartItemButtons[i];
     button.addEventListener("click", removeCartItem);
   }
-
-  var quantityInputs = document.getElementsByClassName("cart-quantity-input");
-  for (var i = 0; i < quantityInputs.length; i++) {
-    var input = quantityInputs[i];
-    input.addEventListener("change", quantityChanged);
+  for (var i = 0; i <= 7; i++) {
+    var select = document.querySelectorAll("button")[i];
+    select.addEventListener("click", runEvent);
   }
-
-  var addToCartButtons = document.getElementsByClassName("shop-item-button");
-  for (var i = 0; i < addToCartButtons.length; i++) {
-    var button = addToCartButtons[i];
-    button.addEventListener("click", addToCartClicked);
-  }
-
-  document
-    .getElementsByClassName("btn-purchase")[0]
-    .addEventListener("click", purchaseClicked);
 }
 
+var quantityInputs = document.getElementsByClassName("cart-quantity-input");
+for (var i = 0; i < quantityInputs.length; i++) {
+  var input = quantityInputs[i];
+  input.addEventListener("change", quantityChanged);
+}
+
+var addToCartButtons = document.getElementsByClassName("shop-item-button");
+for (var i = 0; i < addToCartButtons.length; i++) {
+  var button = addToCartButtons[i];
+  button.addEventListener("click", addToCartClicked);
+}
+
+document
+  .getElementsByClassName("btn-purchase")[0]
+  .addEventListener("click", purchaseClicked);
+
+function runEvent(e) {
+  console.log(e.target.value);
+
+  if (e.target.value === "1") {
+    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+    var sec = document.getElementById("");
+    console.log(sec);
+    fetch("/static/breakfast.json")
+      .then((response) => {
+        console.log("resolved", response);
+        return response.json();
+      })
+      .then((data) => {
+        Array.from(data).forEach(function (d) {
+          var item = document.createElement("div");
+          item.classList.add("shop-items");
+
+          var items = document.getElementsByClassName("shop-items")[0];
+          var cartRowContents = ` 
+        <div class="shop-item">
+        <span class="shop-item-title">${d.name}</span>
+        <p> ${d.desc} </p>
+        <div class="shop-item-details">
+          <span class="shop-item-price">$ ${d.price}</span>
+          <button class="btn btn-primary shop-item-button" type="button">
+            ADD TO CART
+          </button>`;
+          item.innerHTML = cartRowContents;
+          items.append(item);
+          var addToCartBtn =
+            document.getElementsByClassName("shop-item-button");
+          for (var i = 0; i < addToCartBtn.length; i++) {
+            var button = addToCartBtn[i];
+            button.addEventListener("click", addToCartClicked);
+          }
+        });
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log("rejected", err);
+      });
+  } else if (e.target.value === "2") {
+    var sec = document.getElementById("select-name");
+    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+
+    fetch("/static/salads.json")
+      .then((response) => {
+        console.log("resolved", response);
+        return response.json();
+      })
+      .then((data) => {
+        Array.from(data).forEach(function (d) {
+          var item = document.createElement("div");
+          item.classList.add("shop-items");
+
+          var items = document.getElementsByClassName("shop-items")[0];
+          var cartRowContents = ` 
+        <div class="shop-item">
+        <span class="shop-item-title">${d.name}</span>
+        <p> ${d.desc}</p>
+  
+        <fieldset>
+        <label>
+          <span class="shop-item-price">$ ${d.s_price}</span>
+          <span class="shop-item-price">$ ${d.l_price}</span>
+          <button class="btn btn-primary shop-item-button" type="button">
+            ADD TO CART
+          </button>`;
+          item.innerHTML = cartRowContents;
+          items.append(item);
+          var addToCartBtn =
+            document.getElementsByClassName("shop-item-button");
+          for (var i = 0; i < addToCartBtn.length; i++) {
+            var button = addToCartBtn[i];
+            button.addEventListener("click", addToCartClicked);
+          }
+        });
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log("rejected", err);
+      });
+  } else if (e.target.value === "3") {
+    var sec = document.getElementById("select-name");
+    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+    fetch("/static/pastry.json")
+      .then((response) => {
+        console.log("resolved", response);
+        return response.json();
+      })
+      .then((data) => {
+        Array.from(data).forEach(function (d) {
+          var item = document.createElement("div");
+          item.classList.add("shop-items");
+
+          var items = document.getElementsByClassName("shop-items")[0];
+          var cartRowContents = ` 
+            <div class="shop-item">
+            <span class="shop-item-title">${d.name}</span>
+            
+            <div class="shop-item-details">
+            
+              <span class="shop-item-price">$${d.price}</span>
+              <button class="btn btn-primary shop-item-button" type="button">
+                ADD TO CART
+              </button>`;
+          item.innerHTML = cartRowContents;
+          items.append(item);
+          var addToCartBtn =
+            document.getElementsByClassName("shop-item-button");
+          for (var i = 0; i < addToCartBtn.length; i++) {
+            var button = addToCartBtn[i];
+            button.addEventListener("click", addToCartClicked);
+          }
+        });
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log("rejected", err);
+      });
+  } else if (e.target.value === "4") {
+    var sec = document.getElementById("select-name");
+    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+
+    fetch("/static/sandwich.json")
+      .then((response) => {
+        console.log("resolved", response);
+        return response.json();
+      })
+      .then((data) => {
+        Array.from(data).forEach(function (d) {
+          var item = document.createElement("div");
+          item.classList.add("shop-items");
+
+          var items = document.getElementsByClassName("shop-items")[0];
+          var cartRowContents = ` 
+            <div class="shop-item">
+            <span class="shop-item-title">${d.name}</span>
+            <p> ${d.desc}</p>
+      
+            <fieldset>
+            <label>
+              <span class="shop-item-price">$${d.price}</span>
+              <button class="btn btn-primary shop-item-button" type="button">
+                ADD TO CART
+              </button>`;
+          item.innerHTML = cartRowContents;
+          items.append(item);
+          var addToCartBtn =
+            document.getElementsByClassName("shop-item-button");
+          for (var i = 0; i < addToCartBtn.length; i++) {
+            var button = addToCartBtn[i];
+            button.addEventListener("click", addToCartClicked);
+          }
+        });
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log("rejected", err);
+      });
+  } else if (e.target.value === "5") {
+    var sec = document.getElementById("select-name");
+    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+
+    fetch("/static/brewed.json")
+      .then((response) => {
+        console.log("resolved", response);
+        return response.json();
+      })
+      .then((data) => {
+        Array.from(data).forEach(function (d) {
+          var item = document.createElement("div");
+          item.classList.add("shop-items");
+
+          var items = document.getElementsByClassName("shop-items")[0];
+          var cartRowContents = ` 
+                <div class="shop-item">
+                <span class="shop-item-title">${d.name}</span>
+                <p> ${d.desc}</p>
+          
+                
+                  <span class="shop-item-price">$${d.s_price}</span>
+                  <span>$${d.m_price}</span>
+                  <span >$${d.l_price}</span>
+                  <button class="btn btn-primary shop-item-button" type="button">
+                ADD TO CART
+              </button>`;
+          item.innerHTML = cartRowContents;
+          items.append(item);
+          var addToCartBtn =
+            document.getElementsByClassName("shop-item-button");
+          for (var i = 0; i < addToCartBtn.length; i++) {
+            var button = addToCartBtn[i];
+            button.addEventListener("click", addToCartClicked);
+          }
+        });
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log("rejected", err);
+      });
+  } else if (e.target.value === "6") {
+    var sec = document.getElementById("select-name");
+    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+
+    fetch("/static/specialty.json")
+      .then((response) => {
+        console.log("resolved", response);
+        return response.json();
+      })
+      .then((data) => {
+        Array.from(data).forEach(function (d) {
+          var item = document.createElement("div");
+          item.classList.add("shop-items");
+
+          var items = document.getElementsByClassName("shop-items")[0];
+          var cartRowContents = ` 
+                    <div class="shop-item">
+                    <span class="shop-item-title">${d.name}</span>
+                    <p> ${d.desc}</p>
+              
+                  
+                    <span class="shop-item-price">$ ${d.s_price}</span>
+                    <span>$ ${d.m_price}</span>
+                    <span>$ ${d.l_price}</span>
+                      <button class="btn btn-primary shop-item-button" type="button">
+                        ADD TO CART
+                      </button>`;
+          item.innerHTML = cartRowContents;
+          items.append(item);
+          var addToCartBtn =
+            document.getElementsByClassName("shop-item-button");
+          for (var i = 0; i < addToCartBtn.length; i++) {
+            var button = addToCartBtn[i];
+            button.addEventListener("click", addToCartClicked);
+          }
+        });
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log("rejected", err);
+      });
+  } else if (e.target.value === "7") {
+    var sec = document.getElementById("select-name");
+    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+
+    fetch("/static/espresso.json")
+      .then((response) => {
+        console.log("resolved", response);
+        return response.json();
+      })
+      .then((data) => {
+        Array.from(data).forEach(function (d) {
+          var item = document.createElement("div");
+          item.classList.add("shop-items");
+
+          var items = document.getElementsByClassName("shop-items")[0];
+          var cartRowContents = ` 
+            <div class="shop-item">
+            <span class="shop-item-title">${d.name}</span>
+            <p> ${d.desc}</p>
+      
+            
+            <span class="shop-item-price">$${d.s_price}</span>
+            <span>$${d.m_price}</span>
+              <span>$${d.l_price}</span>
+              <button class="btn btn-primary shop-item-button" type="button">
+                ADD TO CART
+              </button>`;
+          item.innerHTML = cartRowContents;
+          items.append(item);
+          var addToCartBtn =
+            document.getElementsByClassName("shop-item-button");
+          for (var i = 0; i < addToCartBtn.length; i++) {
+            var button = addToCartBtn[i];
+            button.addEventListener("click", addToCartClicked);
+          }
+        });
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log("rejected", err);
+      });
+  } else if (e.target.value === "8") {
+    var sec = document.getElementById("select-name");
+    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+
+    fetch("/static/blended.json")
+      .then((response) => {
+        console.log("resolved", response);
+        return response.json();
+      })
+      .then((data) => {
+        Array.from(data).forEach(function (d) {
+          var item = document.createElement("div");
+          item.classList.add("shop-items");
+
+          var items = document.getElementsByClassName("shop-items")[0];
+          var cartRowContents = ` 
+              <div class="shop-item">
+              <span class="shop-item-title">${d.name}</span>
+              <p> ${d.desc}</p>
+        
+              
+              <span class="shop-item-price">$${d.s_price}</span>
+              <span>$${d.m_price}</span>
+              <span>$${d.l_price}</span>
+                <button class="btn btn-primary shop-item-button" type="button">
+                  ADD TO CART
+                </button>`;
+          item.innerHTML = cartRowContents;
+          items.append(item);
+          var addToCartBtn =
+            document.getElementsByClassName("shop-item-button");
+          for (var i = 0; i < addToCartBtn.length; i++) {
+            var button = addToCartBtn[i];
+            button.addEventListener("click", addToCartClicked);
+          }
+        });
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log("rejected", err);
+      });
+  }
+}
 function purchaseClicked() {
   alert("Thank you for your purchase");
   var cartItems = document.getElementsByClassName("cart-items")[0];

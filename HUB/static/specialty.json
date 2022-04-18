@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Butter Pecan",
+    "desc": "Our concotion of freshly brewed coffee, butter pecan, caramel, and milk",
+    "s_price": 5.25,
+    "m_price": 5.5,
+    "l_price": 5.75
+  },
+  {
+    "name": "Brown Sugar Cinnamon",
+    "desc": "Brewed coffee mixed with steamed milk and topped with a dollop of milk froth",
+    "s_price": 5.25,
+    "m_price": 5.25,
+    "l_price": 5.75
+  },
+  {
+    "name": "Italian Soda",
+    "desc": "Sweet syrups mixed with crisp sparkling water. Built to order and make your own flavor!",
+    "s_price": 4.25,
+    "m_price": 4.5,
+    "l_price": 4.75
+  },
+  {
+    "name": "Vanilla Honey",
+    "desc": "Our concoction of freshly brewed coffee, pure raw honey, milk, and french vanilla",
+    "s_price": 5.25,
+    "m_price": 5.5,
+    "l_price": 5.75
+  }
+]

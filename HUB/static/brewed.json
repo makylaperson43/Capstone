@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Coffee With A Shot",
+    "desc": "Brewed coffee with a freshly brewed shot of espresso commonly referred to as a 'Red Eye'",
+    "s_price": 3.25,
+    "m_price": 3.5,
+    "l_price": 4.0
+  },
+  {
+    "name": "Cafe Au Lait",
+    "desc": "Brewed coffee mixed with steamed milk and topped with a dollop of milk froth",
+    "s_price": 3.25,
+    "m_price": 4.25,
+    "l_price": 5.0
+  },
+  {
+    "name": "Brewed Coffee",
+    "desc": "Freshly brewed coffee. Refills are $2 each",
+    "s_price": 2.5,
+    "m_price": 2.8,
+    "l_price": 3.5
+  }
+]

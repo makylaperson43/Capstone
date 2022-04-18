@@ -18,36 +18,10 @@ def home(request):
     context = {}
     return render(request, 'home.html', context)
 
-class MenuView(View):
-    #forms
-    coffee_form = CoffeeOrderForm()
-    # food_form = FoodOrderForm()
+def menu(request):
 
-    def get(self, request, *args, **kwargs):
-        all_coffee = Coffee.objects.all()
-        all_food = Food.objects.all()
-        context = {
-            'all_coffee': all_coffee,
-            'all_food': all_food
-        }
-        return render(request, 'menu.html', context)
-
-    def Coffee_post(self, request, *args, **kwargs):
-        obj = request.POST.get('id')
-        CForm = CoffeeOrderForm(request.POST)
-        if CForm.is_valid():
-            instance = CForm.save()
-            if CForm.size == 'small':
-                instance.price = obj.s_price
-            elif CForm.size == 'medium':
-                instance.price = obj.m_price
-            elif CForm.size == 'large':
-                instance.price = obj.l_price
-            instance.save()
-            messages.info(request, "Added to Cart")
-            return redirect('menu-page')
-
-
+    context = {}
+    return render(request, 'menu.html', context)
 
 def gallery(request):
 

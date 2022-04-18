@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Basic Burrito",
+    "desc": "Extra large tortilla filled with your choice of meat,egg, and cheese",
+    "price": 4.5
+  },
+  {
+    "name": "Cinnamon Roll",
+    "desc": "Extra large homemade cinnamon rolls topped with original icing",
+    "price": 4.75
+  },
+  {
+    "name": "Sticky Roll",
+    "desc": "Extra large homemade cinnamon roll topped with our signature caramel sauce",
+    "price": 5.0
+  },
+  {
+    "name": "Quiche",
+    "desc": "Spontaneously made fresh daily! ask your server for details",
+    "price": 3.5
+  },
+  {
+    "name": "Breakfast Sandwich",
+    "desc": "Bagel, biscuit, or croissant topped with your choice of meat, egg, and cheese",
+    "price": 5.0
+  },
+  {
+    "name": "Sausages Rolls",
+    "desc": "Extra large cream cheese and sausage filled bread",
+    "price": 2.5
+  },
+  {
+    "name": "Sausage Kolache",
+    "desc": "Smoked sausage and cheese wrapped in a homemade yeast roll",
+    "price": 3.5
+  }
+]

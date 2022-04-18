@@ -6,12 +6,12 @@ body {
 }
 
 .navBackground a {
+  background-color: black;
   display: block;
   color: white;
   padding: 14px 16px;
   text-decoration: none;
   float: right;
-  margin-top: 80px;
 }
 
 .navBackground {
@@ -255,7 +255,12 @@ img {
   margin-left: 100px;
 }
 .movecart {
-  margin-top: 10em;
+  margin-right: 10em;
+}
+.buttons {
+  color: white;
+  background-color: blue;
+  border: none;
 }
 
 .menuWord {

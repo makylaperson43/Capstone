@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Mocha",
+    "desc": "Blend of ice, espresso, milk, and chocolate",
+    "s_price": 5.25,
+    "m_price": 5.5,
+    "l_price": 5.75
+  },
+  {
+    "name": "White Chocolate",
+    "desc": "Blend of ice, espresso, milk, and white chocolate",
+    "s_price": 5.25,
+    "m_price": 5.5,
+    "l_price": 5.75
+  },
+  {
+    "name": "Vanilla Bean",
+    "desc": "Blend of ice, milk, and vanilla bean",
+    "s_price": 4.25,
+    "m_price": 4.5,
+    "l_price": 5.0
+  },
+  {
+    "name": "Strawberry Cream",
+    "desc": "Blend of ice, milk, and strawberry puree",
+    "s_price": 4.5,
+    "m_price": 5.0,
+    "l_price": 5.5
+  },
+  {
+    "name": "Caramel",
+    "desc": "Blend of espresso, milk, and caramel",
+    "s_price": 5.25,
+    "m_price": 5.5,
+    "l_price": 5.75
+  },
+  {
+    "name": "Java Chip",
+    "desc": "Blend of ice, mocha, milk, and chocolate chips",
+    "s_price": 5.25,
+    "m_price": 5.5,
+    "l_price": 5.75
+  }
+]

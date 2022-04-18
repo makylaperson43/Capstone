@@ -1,0 +1,27 @@
+[
+  {
+    "name": "The Country Club",
+    "desc": "Smoked turkey, smoked ham, bacon, cheddar cheese, honey mustard, lettuce, and tomato(Sandwich or Wrap)",
+    "price": 8.99
+  },
+  {
+    "name": "Chicken Caesar",
+    "desc": "Grilled chicken breast, lettuce, parmesan cheese, caesar dressing(Wrap Only)",
+    "price": 8.99
+  },
+  {
+    "name": "Classic BLT",
+    "desc": "The classic... were just adding mayo(Wrap or Sandwich)",
+    "price": 6.99
+  },
+  {
+    "name": "Grilled Pimento Cheese",
+    "desc": "Homemade pimento cheese on ciabatta bread, grilled to perfection, topped with bacon, and jalapenos",
+    "price": 7.99
+  },
+  {
+    "name": "Chicken Salad",
+    "desc": "Homemade chicken salad, lettuce, and tomato",
+    "price": 6.5
+  }
+]

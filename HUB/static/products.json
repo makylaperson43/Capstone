@@ -1,70 +1,38 @@
-{
-  "coffees": [
-    {
-      "id": 1,
-      "name": "Coffee With A Shot",
-      "desc": "Brewed coffee with a freshly brewed shot of espresso commonly referred to as a 'Red Eye.'",
-      "s_price": 3.25,
-      "m_price": 3.5,
-      "l_price": 4.0,
-      "category": "Brewed Coffee"
-    },
-    {
-      "id": 2,
-      "name": "Latte",
-      "desc": "Espresso and steamed milk with a touch of foam.",
-      "s_price": 4.25,
-      "m_price": 4.5,
-      "l_price": 4.75,
-      "category": "Espresso"
-    },
-    {
-      "id": 3,
-      "name": "Butter Pecan",
-      "desc": "Our concoction of freshly brewed coffee, butter pecan, caramel, and milk.",
-      "s_price": 5.25,
-      "m_price": 5.5,
-      "l_price": 5.75,
-      "category": "Specialty Coffee"
-    },
-    {
-      "id": 4,
-      "name": "Mocha",
-      "desc": "Blend of ice, espresso, milk, and chocolate.",
-      "s_price": 5.25,
-      "m_price": 5.5,
-      "l_price": 5.75,
-      "category": "Blended Coffees"
-    }
-  ],
-  "Food": [
-    {
-      "id": 1,
-      "name": "Basic Burrito",
-      "desc": "Extra large tortilla filled with your choice of meat, egg, and cheese.",
-      "price": 4.5,
-      "category": "Breakfast"
-    },
-    {
-      "id": 2,
-      "name": "Muffin",
-      "desc": "Blueberry, banana nut, chocolate chip",
-      "price": 2.0,
-      "category": "Pastries & More"
-    },
-    {
-      "id": 3,
-      "name": "Garden Salad",
-      "desc": "Fresh greens topped with a seasonal veggie mixture and your choice of dressing",
-      "price": 4.5,
-      "category": "Salads"
-    },
-    {
-      "id": 2,
-      "name": "The Country Club",
-      "desc": "Smoked turkey, smoked ham, bacon, cheddar cheese, honey mustard, lettuce, and tomato.",
-      "price": 8.99,
-      "category": "Sandwiches & Wraps"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "Coffee With A Shot",
+    "desc": "Brewed coffee with a freshly brewed shot of espresso commonly referred to as a 'Red Eye.'",
+    "s_price": 3.25,
+    "m_price": 3.5,
+    "l_price": 4.0,
+    "category": "Brewed Coffee"
+  },
+  {
+    "id": 2,
+    "name": "Latte",
+    "desc": "Espresso and steamed milk with a touch of foam.",
+    "s_price": 4.25,
+    "m_price": 4.5,
+    "l_price": 4.75,
+    "category": "Espresso"
+  },
+  {
+    "id": 3,
+    "name": "Butter Pecan",
+    "desc": "Our concoction of freshly brewed coffee, butter pecan, caramel, and milk.",
+    "s_price": 5.25,
+    "m_price": 5.5,
+    "l_price": 5.75,
+    "category": "Specialty Coffee"
+  },
+  {
+    "id": 4,
+    "name": "Mocha",
+    "desc": "Blend of ice, espresso, milk, and chocolate.",
+    "s_price": 5.25,
+    "m_price": 5.5,
+    "l_price": 5.75,
+    "category": "Blended Coffees"
+  }
+]

@@ -6,5 +6,6 @@
     "galleryimg",
     "homehours",
     "numbertext"
-  ]
+  ],
+  "liveServer.settings.port": 5501
 }

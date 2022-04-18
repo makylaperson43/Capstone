@@ -107,3 +107,50 @@ img {
     opacity: 1;
   }
 }
+
+
+
+ "Food": [
+    {
+      "id": 1,
+      "name": "Basic Burrito",
+      "desc": "Extra large tortilla filled with your choice of meat, egg, and cheese.",
+      "price": 4.5,
+      "category": "Breakfast"
+    },
+    {
+      "id": 2,
+      "name": "Muffin",
+      "desc": "Blueberry, banana nut, chocolate chip",
+      "price": 2.0,
+      "category": "Pastries & More"
+    },
+    {
+      "id": 3,
+      "name": "Garden Salad",
+      "desc": "Fresh greens topped with a seasonal veggie mixture and your choice of dressing",
+      "price": 4.5,
+      "category": "Salads"
+    },
+    {
+      "id": 2,
+      "name": "The Country Club",
+      "desc": "Smoked turkey, smoked ham, bacon, cheddar cheese, honey mustard, lettuce, and tomato.",
+      "price": 8.99,
+      "category": "Sandwiches & Wraps"
+    }
+  ]
+}
+
+<div class="shop-item">
+        <span class="shop-item-title">${d.name}</span>
+        <select class="selectme">
+        <option value="1">${s_price}</option>
+        <option value="2">${m_price}</option>
+        <option value="3"> ${l_price}</option>
+        </select>
+        <div class="shop-item-details">
+          <span class="shop-item-price">$ ${d.price}</span>
+          <button class="btn btn-primary shop-item-button" type="button">
+            ADD TO CART
+          </button>`;

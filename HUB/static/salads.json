@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Garden Salad",
+    "desc": "Fresh greens topped with a seasonal veggie mixture and your choice of dressing",
+    "s_price": 4.5,
+    "l_price": 8.0
+  },
+  {
+    "name": "Club Salad",
+    "desc": "Fresh greens topped with a veggie mixture, ham, turkey, bacon, cheese, and honey mustard",
+    "s_price": 6.5,
+    "l_price": 11.0
+  },
+  {
+    "name": "Caesar Salad",
+    "desc": "Romaine lettuce with parmesan cheese, crotons, and caesar dressing",
+    "s_price": 4.5,
+    "l_price": 8.0
+  },
+  {
+    "name": "Seasonal Salad",
+    "desc": "Ask your server for details",
+    "s_price": 6.5,
+    "l_price": 11.0
+  }
+]

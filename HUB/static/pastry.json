@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Muffin",
+    "desc": "Fresh greens topped with a seasonal veggie mixture and your choice of dressing",
+    "price": 2.0
+  },
+  {
+    "name": "Danish",
+    "price": 2.75
+  },
+  {
+    "name": "Turnovers",
+    "price": 3.5
+  },
+  {
+    "name": "Poptarts",
+    "price": 3.5
+  },
+  {
+    "name": "Loaf",
+    "l_price": 2.75
+  },
+  {
+    "name": "Scones",
+    "price": 2.75
+  },
+  {
+    "name": "Parfait",
+    "price": 4.5
+  }
+]

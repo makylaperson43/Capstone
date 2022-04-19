@@ -73,3 +73,9 @@ def cart1(request):
 
     context = {}
     return render(request, 'cart.html', context)
+
+#To test Square payment
+def checkout(request):
+
+    context = {}
+    return render(request, 'checkout.html', context)

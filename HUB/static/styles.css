@@ -6,7 +6,6 @@ body {
 }
 
 .navBackground a {
-  background-color: black;
   display: block;
   color: white;
   padding: 14px 16px;
@@ -255,10 +254,50 @@ img {
   margin-left: 100px;
 }
 .movecart {
-  margin-right: 10em;
+  margin-top: 10em;
+  text-align: center;
 }
 .buttons {
   color: white;
-  background-color: blue;
+  width: 8em;
+  background-color: black;
   border: none;
+}
+<<<<<<< HEAD
+.shop-item {
+  border: solid 2px grey;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.shop-item-title {
+  border: solid 2px black;
+}
+.cart-item {
+  padding-bottom: 4em;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  height: fit-content;
+  padding: 20px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 1px;
+  font-size: 20px;
+  text-align: center;
+}
+.btn-purchase {
+  padding-bottom: 2em;
+=======
+
+.menuWord {
+  font-size: 1000px;
+>>>>>>> ba26004582b2235e74339514a974e54a692a6913
 }

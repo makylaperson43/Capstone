@@ -1,13 +1,5 @@
 {% extends 'base.html' %} {%block content%} {%load static %}
 <!DOCTYPE html>
-<<<<<<< HEAD
-=======
-
-
-
-    
-
->>>>>>> 076148c30412cab9b47a8758a868e0fb287604ce
 <html>
   <head>
     <title>Login</title>
@@ -25,174 +17,49 @@
       integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
       crossorigin="anonymous"
     />
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-   
- 
   </head>
   <body>
     <div class="navBackground">
       <img class="theHubWord" src="/static/images/hub.png" />
-=======
-    <style>
-<<<<<<< HEAD
-     
-=======
->>>>>>> 076148c30412cab9b47a8758a868e0fb287604ce
-      {% comment %} body,
-      html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background: #83c7c0;
-      }
-      .user_card {
-        width: 900px;
-        height: 39em;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-right: auto;
-        margin-left: auto;
-        background: black;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 5px;
-      }
+      <div class="container h-100">
+        <div class="box1">
+          <div class="user_card_login">
+            <div class="user_card">
+              <div class="d-flex justify-content-center">
+                <h3 id="form-title">LOGIN</h3>
+              </div>
+              <div class="d-flex justify-content-center form_container">
+                <form method="POST" action="">
+                  {% csrf_token %}
+                  <p class="paslog">Username:</p>
+                  <div class="input-group mb-3">
+                    <div class="input-group-append"></div>
+                    <input type="text" name="username" class="tb" />
+                  </div>
+                  <p class="paslog">Password:</p>
+                  <div class="input-group mb-2">
+                    <div class="input-group-append"></div>
+                    <input type="password" name="password" class="tb" />
+                  </div>
 
-      .form_container {
-        margin-top: 20px;
-      }
-
-      #form-title {
-        color: #fff;
-        text-align: center;
-      }
-
-      .login_btn {
-        height: 2em;
-        width: 50%;
-        border-radius: 5%;
-        border: solid 3px salmon;
-        margin-top: 1em;
-        margin-left: 16em;
-        background: white;
-        color: black;
-      }
-      .login_btn:hover {
-        background: #83c7c0;
-      }
-      .login_btn:focus {
-        box-shadow: none ;
-        outline: 0px ;
-      }
-      .login_container {
-        padding: 0 2rem;
-      }
-      .input-group-text {
-        background: #f7ba5b ;
-        color: white;
-        border: 0 ;
-        border-radius: 0.25rem 1 1 0.5rem;
-      }
-      .input_user,
-      .input_pass:focus {
-        box-shadow: none;
-        outline: 0px;
-      }
-
-      #messages {
-        background-color: grey;
-        color: #fff;
-        padding: 10px;
-        margin-top: 10px;
-      }
-      .box1 {
-        background: salmon;
-        border: solid 6px black;
-        border-radius: 10em;
-        height: 40em;
-        margin-top: 10em;
-        
-      }
-      .paslog {
-        color: white;
-        text-align: left;
-      }
-      .colorl {
-        color: blue;
-        text-decoration: None;
-      }
-      .colorl:hover {
-        color: white;
-        text-decoration: none;
-      }
-      .tb {
-        height: 3em;
-        width: 65em;
-        margin-left: 1em;
-     
-        border-radius: 3em;
-      } {% endcomment %}
-    </style>
-  </head>
-  <body>
-    <div class="navBackground">
-<<<<<<< HEAD
-      <img
-        class="theHubWord"
-        src="{%static 'images/hubLogo.png'%}"
-        alt="The Hub Logo"
-      />
-=======
-      <img class="theHubWord" src="static/images/blurredCrop.jpg" />
->>>>>>> 57c53d19700b079d2a1507d6f66f69cbaf096bb6
->>>>>>> 076148c30412cab9b47a8758a868e0fb287604ce
-    </div>
-    <div class="container h-100">
-      <div class="box1">
-        <div class="user_card_login">
-          <div class="user_card">
-            <div class="d-flex justify-content-center">
-              <h3 id="form-title">LOGIN</h3>
-            </div>
-            <div class="d-flex justify-content-center form_container">
-              <form method="POST" action="">
-                {% csrf_token %}
-                <p class="paslog">Username:</p>
-                <div class="input-group mb-3">
-                  <div class="input-group-append"></div>
-                  <input type="text" name="username" class="tb" />
-                </div>
-                <p class="paslog">Password:</p>
-                <div class="input-group mb-2">
-                  <div class="input-group-append"></div>
-                  <input type="password" name="password" class="tb" />
-                </div>
-
-                <div class="d-flex justify-content-center mt-3 login_container">
-                  <input class="btn login_btn" type="submit" value="Login" />
-                </div>
-              </form>
-            </div>
-            {% for message in messages%}
-            <p id="messages">{{message}}</p>
-            {% endfor %}
-            <div >
-             
-                <a href="{% url 'register-page' %}" class="ml-2"
-              
-              <div class="d-flex justify-content-center links colorl">Don't have an account?</a>
+                  <div
+                    class="d-flex justify-content-center mt-3 login_container"
+                  >
+                    <input class="btn login_btn" type="submit" value="Login" />
+                  </div>
+                </form>
+              </div>
+              {% for message in messages%}
+              <p id="messages">{{message}}</p>
+              {% endfor %}
+              <div>
+                <a
+                  href="{% url 'register-page' %}"
+                  class="ml-2"
+                  <div
+                  class="d-flex justify-content-center links colorl"
+                  >Don't have an account?</a
+                >
               </div>
             </div>
           </div>
@@ -200,13 +67,9 @@
       </div>
     </div>
   </body>
-<<<<<<< HEAD
   <footer class="footer">
     <p class="footerWords">The Hub Bistro & Coffee House</p>
     <p class="copy">©Makyla Person, Dylan Goad, and Justin Ashmore</p>
   </footer>
 </html>
-=======
-</html>
-{% endblock %}
->>>>>>> 076148c30412cab9b47a8758a868e0fb287604ce
+{% endblock content%}

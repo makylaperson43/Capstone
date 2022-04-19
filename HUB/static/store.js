@@ -36,7 +36,7 @@ function runEvent(e) {
   console.log(e.target.value);
 
   if (e.target.value === "1") {
-    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+    document.getElementById("divid").innerHTML = `<div class="grid-container">`;
     var sec = document.getElementById("");
     console.log(sec);
     fetch("/static/breakfast.json")
@@ -49,16 +49,21 @@ function runEvent(e) {
           var item = document.createElement("div");
           item.classList.add("shop-items");
 
-          var items = document.getElementsByClassName("shop-items")[0];
+          var items = document.getElementsByClassName("grid-container")[0];
           var cartRowContents = ` 
+        <div class="grid-item">
         <div class="shop-item">
-        <span class="shop-item-title">${d.name}</span>
-        <p> ${d.desc} </p>
-        <div class="shop-item-details">
-          <span class="shop-item-price">$ ${d.price}</span>
-          <button class="btn btn-primary shop-item-button" type="button">
-            ADD TO CART
-          </button>`;
+            <span class="shop-item-title">${d.name}</span>
+            <p> ${d.desc} </p>
+            <div class="shop-item-details">
+              <span class="shop-item-price">$ ${d.price}</span>
+              <button class="btn btn-primary shop-item-button" type="button">
+                ADD TO CART
+              </button>
+            
+          </div>
+        </div>`;
+
           item.innerHTML = cartRowContents;
           items.append(item);
           var addToCartBtn =
@@ -257,6 +262,7 @@ function runEvent(e) {
                     <span class="shop-item-price">$ ${d.s_price}</span>
                     <span>$ ${d.m_price}</span>
                     <span>$ ${d.l_price}</span>
+                  
                       <button class="btn btn-primary shop-item-button" type="button">
                         ADD TO CART
                       </button>`;
@@ -403,7 +409,7 @@ function addItemToCart(title, price) {
     }
   }
   var cartRowContents = `
-      <div class="cart-item cart-column">
+      <div class=" cart-column">
        
           <span class="cart-item-title">${title}</span>
       </div>

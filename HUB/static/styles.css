@@ -264,6 +264,7 @@ img {
   background-color: black;
   border: none;
 }
+<<<<<<< HEAD
 .shop-item {
   border: solid 2px grey;
   text-align: center;
@@ -295,4 +296,9 @@ img {
 }
 .btn-purchase {
   padding-bottom: 2em;
+=======
+
+.menuWord {
+  font-size: 1000px;
+>>>>>>> ba26004582b2235e74339514a974e54a692a6913
 }

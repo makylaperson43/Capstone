@@ -5,8 +5,9 @@ client = Client(
     environment='sandbox',
 )
 
-locations_api = client.locations
-result = locations_api.list_locations()
+customers_api = client.customers
+payments_api = client.payments
+result = customers_api.list_customers()
 if result.is_success():
     print(result.body)
 elif result.is_error():

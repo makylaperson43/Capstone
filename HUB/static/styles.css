@@ -256,14 +256,21 @@ img {
 .movecart {
   margin-top: 10em;
   text-align: center;
+  background-color: black;
 }
 .buttons {
-  color: white;
-  width: 8em;
+  color: #ffffff;
+  width: 12em;
+  height: 5em;
   background-color: black;
   border: none;
+  border-right: solid 1px white;
+  border-left: solid 1px white;
 }
-<<<<<<< HEAD
+.buttons:hover {
+  background-color: #83c7c0;
+}
+
 .shop-item {
   border: solid 2px grey;
   text-align: center;
@@ -271,9 +278,6 @@ img {
   color: white;
 }
 
-.shop-item-title {
-  border: solid 2px black;
-}
 .cart-item {
   padding-bottom: 4em;
   text-align: center;
@@ -289,15 +293,26 @@ img {
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 1px;
+  padding: 6px;
   font-size: 20px;
   text-align: center;
 }
 .btn-purchase {
-  padding-bottom: 2em;
-=======
-
+  padding: 1em;
+  border: none;
+}
+.btn-purchase:hover {
+  background-color: #83c7c0;
+  border: solid 0.5px black;
+}
 .menuWord {
   font-size: 1000px;
->>>>>>> ba26004582b2235e74339514a974e54a692a6913
+}
+.container {
+  background-color: black;
+  color: white;
+  border: solid 2px #ffffff;
+  padding-right: 10em;
+  padding-left: 10em;
+  padding-bottom: 10em;
 }

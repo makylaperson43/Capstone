@@ -14,7 +14,7 @@ body {
 }
 
 .navBackground {
-  overflow: hidden;
+  overflow: visible;
   background-color: #83c7c0;
   position: fixed;
   top: 0;
@@ -87,32 +87,35 @@ body {
   display: none;
 }
 img {
-  vertical-align: top;
+  overflow: hidden;
   width: 700px;
   height: 466px;
   border-radius: 25px;
 }
 
 .slideshow-container {
+  bottom: 5em;
+  right: 23em;
   max-width: 700px;
   max-height: 200em;
   background-color: #83c7c0;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  position: fixed;
   margin-top: 10em;
   border: solid 2px black;
   border-radius: 25px;
 }
 
 .galleryimg {
-  height: 50em;
+  height: 40em;
+  overflow: visible;
 }
 
 .prev,
 .next {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 50%;
   border-radius: 25px;
   width: auto;
@@ -122,9 +125,6 @@ img {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
-
-  user-select: none;
 }
 
 .prev {
@@ -257,6 +257,7 @@ img {
   margin-top: 10em;
   text-align: center;
   background-color: black;
+  width: 90em;
 }
 .buttons {
   color: #ffffff;
@@ -311,8 +312,13 @@ img {
 .container {
   background-color: black;
   color: white;
+  margin-top: 3em;
   border: solid 2px #ffffff;
   padding-right: 10em;
   padding-left: 10em;
   padding-bottom: 10em;
+}
+.fixgal {
+  padding-top: 10em;
+  padding-bottom: 20em;
 }

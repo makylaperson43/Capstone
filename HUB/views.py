@@ -6,7 +6,6 @@ from requests import request
 from django.contrib.auth.forms import UserCreationForm
 
 from HUB.forms import *
-from HUB.square import *
 from HUB.models import *
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -73,3 +72,7 @@ def cart1(request):
 
     context = {}
     return render(request, 'cart.html', context)
+
+def payment(request):
+    context = {}
+    return render(request, 'payment.html', context)

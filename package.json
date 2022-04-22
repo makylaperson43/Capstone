@@ -3,5 +3,8 @@
     "ejs": "^3.1.7",
     "express": "^4.17.3",
     "stripe": "^8.219.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0"
   }
 }

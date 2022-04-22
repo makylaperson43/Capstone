@@ -12,7 +12,7 @@
   <body>
     <div class="navBackground">
       <img class="theHubWord" src="/static/images/hub.png" />
-      <a href="{%url 'menu-page'%}"
+      
         ><img class="cartImage" src="/static/images/cart.png"
       /></a>
       <a href="{%url 'logout'%}">Logout</a>
@@ -26,6 +26,11 @@
       <a href="{%url 'home-page'%}">Home</a>
     </div>
     <script src="{%static 'store.js' %}" async></script>
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+        <script>
+            var stripePublicKey = '<%= stripePublicKey %>'
+        </script>
+        <script src="{%static 'store.js' %}" defer></script>
     <footer class="footer">
       <p class="footerWords">The Hub Bistro & Coffee House</p>
       <p class="copy">©Makyla Person, Dylan Goad, and Justin Ashmore</p>

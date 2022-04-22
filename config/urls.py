@@ -25,11 +25,9 @@ urlpatterns = [
     path('', views.home, name='home-page'),
     path('gallery/', views.gallery, name='gallery-page'),
     path('cart/', views.cart1, name="cart-page"),
-    path('menu/', views.menu, name='menu-page'),
     path('about/', views.about, name="about-page"),
     
     path('login/', views.loginPage, name="login-page"),
     path('register/', views.registerPage, name="register-page"),
     path('logout/', views.logoutUser, name="logout"),
-    path('payment/', views.payment, name="payment"),
 ]

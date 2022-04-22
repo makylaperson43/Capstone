@@ -79,3 +79,6 @@ def checkout(request):
 
     context = {}
     return render(request, 'checkout.html', context)
+def payment(request):
+    context = {}
+    return render(request, 'payment.html', context)

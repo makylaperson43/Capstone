@@ -30,5 +30,6 @@ urlpatterns = [
     
     path('login/', views.loginPage, name="login-page"),
     path('register/', views.registerPage, name="register-page"),
-    path('logout/', views.logoutUser, name="logout")
+    path('logout/', views.logoutUser, name="logout"),
+    path('payment/', views.payment, name="payment"),
 ]

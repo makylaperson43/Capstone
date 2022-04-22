@@ -56,7 +56,7 @@ function runEvent(e) {
             <span class="shop-item-title">${d.name}</span>
             <p> ${d.desc} </p>
             <div class="shop-item-details">
-              <span class="shop-item-price">$ ${d.price}</span>
+              <span class="shop-item-price">$${d.price}</span>
               <button class="btn btn-primary shop-item-button" type="button">
                 ADD TO CART
               </button>
@@ -80,7 +80,7 @@ function runEvent(e) {
       });
   } else if (e.target.value === "2") {
     var sec = document.getElementById("select-name");
-    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+    document.getElementById("divid").innerHTML = `<div class="grid-container">`;
 
     fetch("/static/salads.json")
       .then((response) => {
@@ -92,26 +92,30 @@ function runEvent(e) {
           var item = document.createElement("div");
           item.classList.add("shop-items");
 
-          var items = document.getElementsByClassName("shop-items")[0];
+          var items = document.getElementsByClassName("grid-container")[0];
           var cartRowContents = ` 
-        <div class="shop-item">
-        <span class="shop-item-title">${d.name}</span>
-        <p> ${d.desc}</p>
-  
-        <fieldset>
-        <label>
-          <span class="shop-item-price">$ ${d.s_price}</span>
-          <span class="shop-item-price">$ ${d.l_price}</span>
-          <button class="btn btn-primary shop-item-button" type="button">
-            ADD TO CART
-          </button>`;
+          <div class="grid-item">
+          <div class="shop-item">
+              <span class="shop-item-title">${d.name}</span>
+              <p> ${d.desc} </p>
+              <select class="shop-item-price">
+              <option value="${d.s_price}"> Small</option>
+             
+              <option value="${d.l_price}"> Large</option>
+              </select>
+                <button class="btn btn-primary shop-item-button" type="button">
+                  ADD TO CART
+                </button>
+              
+            </div>
+          </div>`;
           item.innerHTML = cartRowContents;
           items.append(item);
           var addToCartBtn =
             document.getElementsByClassName("shop-item-button");
           for (var i = 0; i < addToCartBtn.length; i++) {
             var button = addToCartBtn[i];
-            button.addEventListener("click", addToCartClicked);
+            button.addEventListener("click", addToCartClickedCoffee);
           }
         });
         console.log(data);
@@ -121,7 +125,7 @@ function runEvent(e) {
       });
   } else if (e.target.value === "3") {
     var sec = document.getElementById("select-name");
-    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+    document.getElementById("divid").innerHTML = `<div class="grid-container">`;
     fetch("/static/pastry.json")
       .then((response) => {
         console.log("resolved", response);
@@ -132,17 +136,20 @@ function runEvent(e) {
           var item = document.createElement("div");
           item.classList.add("shop-items");
 
-          var items = document.getElementsByClassName("shop-items")[0];
+          var items = document.getElementsByClassName("grid-container")[0];
           var cartRowContents = ` 
-            <div class="shop-item">
+        <div class="grid-item">
+        <div class="shop-item">
             <span class="shop-item-title">${d.name}</span>
-            
+          
             <div class="shop-item-details">
-            
               <span class="shop-item-price">$${d.price}</span>
               <button class="btn btn-primary shop-item-button" type="button">
                 ADD TO CART
-              </button>`;
+              </button>
+            
+          </div>
+        </div>`;
           item.innerHTML = cartRowContents;
           items.append(item);
           var addToCartBtn =
@@ -159,7 +166,7 @@ function runEvent(e) {
       });
   } else if (e.target.value === "4") {
     var sec = document.getElementById("select-name");
-    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+    document.getElementById("divid").innerHTML = `<div class="grid-container">`;
 
     fetch("/static/sandwich.json")
       .then((response) => {
@@ -171,18 +178,21 @@ function runEvent(e) {
           var item = document.createElement("div");
           item.classList.add("shop-items");
 
-          var items = document.getElementsByClassName("shop-items")[0];
+          var items = document.getElementsByClassName("grid-container")[0];
           var cartRowContents = ` 
-            <div class="shop-item">
+        <div class="grid-item">
+        <div class="shop-item">
             <span class="shop-item-title">${d.name}</span>
-            <p> ${d.desc}</p>
-      
-            <fieldset>
-            <label>
+            <p> ${d.desc} </p>
+            <div class="shop-item-details">
               <span class="shop-item-price">$${d.price}</span>
               <button class="btn btn-primary shop-item-button" type="button">
                 ADD TO CART
-              </button>`;
+              </button>
+            
+          </div>
+        </div>`;
+
           item.innerHTML = cartRowContents;
           items.append(item);
           var addToCartBtn =
@@ -199,7 +209,7 @@ function runEvent(e) {
       });
   } else if (e.target.value === "5") {
     var sec = document.getElementById("select-name");
-    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+    document.getElementById("divid").innerHTML = `<div class="grid-container">`;
 
     fetch("/static/brewed.json")
       .then((response) => {
@@ -211,26 +221,30 @@ function runEvent(e) {
           var item = document.createElement("div");
           item.classList.add("shop-items");
 
-          var items = document.getElementsByClassName("shop-items")[0];
+          var items = document.getElementsByClassName("grid-container")[0];
           var cartRowContents = ` 
-                <div class="shop-item">
-                <span class="shop-item-title">${d.name}</span>
-                <p> ${d.desc}</p>
-          
-                
-                  <span class="shop-item-price">$${d.s_price}</span>
-                  <span>$${d.m_price}</span>
-                  <span >$${d.l_price}</span>
-                  <button class="btn btn-primary shop-item-button" type="button">
-                ADD TO CART
-              </button>`;
+          <div class="grid-item">
+          <div class="shop-item">
+              <span class="shop-item-title">${d.name}</span>
+              <p> ${d.desc} </p>
+              <select class="shop-item-price">
+              <option value="${d.s_price}"> Small</option>
+              <option value="${d.m_price}"> Medium</option>
+              <option value="${d.l_price}"> Large</option>
+              </select>
+                <button class="btn btn-primary shop-item-button" type="button">
+                  ADD TO CART
+                </button>
+              
+            </div>
+          </div>`;
           item.innerHTML = cartRowContents;
           items.append(item);
           var addToCartBtn =
             document.getElementsByClassName("shop-item-button");
           for (var i = 0; i < addToCartBtn.length; i++) {
             var button = addToCartBtn[i];
-            button.addEventListener("click", addToCartClicked);
+            button.addEventListener("click", addToCartClickedCoffee);
           }
         });
         console.log(data);
@@ -240,49 +254,7 @@ function runEvent(e) {
       });
   } else if (e.target.value === "6") {
     var sec = document.getElementById("select-name");
-    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
-
-    fetch("/static/specialty.json")
-      .then((response) => {
-        console.log("resolved", response);
-        return response.json();
-      })
-      .then((data) => {
-        Array.from(data).forEach(function (d) {
-          var item = document.createElement("div");
-          item.classList.add("shop-items");
-
-          var items = document.getElementsByClassName("shop-items")[0];
-          var cartRowContents = ` 
-                    <div class="shop-item">
-                    <span class="shop-item-title">${d.name}</span>
-                    <p> ${d.desc}</p>
-              
-                  
-                    <span class="shop-item-price">$ ${d.s_price}</span>
-                    <span>$ ${d.m_price}</span>
-                    <span>$ ${d.l_price}</span>
-                  
-                      <button class="btn btn-primary shop-item-button" type="button">
-                        ADD TO CART
-                      </button>`;
-          item.innerHTML = cartRowContents;
-          items.append(item);
-          var addToCartBtn =
-            document.getElementsByClassName("shop-item-button");
-          for (var i = 0; i < addToCartBtn.length; i++) {
-            var button = addToCartBtn[i];
-            button.addEventListener("click", addToCartClicked);
-          }
-        });
-        console.log(data);
-      })
-      .catch((err) => {
-        console.log("rejected", err);
-      });
-  } else if (e.target.value === "7") {
-    var sec = document.getElementById("select-name");
-    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+    document.getElementById("divid").innerHTML = `<div class="grid-container">`;
 
     fetch("/static/espresso.json")
       .then((response) => {
@@ -294,26 +266,77 @@ function runEvent(e) {
           var item = document.createElement("div");
           item.classList.add("shop-items");
 
-          var items = document.getElementsByClassName("shop-items")[0];
+          var items = document.getElementsByClassName("grid-container")[0];
           var cartRowContents = ` 
-            <div class="shop-item">
-            <span class="shop-item-title">${d.name}</span>
-            <p> ${d.desc}</p>
-      
-            
-            <span class="shop-item-price">$${d.s_price}</span>
-            <span>$${d.m_price}</span>
-              <span>$${d.l_price}</span>
-              <button class="btn btn-primary shop-item-button" type="button">
-                ADD TO CART
-              </button>`;
+          <div class="grid-item">
+          <div class="shop-item">
+              <span class="shop-item-title">${d.name}</span>
+              <p> ${d.desc} </p>
+              
+              <select class="shop-item-price">
+              <option value="${d.s_price}"> Small</option>
+              <option value="${d.m_price}"> Medium</option>
+              <option value="${d.l_price}"> Large</option>
+              </select>
+
+                <button class="btn btn-primary shop-item-button" type="button">
+                  ADD TO CART
+                </button>
+              
+            </div>
+          </div>`;
           item.innerHTML = cartRowContents;
           items.append(item);
           var addToCartBtn =
             document.getElementsByClassName("shop-item-button");
           for (var i = 0; i < addToCartBtn.length; i++) {
             var button = addToCartBtn[i];
-            button.addEventListener("click", addToCartClicked);
+            button.addEventListener("click", addToCartClickedCoffee);
+          }
+        });
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log("rejected", err);
+      });
+  } else if (e.target.value === "7") {
+    var sec = document.getElementById("select-name");
+    document.getElementById("divid").innerHTML = `<div class="grid-container">`;
+
+    fetch("/static/specialty.json")
+      .then((response) => {
+        console.log("resolved", response);
+        return response.json();
+      })
+      .then((data) => {
+        Array.from(data).forEach(function (d) {
+          var item = document.createElement("div");
+          item.classList.add("shop-items");
+
+          var items = document.getElementsByClassName("grid-container")[0];
+          var cartRowContents = ` 
+          <div class="grid-item">
+          <div class="shop-item">
+              <span class="shop-item-title">${d.name}</span>
+              <p> ${d.desc} </p>
+              <select class="shop-item-price">
+              <option value="${d.s_price}"> Small</option>
+              <option value="${d.m_price}"> Medium</option>
+              <option value="${d.l_price}"> Large</option>
+              </select>
+                <button class="btn btn-primary shop-item-button" type="button">
+                  ADD TO CART
+                </button>
+              
+            </div>
+          </div>`;
+          item.innerHTML = cartRowContents;
+          items.append(item);
+          var addToCartBtn =
+            document.getElementsByClassName("shop-item-button");
+          for (var i = 0; i < addToCartBtn.length; i++) {
+            var button = addToCartBtn[i];
+            button.addEventListener("click", addToCartClickedCoffee);
           }
         });
         console.log(data);
@@ -323,7 +346,7 @@ function runEvent(e) {
       });
   } else if (e.target.value === "8") {
     var sec = document.getElementById("select-name");
-    document.getElementById("divid").innerHTML = `<div class="shop-items">`;
+    document.getElementById("divid").innerHTML = `<div class="grid-container">`;
 
     fetch("/static/blended.json")
       .then((response) => {
@@ -335,26 +358,30 @@ function runEvent(e) {
           var item = document.createElement("div");
           item.classList.add("shop-items");
 
-          var items = document.getElementsByClassName("shop-items")[0];
+          var items = document.getElementsByClassName("grid-container")[0];
           var cartRowContents = ` 
-              <div class="shop-item">
+          <div class="grid-item">
+          <div class="shop-item">
               <span class="shop-item-title">${d.name}</span>
-              <p> ${d.desc}</p>
-        
-              
-              <span class="shop-item-price">$${d.s_price}</span>
-              <span>$${d.m_price}</span>
-              <span>$${d.l_price}</span>
+              <p> ${d.desc} </p>
+              <select class="shop-item-price">
+              <option value="${d.s_price}"> Small</option>
+              <option value="${d.m_price}"> Medium</option>
+              <option value="${d.l_price}"> Large</option>
+              </select>
                 <button class="btn btn-primary shop-item-button" type="button">
                   ADD TO CART
-                </button>`;
+                </button>
+              
+            </div>
+          </div>`;
           item.innerHTML = cartRowContents;
           items.append(item);
           var addToCartBtn =
             document.getElementsByClassName("shop-item-button");
           for (var i = 0; i < addToCartBtn.length; i++) {
             var button = addToCartBtn[i];
-            button.addEventListener("click", addToCartClicked);
+            button.addEventListener("click", addToCartClickedCoffee);
           }
         });
         console.log(data);
@@ -391,7 +418,19 @@ function addToCartClicked(event) {
   var button = event.target;
   var shopItem = button.parentElement.parentElement;
   var title = shopItem.getElementsByClassName("shop-item-title")[0].innerText;
+
   var price = shopItem.getElementsByClassName("shop-item-price")[0].innerText;
+
+  addItemToCart(title, price);
+  updateCartTotal();
+}
+
+function addToCartClickedCoffee(event) {
+  var button = event.target;
+  var shopItem = button.parentElement.parentElement;
+  var title = shopItem.getElementsByClassName("shop-item-title")[0].innerText;
+
+  var price = shopItem.getElementsByClassName("shop-item-price")[0].value;
 
   addItemToCart(title, price);
   updateCartTotal();
@@ -402,8 +441,12 @@ function addItemToCart(title, price) {
   cartRow.classList.add("cart-row");
   var cartItems = document.getElementsByClassName("cart-items")[0];
   var cartItemNames = cartItems.getElementsByClassName("cart-item-title");
+  var cartPrice = cartItems.getElementsByClassName("cart-price");
   for (var i = 0; i < cartItemNames.length; i++) {
-    if (cartItemNames[i].innerText == title) {
+    if (
+      cartItemNames[i].innerText == title &&
+      cartPrice[i].innerText == price
+    ) {
       alert("This item is already added to the cart");
       return;
     }

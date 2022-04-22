@@ -9,9 +9,9 @@
   {
     "name": "Cappuccino",
     "desc": "One part espresso, one part milk, and on part foam",
-    "s_price": 5.25,
-    "m_price": 5.25,
-    "l_price": 5.75
+    "s_price": 3.5,
+    "m_price": 3.75,
+    "l_price": 4.0
   },
   {
     "name": "Americano",

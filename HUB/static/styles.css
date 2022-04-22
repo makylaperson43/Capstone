@@ -14,7 +14,7 @@ body {
 }
 
 .navBackground {
-  overflow: hidden;
+  overflow: visible;
   background-color: #83c7c0;
   position: fixed;
   top: 0;
@@ -87,32 +87,35 @@ body {
   display: none;
 }
 img {
-  vertical-align: top;
+  overflow: hidden;
   width: 700px;
   height: 466px;
   border-radius: 25px;
 }
 
 .slideshow-container {
+  bottom: 5em;
+  right: 23em;
   max-width: 700px;
   max-height: 200em;
   background-color: #83c7c0;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  position: fixed;
   margin-top: 10em;
   border: solid 2px black;
   border-radius: 25px;
 }
 
 .galleryimg {
-  height: 50em;
+  height: 40em;
+  overflow: visible;
 }
 
 .prev,
 .next {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 50%;
   border-radius: 25px;
   width: auto;
@@ -122,9 +125,6 @@ img {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
-
-  user-select: none;
 }
 
 .prev {
@@ -256,14 +256,22 @@ img {
 .movecart {
   margin-top: 10em;
   text-align: center;
+  background-color: black;
+  width: 90em;
 }
 .buttons {
-  color: white;
-  width: 8em;
+  color: #ffffff;
+  width: 12em;
+  height: 5em;
   background-color: black;
   border: none;
+  border-right: solid 1px white;
+  border-left: solid 1px white;
 }
-<<<<<<< HEAD
+.buttons:hover {
+  background-color: #83c7c0;
+}
+
 .shop-item {
   border: solid 2px grey;
   text-align: center;
@@ -271,9 +279,6 @@ img {
   color: white;
 }
 
-.shop-item-title {
-  border: solid 2px black;
-}
 .cart-item {
   padding-bottom: 4em;
   text-align: center;
@@ -289,15 +294,31 @@ img {
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 1px;
+  padding: 6px;
   font-size: 20px;
   text-align: center;
 }
 .btn-purchase {
-  padding-bottom: 2em;
-=======
-
+  padding: 1em;
+  border: none;
+}
+.btn-purchase:hover {
+  background-color: #83c7c0;
+  border: solid 0.5px black;
+}
 .menuWord {
   font-size: 1000px;
->>>>>>> ba26004582b2235e74339514a974e54a692a6913
+}
+.container {
+  background-color: black;
+  color: white;
+  margin-top: 3em;
+  border: solid 2px #ffffff;
+  padding-right: 10em;
+  padding-left: 10em;
+  padding-bottom: 10em;
+}
+.fixgal {
+  padding-top: 10em;
+  padding-bottom: 20em;
 }

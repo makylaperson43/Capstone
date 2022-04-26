@@ -20,6 +20,11 @@ body {
   top: 0;
   width: 100%;
 }
+@media only screen and (max-width: 600px) {
+  .navBackground {
+    width: 100%;
+  }
+}
 
 .orderBack {
   background-color: white;
@@ -36,6 +41,57 @@ body {
   background-color: white;
   margin-top: 18em;
   margin-left: 950px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .homehours {
+    margin-top: 12em;
+    margin-left: 900px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .homehours {
+    margin-top: 12em;
+    margin-left: 800px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .homehours {
+    margin-top: 12em;
+    margin-left: 700px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .homehours {
+    margin-top: 12em;
+    margin-left: 600px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .homehours {
+    margin-top: 12em;
+    margin-left: 500px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .homehours {
+    margin-top: 12em;
+    margin-left: 420px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .homehours {
+    margin-top: 12em;
+    margin-left: 350px;
+  }
+}
+@media (max-width: 600px) {
+  .homehours {
+    margin-top: 12em;
+    margin-left: 200px;
+  }
 }
 
 .facebookImage {
@@ -63,9 +119,22 @@ body {
 .reviewsBackground {
   background-color: #83c7c0;
   color: white;
-  padding: 10px 0 120px 0;
+  padding: 30px 0 120px 0;
   margin-top: 150px;
   margin-bottom: 200px;
+  width: 1500px;
+}
+@media only screen and (max-width: 1000px) {
+  .reviewsBackground {
+    margin-bottom: 150px;
+    width: 1000px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .reviewsBackground {
+    margin-bottom: 100px;
+    width: 600px;
+  }
 }
 
 .whatPeopleSay {
@@ -241,11 +310,32 @@ img {
   padding: 50px;
   margin: -364px 0 0 520px;
 }
+@media only screen and (max-width: 1000px) {
+  .divBox2 {
+    margin: 60px 0 0 -50px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .divBox2 {
+    margin: 60px 0 0 -50px;
+  }
+}
 
 .divBox3 {
   width: 300px;
   padding: 50px;
   margin: -457px 0 0 970px;
+}
+@media only screen and (max-width: 1000px) {
+  .divBox3 {
+    margin: 60px 0 0 -50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .divBox3 {
+    margin: 60px 0 0 -50px;
+  }
 }
 
 .quotationSize {

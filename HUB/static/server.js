@@ -1,3 +1,5 @@
+import Stripe from "stripe";
+
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").load();
 }
@@ -13,7 +15,7 @@ const app = express();
 const fs = require("fs");
 const stripe = require("stripe")(stripeSecretKey);
 
-app.set("view engine", "ejs");
+app.set("view engine", "html");
 app.use(express.json());
 app.use(express.static("static"));
 
@@ -30,7 +32,7 @@ app.get("/store.html", function (req, res) {
   });
 });
 
-app.post("/purchase", function (req, res) {
+app.post("/cart.html", function (req, res) {
   fs.readFile("sandwich.json", function (error, data) {
     if (error) {
       res.status(500).end();
@@ -38,7 +40,7 @@ app.post("/purchase", function (req, res) {
       let total = 0;
       req.body.items.forEach(function (item) {
         const itemJson = itemsArray.find(function (i) {
-          return i.id == item.id;
+          return i.name == item.name;
         });
         total = total + itemJson.price * item.quantity;
       });

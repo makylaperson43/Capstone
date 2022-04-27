@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #83c7c0;
 }
 
 .navBackground a {
@@ -28,6 +29,7 @@ body {
   text-align: center;
   background-color: black;
   width: 90em;
+  position: fixed;
 }
 .buttons {
   color: #ffffff;

@@ -542,3 +542,15 @@ function updateCartTotal() {
   document.getElementsByClassName("cart-total-price")[0].innerText =
     "$" + total;
 }
+
+// Scroll for NavBar
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navBackground").style.top = "0";
+  } else {
+    document.getElementById("navBackground").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+};

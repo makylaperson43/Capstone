@@ -13,8 +13,8 @@ urlpatterns = [
     path('about/', views.about, name="about-page"),
 
     path('paypal/', views.paypalPayments, name='paypal-ipn'),
-    path('paypal-return/', views.paypal_return, name='paypal-return'),
-    path('paypal-cancel/', views.paypal_cancel, name='paypal-cancel'),
+    # path('paypal-return/', views.paypal_return, name='paypal-return'),
+    # path('paypal-cancel/', views.paypal_cancel, name='paypal-cancel'),
     
     path('login/', views.loginPage, name="login-page"),
     path('register/', views.registerPage, name="register-page"),

@@ -5,20 +5,21 @@ body {
   margin: 0;
 }
 
+.navBackground {
+  background-color: #83c7c0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
 .navBackground a {
   display: block;
   color: white;
   padding: 14px 16px;
   text-decoration: none;
   float: right;
-}
-
-.navBackground {
-  overflow: visible;
-  background-color: #83c7c0;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 .orderBack {
@@ -214,17 +215,6 @@ img {
 
 /*Cart Prototype stuff*/
 
-.row {
-  margin: 2em;
-}
-
-.box-element {
-  background-color: white;
-  margin-top: 10em;
-  padding: 1em;
-  border-radius: 20px;
-}
-
 .reviewsName {
   color: #6b3b17;
   text-align: center;
@@ -253,72 +243,19 @@ img {
   height: 50px;
   margin-left: 100px;
 }
-.movecart {
-  margin-top: 10em;
-  text-align: center;
-  background-color: black;
-  width: 90em;
-}
-.buttons {
-  color: #ffffff;
-  width: 12em;
-  height: 5em;
-  background-color: black;
-  border: none;
-  border-right: solid 1px white;
-  border-left: solid 1px white;
-}
-.buttons:hover {
-  background-color: #83c7c0;
-}
 
-.shop-item {
-  border: solid 2px grey;
-  text-align: center;
-  background-color: black;
-  color: white;
-}
-
-.cart-item {
-  padding-bottom: 4em;
-  text-align: center;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-
-  height: fit-content;
-  padding: 20px;
-}
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 6px;
-  font-size: 20px;
-  text-align: center;
-}
-.btn-purchase {
-  padding: 1em;
-  border: none;
-}
-.btn-purchase:hover {
-  background-color: #83c7c0;
-  border: solid 0.5px black;
-}
 .menuWord {
   font-size: 1000px;
 }
-.container {
-  background-color: black;
-  color: white;
-  margin-top: 3em;
-  border: solid 2px #ffffff;
-  padding-right: 10em;
-  padding-left: 10em;
-  padding-bottom: 10em;
-}
+
 .fixgal {
   padding-top: 10em;
   padding-bottom: 20em;
+}
+
+.galleryBackground {
+  color: #83c7c0;
+  width: 300px;
+  padding: 50px;
+  margin-top: 100px;
 }

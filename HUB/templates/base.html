@@ -12,9 +12,11 @@
   <body>
     <div class="navBackground">
       <img class="theHubWord" src="/static/images/hub.png" />
-      <a href="{%url 'menu-page'%}"
+    
+      {% comment %} <a href="{%url 'menu-page'%}"
         ><img class="cartImage" src="/static/images/cart.png"
-      /></a>
+      /></a> {% endcomment %}
+      
       <a href="{%url 'logout'%}">Logout</a>
       <a href="{%url 'register-page'%}">Register</a>
       <a href="{%url 'login-page'%}">Login</a>

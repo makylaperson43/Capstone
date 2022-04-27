@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  background-color: white;
+  background-color: #83c7c0;
   background-image: none;
   margin: 0;
 }
@@ -8,11 +8,12 @@ body {
 html {
   width: 100%;
 }
+
 .user_card_login {
-  width: 350px;
+  width: 400px;
   background: white;
-  margin-top: 200px;
-  margin-bottom: auto;
+  margin-top: 85px;
+  margin-bottom: 4em;
   padding: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -24,7 +25,43 @@ html {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  margin-left: 480px;
+  margin-left: 355px;
+  color: black;
+}
+@media only screen and (max-width: 1100px) {
+  .user_card_login {
+    margin-left: 17em;
+  }
+}
+
+@media (max-width: 905px) {
+  .user_card_login {
+    margin-left: 12em;
+    width: 20em;
+  }
+}
+@media only screen and (max-width: 705px) {
+  .user_card_login {
+    margin-left: 8em;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .user_card_login {
+    margin-left: 5em;
+    width: 20em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .user_card_login {
+    margin-left: 9em;
+    width: 15em;
+  }
+}
+@media (max-width: 600px) {
+  .user_card_login {
+    margin-left: 3.5em;
+    width: 15em;
+  }
 }
 
 .theHubWord {
@@ -33,13 +70,18 @@ html {
 }
 
 .navBackground {
-  overflow: hidden;
+  overflow: visible;
   background-color: #83c7c0;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+  .navBackground {
+    font-size: 8px;
+  }
+}
 .footer {
   position: fixed;
   left: 0;
@@ -64,4 +106,27 @@ html {
 
 .copy {
   color: white;
+}
+
+.container {
+  margin-top: 10em;
+  padding-bottom: 1em;
+  border: solid 3px #83c7c0;
+}
+@media only screen and (max-width: 1100px) {
+  .container {
+    padding-right: 5em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-right: 5em;
+  }
+}
+.ml-2 {
+  text-decoration: none;
+}
+.ml-2:hover {
+  color: #83c7c0;
+  text-decoration: none;
 }

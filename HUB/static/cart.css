@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+}
+
+.navBackground a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: right;
+}
+
+.navBackground {
+  overflow: visible;
+  background-color: #83c7c0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.theHubWord {
+  width: 20%;
+  height: 50%;
+}
+
+.movecart {
+  margin-top: 10em;
+  text-align: center;
+  background-color: black;
+  width: 90em;
+}
+.buttons {
+  color: #ffffff;
+  width: 12em;
+  height: 5em;
+  background-color: black;
+  border: none;
+  border-right: solid 1px white;
+  border-left: solid 1px white;
+}
+.buttons:hover {
+  background-color: #83c7c0;
+}
+
+.cart-item {
+  padding-bottom: 4em;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  height: fit-content;
+  padding: 20px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 6px;
+  font-size: 20px;
+  text-align: center;
+}
+.btn-purchase {
+  padding: 1em;
+  border: none;
+}
+.btn-purchase:hover {
+  background-color: #83c7c0;
+  border: solid 0.5px black;
+}
+
+.shop-item {
+  border: solid 2px grey;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.container {
+  background-color: black;
+  color: white;
+  margin-top: 3em;
+  border: solid 2px #ffffff;
+  padding-right: 10em;
+  padding-left: 10em;
+  padding-bottom: 10em;
+}
+
+.row {
+  margin: 2em;
+}
+
+.box-element {
+  background-color: white;
+  margin-top: 10em;
+  padding: 1em;
+  border-radius: 20px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #83c7c0;
+  text-align: center;
+}

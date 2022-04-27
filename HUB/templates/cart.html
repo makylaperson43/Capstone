@@ -1,36 +1,70 @@
-{% extends 'base.html' %} {%block content%} {%load static%}
-<body>
-  <div class="movecart">
-    <button type="button" value="1" class="buttons">Breakfast</button>
-    <button type="button" value="2" class="buttons">Salads</button>
-    <button type="button" value="3" class="buttons">Pastries & More</button>
-    <button type="button" value="4" class="buttons">Sandwiches & Wraps</button>
-    <button type="button" value="5" class="buttons">Brewed Coffees</button>
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'cart.css' %}" />
+    <title>Document</title>
+  </head>
+  <div class="navBackground">
+    <img class="theHubWord" src="/static/images/hub.png" />
 
-    <button type="button" value="6" class="buttons">Espresso</button>
+    {% comment %}
+    <a href="{%url 'menu-page'%}"
+      ><img class="cartImage" src="/static/images/cart.png"
+    /></a>
+    {% endcomment %}
 
-    <button type="button" value="7" class="buttons">Specialty Drinks</button>
-    <button type="button" value="8" class="buttons">Blended Coffees</button>
+    <a href="{%url 'logout'%}">Logout</a>
+    <a href="{%url 'register-page'%}">Register</a>
+    <a href="{%url 'login-page'%}">Login</a>
+    <a href="{%url 'gallery-page'%}">Gallery</a>
+
+    <a href="{%url 'cart-page'%}">Menu</a>
+
+    <a href="{%url 'about-page'%}">About Us</a>
+    <a href="{%url 'home-page'%}">Home</a>
   </div>
-
-  <div id="divid"></div>
-
-  <section class="container content-section">
-    <div class="cart-item">
-      <h2 class="section-header">CART</h2>
-      <div class="cart-row"></div>
-
-      <div class="cart-items"></div>
-
-      <div class="cart-total">
-        <strong class="cart-total-title">Total</strong>
-        <span class="cart-total-price">$0</span>
-      </div>
-      <button class="btn btn-primary btn-purchase" type="button">
-        PURCHASE
+  <script src="{%static 'store.js' %}" async></script>
+  <body>
+    <div class="movecart">
+      <button type="button" value="1" class="buttons">Breakfast</button>
+      <button type="button" value="2" class="buttons">Salads</button>
+      <button type="button" value="3" class="buttons">Pastries & More</button>
+      <button type="button" value="4" class="buttons">
+        Sandwiches & Wraps
       </button>
-    </div>
-  </section>
-</body>
+      <button type="button" value="5" class="buttons">Brewed Coffees</button>
 
-{% endblock %}
+      <button type="button" value="6" class="buttons">Espresso</button>
+
+      <button type="button" value="7" class="buttons">Specialty Drinks</button>
+      <button type="button" value="8" class="buttons">Blended Coffees</button>
+    </div>
+
+    <div id="divid"></div>
+
+    <section class="container content-section">
+      <div class="cart-item">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row"></div>
+
+        <div class="cart-items"></div>
+
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">
+          PURCHASE
+        </button>
+      </div>
+    </section>
+  </body>
+  <footer class="footer">
+    <p class="footerWords">The Hub Bistro & Coffee House</p>
+    <p class="copy">©Makyla Person, Dylan Goad, and Justin Ashmore</p>
+  </footer>
+</html>

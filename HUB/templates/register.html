@@ -10,16 +10,12 @@
   </head>
 
   <body>
-    <div class="navBackground">
-      <img class="theHubWord" src="/static/images/hub.pnge" />
-    </div>
     <div>
       <div>
         <div>
           <h3 class="register_word">CREATE AN ACCOUNT</h3>
         </div>
         <div class="user_card_register">
-          <p>* required field</p>
           <div>
             <form method="POST" action="">
               {% csrf_token %}
@@ -60,15 +56,6 @@
         form_fields[field].className += " form-control";
       }
     </script>
-    {% comment %}
-    <script src="{%static 'store.js' %}" async></script>
-    {%block content%}{% endblock %} {% endcomment %} {% comment %}
-    <h1>Register</h1>
-    <form method="POST" class="register">
-      {% csrf_token %} {{form.as_p}}
-      <input type="submit" />
-    </form>
-    {% endcomment %}
   </body>
 
   <footer class="footer">

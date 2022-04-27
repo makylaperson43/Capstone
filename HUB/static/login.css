@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  background-color: white;
+  background-color: #83c7c0;
   background-image: none;
   margin: 0;
 }
@@ -8,11 +8,12 @@ body {
 html {
   width: 100%;
 }
+
 .user_card_login {
-  width: 350px;
+  width: 400px;
   background: white;
-  margin-top: 200px;
-  margin-bottom: auto;
+  margin-top: 85px;
+  margin-bottom: 4em;
   padding: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -24,7 +25,8 @@ html {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  margin-left: 540px;
+  margin-left: 355px;
+  color: black;
 }
 
 .theHubWord {
@@ -33,7 +35,7 @@ html {
 }
 
 .navBackground {
-  overflow: hidden;
+  overflow: visible;
   background-color: #83c7c0;
   position: fixed;
   top: 0;
@@ -64,4 +66,18 @@ html {
 
 .copy {
   color: white;
+}
+
+.container {
+  margin-top: 10em;
+  padding-bottom: 1em;
+  border: solid 3px #83c7c0;
+}
+
+.ml-2 {
+  text-decoration: none;
+}
+.ml-2:hover {
+  color: #83c7c0;
+  text-decoration: none;
 }

@@ -1,6 +1,5 @@
 {% extends 'base.html' %} {%block content%} {%load static %}
-<!DOCTYPE html>
-<html>
+
   <head>
     <title>Login</title>
     <link rel="stylesheet" href="{% static 'login.css' %}" />
@@ -21,44 +20,57 @@
   <body>
     <div class="navBackground">
       <img class="theHubWord" src="/static/images/hub.png" />
-    </div>
-    <div>
-      <div class="box1">
-        <div class="user_card_login">
-          <div class="user_card">
-            <div class="d-flex justify-content-center">
-              <h3 id="form-title">LOGIN</h3>
-            </div>
-            <div class="d-flex justify-content-center form_container">
-              <form method="POST" action="">
-                {% csrf_token %}
-                <p class="paslog">Username:</p>
-                <div class="input-group mb-3">
-                  <div class="input-group-append"></div>
-                  <input type="text" name="username" class="tb" />
-                </div>
-                <p class="paslog">Password:</p>
-                <div class="input-group mb-2">
-                  <div class="input-group-append"></div>
-                  <input type="password" name="password" class="tb" />
-                </div>
 
-                <div class="d-flex justify-content-center mt-3 login_container">
-                  <input class="btn login_btn" type="submit" value="Login" />
-                </div>
-              </form>
-            </div>
-            {% for message in messages%}
-            <p id="messages">{{message}}</p>
-            {% endfor %}
-            <div>
-              <a
-                href="{% url 'register-page' %}"
-                class="ml-2"
-                <div
-                class="d-flex justify-content-center links colorl"
-                >Don't have an account?</a
-              >
+      <a href="{%url 'logout'%}">Logout</a>
+      <a href="{%url 'register-page'%}">Register</a>
+      <a href="{%url 'login-page'%}">Login</a>
+      <a href="{%url 'gallery-page'%}">Gallery</a>
+
+      <a href="{%url 'cart-page'%}">Menu</a>
+
+      <a href="{%url 'about-page'%}">About Us</a>
+      <a href="{%url 'home-page'%}">Home</a>
+    </div>
+      <div class="container h-100">
+        <div class="box1">
+          <div class="user_card_login">
+            <div class="user_card">
+              <div class="d-flex justify-content-center">
+                <h3 id="form-title">LOGIN</h3>
+              </div>
+              <div class="d-flex justify-content-center form_container">
+                <form method="POST" action="">
+                  {% csrf_token %}
+                  <p class="paslog">Username:</p>
+                  <div class="input-group mb-3">
+                    <div class="input-group-append"></div>
+                    <input type="text" name="username" class="tb" />
+                  </div>
+                  <p class="paslog">Password:</p>
+                  <div class="input-group mb-2">
+                    <div class="input-group-append"></div>
+                    <input type="password" name="password" class="tb" />
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-center mt-3 login_container"
+                  >
+                    <input class="btn login_btn" type="submit" value="Login" />
+                  </div>
+                </form>
+              </div>
+              {% for message in messages%}
+              <p id="messages">{{message}}</p>
+              {% endfor %}
+              <div>
+                <a
+                  href="{% url 'register-page' %}"
+                  class="ml-2"
+                  <div
+                  class="d-flex justify-content-center colorl"
+                  >Don't have an account?</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -69,5 +81,5 @@
     <p class="footerWords">The Hub Bistro & Coffee House</p>
     <p class="copy">©Makyla Person, Dylan Goad, and Justin Ashmore</p>
   </footer>
-</html>
+
 {% endblock content%}

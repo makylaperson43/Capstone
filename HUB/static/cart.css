@@ -52,7 +52,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto;
-
+  margin-top: 10em;
   height: fit-content;
   padding: 20px;
 }
@@ -82,7 +82,7 @@ body {
 .container {
   background-color: black;
   color: white;
-  margin-top: 3em;
+  margin-top: 10em;
   border: solid 2px #ffffff;
   padding-right: 10em;
   padding-left: 10em;

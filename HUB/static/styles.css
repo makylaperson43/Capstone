@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 
-.navBackground {
+#navBackground {
   background-color: #83c7c0;
   position: fixed;
   top: 0;
@@ -14,7 +14,7 @@ body {
   transition: top 0.3s;
 }
 
-.navBackground a {
+#navBackground a {
   display: block;
   color: white;
   padding: 14px 16px;

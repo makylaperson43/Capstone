@@ -10,10 +10,10 @@ html {
 }
 
 .user_card_register {
-  width: 350px;
+  width: 400px;
   background: white;
-  margin-top: 200px;
-  margin-bottom: 100px;
+  margin-top: 85px;
+  margin-bottom: 4em;
   padding: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -25,7 +25,8 @@ html {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  margin-left: 480px;
+  margin-left: 355px;
+  color: black;
 }
 @media only screen and (max-width: 1100px) {
   .user_card_register {
@@ -44,6 +45,12 @@ html {
     margin-left: 1.5em;
     width: 180px;
   }
+}
+.container {
+  margin-top: 5em;
+  padding-bottom: 1em;
+
+  justify-content: center;
 }
 
 .theHubWord {
@@ -75,11 +82,14 @@ html {
 .copy {
   color: white;
 }
-
+.ml-2 {
+  text-decoration: none;
+}
+.ml-2:hover {
+  color: #83c7c0;
+  text-decoration: none;
+}
 .register_word {
-  margin-top: 150px;
-  text-align: center;
-  margin-bottom: -150px;
 }
 
 /* .register_text_box{

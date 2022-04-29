@@ -536,6 +536,7 @@ function addItemToCart(title, price) {
       <p class="cart-price cart-column">${price}</p>
       <div class="cart-quantity cart-column">
           <input class="cart-quantity-input" type="number" value="1">
+          <input type="input" placeholder="Add on"></input>
           <button class="btn btn-danger" type="button">REMOVE</button>
       </div>
     </div>`;

@@ -10,7 +10,7 @@ function ready() {
     var button = removeCartItemButtons[i];
     button.addEventListener("click", removeCartItem);
   }
-  for (var i = 0; i <= 7; i++) {
+  for (var i = 0; i <= 8; i++) {
     var select = document.querySelectorAll("button")[i];
     select.addEventListener("click", runEvent);
   }
@@ -100,10 +100,10 @@ function runEvent(e) {
           var cartRowContents = ` 
         <div class="grid-item">
         <div class="shop-item">
-            <span class="shop-item-title">${d.name}</span>
+            <p class="shop-item-title">${d.name}</p>
             <p> ${d.desc} </p>
             <div class="shop-item-details">
-              <span class="shop-item-price">$${d.price}</span>
+              <p class="shop-item-price">$${d.price}</p>
               <button class="btn btn-primary shop-item-button" type="button">
                 ADD TO CART
               </button>
@@ -143,7 +143,7 @@ function runEvent(e) {
           var cartRowContents = ` 
           <div class="grid-item">
           <div class="shop-item">
-              <span class="shop-item-title">${d.name}</span>
+              <p class="shop-item-title">${d.name}</p>
               <p> ${d.desc} </p>
               <select class="shop-item-price">
               <option value="${d.s_price}"> Small</option>
@@ -187,10 +187,10 @@ function runEvent(e) {
           var cartRowContents = ` 
         <div class="grid-item">
         <div class="shop-item">
-            <span class="shop-item-title">${d.name}</span>
+            <p class="shop-item-title">${d.name}</p>
           
             <div class="shop-item-details">
-              <span class="shop-item-price">$${d.price}</span>
+              <p class="shop-item-price">$${d.price}</p>
               <button class="btn btn-primary shop-item-button" type="button">
                 ADD TO CART
               </button>
@@ -229,10 +229,10 @@ function runEvent(e) {
           var cartRowContents = ` 
         <div class="grid-item">
         <div class="shop-item">
-            <span class="shop-item-title">${d.name}</span>
+            <p class="shop-item-title">${d.name}</p>
             <p> ${d.desc} </p>
             <div class="shop-item-details">
-              <span class="shop-item-price">$${d.price}</span>
+              <p class="shop-item-price">$${d.price}</p>
               <button class="btn btn-primary shop-item-button" type="button">
                 ADD TO CART
               </button>
@@ -272,7 +272,7 @@ function runEvent(e) {
           var cartRowContents = ` 
           <div class="grid-item">
           <div class="shop-item">
-              <span class="shop-item-title">${d.name}</span>
+              <p class="shop-item-title">${d.name}</p>
               <p> ${d.desc} </p>
               <select class="shop-item-price">
               <option value="${d.s_price}"> Small</option>
@@ -317,7 +317,7 @@ function runEvent(e) {
           var cartRowContents = ` 
           <div class="grid-item">
           <div class="shop-item">
-              <span class="shop-item-title">${d.name}</span>
+              <p class="shop-item-title">${d.name}</p>
               <p> ${d.desc} </p>
               
               <select class="shop-item-price">
@@ -364,7 +364,7 @@ function runEvent(e) {
           var cartRowContents = ` 
           <div class="grid-item">
           <div class="shop-item">
-              <span class="shop-item-title">${d.name}</span>
+              <p class="shop-item-title">${d.name}</p>
               <p> ${d.desc} </p>
               <select class="shop-item-price">
               <option value="${d.s_price}"> Small</option>
@@ -409,7 +409,7 @@ function runEvent(e) {
           var cartRowContents = ` 
           <div class="grid-item">
           <div class="shop-item">
-              <span class="shop-item-title">${d.name}</span>
+              <p class="shop-item-title">${d.name}</p>
               <p> ${d.desc} </p>
               <select class="shop-item-price">
               <option value="${d.s_price}"> Small</option>
@@ -536,9 +536,9 @@ function addItemToCart(title, price) {
     <div class="attachment">
       <div class=" cart-column">
        
-          <span class="cart-item-title">${title}</span>
+          <p class="cart-item-title">${title}</p>
       </div>
-      <span class="cart-price cart-column">${price}</span>
+      <p class="cart-price cart-column">${price}</p>
       <div class="cart-quantity cart-column">
           <input class="cart-quantity-input" type="number" value="1">
           <button class="btn btn-danger" type="button">REMOVE</button>

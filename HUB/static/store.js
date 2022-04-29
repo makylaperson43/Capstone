@@ -438,24 +438,24 @@ function runEvent(e) {
       });
   }
 }
-function purchaseClicked() {
+function purchaseClicked(event) {
   alert("Thank you for your purchase");
-
+  const actuator = event.target.parentElement;
   var allCartQuery = document.getElementsByClassName("attachment");
-  var cartItems = document.getElementsByClassName("cart-items")[0];
-  var itemPrices = document.getElementsByClassName("cart-price");
-  var itemTitles = document.getElementsByClassName("cart-item-title");
-  var itemQuantity = document.getElementsByClassName("cart-quantity-input");
-
+  console.log(allCartQuery);
+  var cartItems = document.getElementsByClassName("cart-items");
+  var itemPrices = actuator.querySelectorAll(".cart-price");
+  var itemTitles = actuator.querySelectorAll(".cart-item-title");
+  var itemQuantity = actuator.getElementsByClassName("cart-quantity-input");
   var data = '{ "items" : [';
   for (i = 0; i < allCartQuery.length; i++) {
     data +=
       '{ "title":"' +
-      itemTitles[i] +
+      itemTitles[i].innerText +
       '", "price":"' +
-      itemPrices[i] +
+      itemPrices[i].innerText +
       '", "quantity":"' +
-      itemQuantity[i] +
+      itemQuantity[i].innerText +
       '"},';
   }
   data += "]}";
@@ -463,11 +463,10 @@ function purchaseClicked() {
   xhr.open("POST", "/cart/", true);
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send(JSON.stringify(data));
-
-  while (cartItems.hasChildNodes()) {
-    cartItems.removeChild(cartItems.firstChild);
-  }
-  updateCartTotal();
+  // while (cartItems.hasChildNodes()) {
+  //   cartItems.removeChild(cartItems.firstChild);
+  // }
+  // updateCartTotal();
 }
 
 function removeCartItem(event) {
@@ -484,9 +483,16 @@ function quantityChanged(event) {
   updateCartTotal();
 }
 
+function getCartItemInfo(event) {
+  const actuator = event.target;
+  var itemTitle = actuator.getAttribute("cart-item-title")[0].innerHTML;
+  console.log(itemTitle);
+}
+
 function addToCartClicked(event) {
   var button = event.target;
   var shopItem = button.parentElement.parentElement;
+  console.log(shopItem);
   var title = shopItem.getElementsByClassName("shop-item-title")[0].innerText;
 
   var price = shopItem.getElementsByClassName("shop-item-price")[0].innerText;
@@ -561,15 +567,3 @@ function updateCartTotal() {
   document.getElementsByClassName("cart-total-price")[0].innerText =
     "$" + total;
 }
-
-// Scroll for NavBar
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navBackground").style.top = "0";
-  } else {
-    document.getElementById("navBackground").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-};

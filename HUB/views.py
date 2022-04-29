@@ -25,9 +25,7 @@ def home(request):
 def cart1(request):
     if request.method == "POST":
         data = json.loads(request.body)
-        print(data.title)
-        print()
-        print()
+        print(data)
     
 
     context = {}

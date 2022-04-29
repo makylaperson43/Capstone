@@ -442,8 +442,7 @@ function purchaseClicked(event) {
   alert("Thank you for your purchase");
   const actuator = event.target.parentElement;
   var allCartQuery = document.getElementsByClassName("attachment");
-  console.log(allCartQuery);
-  var cartItems = document.getElementsByClassName("cart-items");
+  var cartItems = document.getElementsByClassName("cart-items")[0];
   var itemPrices = actuator.querySelectorAll(".cart-price");
   var itemTitles = actuator.querySelectorAll(".cart-item-title");
   var itemQuantity = actuator.getElementsByClassName("cart-quantity-input");
@@ -454,19 +453,19 @@ function purchaseClicked(event) {
       itemTitles[i].innerText +
       '", "price":"' +
       itemPrices[i].innerText +
-      '", "quantity":"' +
-      itemQuantity[i].innerText +
-      '"},';
+      '", "quantity":' +
+      itemQuantity[i].value +
+      "},";
   }
   data += "]}";
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "/cart/", true);
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send(JSON.stringify(data));
-  // while (cartItems.hasChildNodes()) {
-  //   cartItems.removeChild(cartItems.firstChild);
-  // }
-  // updateCartTotal();
+  while (cartItems.hasChildNodes()) {
+    cartItems.removeChild(cartItems.firstChild);
+  }
+  updateCartTotal();
 }
 
 function removeCartItem(event) {

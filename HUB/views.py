@@ -23,9 +23,24 @@ def home(request):
 
 @csrf_exempt
 def cart1(request):
+    #Forms
+    item_form = OrderItemForm()
+    
+    #POST
     if request.method == "POST":
+        #JSON Data
         data = json.loads(request.body)
-        print(data)
+        
+        #Order Item Create
+        item_form = OrderItemForm(request.POST)
+        if item_form.is_valid():
+            instance = item_form.save()
+            instance.name = data.title
+            instance.price = data.price
+            instance.extra = data.extra
+            instance.quantity = data.quantity
+            instance.save()
+
     
 
     context = {}

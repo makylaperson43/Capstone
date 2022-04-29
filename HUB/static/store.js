@@ -440,26 +440,22 @@ function runEvent(e) {
 }
 function purchaseClicked(event) {
   alert("Thank you for your purchase");
-
   const actuator = event.target.parentElement;
-  console.log(actuator);
-
   var allCartQuery = document.getElementsByClassName("attachment");
-  var cartItems = document.getElementsByClassName("cart-items")[0];
-  var itemPrices = actuator.getElementsByClassName("cart-price")[0].innerText;
-  var itemTitles =
-    actuator.getElementsByClassName("cart-item-title")[0].innerText;
-  var itemQuantity = actuator.getElementsByClassName("cart-quantity-input")[0]
-    .value;
+  console.log(allCartQuery);
+  var cartItems = document.getElementsByClassName("cart-items");
+  var itemPrices = actuator.querySelectorAll(".cart-price");
+  var itemTitles = actuator.querySelectorAll(".cart-item-title");
+  var itemQuantity = actuator.getElementsByClassName("cart-quantity-input");
   var data = '{ "items" : [';
   for (i = 0; i < allCartQuery.length; i++) {
     data +=
       '{ "title":"' +
-      itemTitles[i] +
+      itemTitles[i].innerText +
       '", "price":"' +
-      itemPrices[i] +
+      itemPrices[i].innerText +
       '", "quantity":"' +
-      itemQuantity[i] +
+      itemQuantity[i].innerText +
       '"},';
   }
   data += "]}";
@@ -467,11 +463,10 @@ function purchaseClicked(event) {
   xhr.open("POST", "/cart/", true);
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send(JSON.stringify(data));
-
-  while (cartItems.hasChildNodes()) {
-    cartItems.removeChild(cartItems.firstChild);
-  }
-  updateCartTotal();
+  // while (cartItems.hasChildNodes()) {
+  //   cartItems.removeChild(cartItems.firstChild);
+  // }
+  // updateCartTotal();
 }
 
 function removeCartItem(event) {

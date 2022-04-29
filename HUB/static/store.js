@@ -439,16 +439,35 @@ function runEvent(e) {
   }
 }
 function purchaseClicked() {
-  // var priceElement = document.getElementsByClassName("cart-total-price")[0];
-  // var price = parseFloat(priceElement.innerText.replace("$", "")) * 100;
-  // stripeHandler.open({
-  //   amount: price,
-  // });
-  const data = [];
-  const items = document.getElementsByClassName("attachment");
-  for (let i = 0; i < items.length; i++) {
-    console.log(i);
+  alert("Thank you for your purchase");
+
+  var allCartQuery = document.getElementsByClassName("attachment");
+  var cartItems = document.getElementsByClassName("cart-items")[0];
+  var itemPrices = document.getElementsByClassName("cart-price");
+  var itemTitles = document.getElementsByClassName("cart-item-title");
+  var itemQuantity = document.getElementsByClassName("cart-quantity-input");
+
+  var data = '{ "items" : [';
+  for (i = 0; i < allCartQuery.length; i++) {
+    data +=
+      '{ "title":"' +
+      itemTitles[i] +
+      '", "price":"' +
+      itemPrices[i] +
+      '", "quantity":"' +
+      itemQuantity[i] +
+      '"},';
   }
+  data += "]}";
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "/cart/", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(JSON.stringify(data));
+
+  while (cartItems.hasChildNodes()) {
+    cartItems.removeChild(cartItems.firstChild);
+  }
+  updateCartTotal();
 }
 
 function removeCartItem(event) {

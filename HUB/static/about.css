@@ -63,7 +63,13 @@ html {
   margin-top: 150px;
   margin-bottom: 200px;
 }
+.footerWords {
+  color: white;
+}
 
+.copy {
+  color: white;
+}
 .ourTeamBackground {
   background-color: #83c7c0;
   color: white;

@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+html {
+  margin: 0;
+}
+
 #navBackground {
   background-color: #83c7c0;
   position: fixed;
@@ -22,6 +26,14 @@ body {
   float: right;
 }
 
+.footerWords {
+  color: white;
+}
+
+.copy {
+  color: white;
+}
+
 .navBackground {
   overflow: visible;
   background-color: #83c7c0;
@@ -29,6 +41,7 @@ body {
   top: 0;
   width: 100%;
 }
+
 @media only screen and (max-width: 600px) {
   .navBackground {
     width: 100%;
@@ -152,132 +165,46 @@ body {
   text-align: center;
 }
 
+.ourTeam {
+  color: #6b3b17;
+  font-size: 46px;
+  text-align: center;
+}
+
+.ourTeamBackground img {
+  width: 60%;
+  height: 75%;
+  margin-left: 15%;
+}
+
+.ourTeamBackground {
+  background-color: #83c7c0;
+  color: white;
+  padding: 30px 0 120px 0;
+  margin-top: 150px;
+  margin-bottom: 200px;
+  width: 1500px;
+}
+
+.teamParagraph {
+  margin-left: 10%;
+  margin-right: 15%;
+  color: #6b3b17;
+  font-size: 20px;
+}
+
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  margin-bottom: 0;
   width: 100%;
   background-color: #83c7c0;
   text-align: center;
 }
 
-.mySlides {
-  display: none;
-}
 img {
   overflow: hidden;
   width: 700px;
   height: 466px;
   border-radius: 25px;
-}
-
-.slideshow-container {
-  bottom: 5em;
-  right: 23em;
-  max-width: 700px;
-  max-height: 200em;
-  background-color: #83c7c0;
-  margin-left: auto;
-  margin-right: auto;
-  position: fixed;
-  margin-top: 10em;
-  border: solid 2px black;
-  border-radius: 25px;
-}
-
-.galleryimg {
-  height: 40em;
-  overflow: visible;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-  position: fixed;
-  top: 50%;
-  border-radius: 25px;
-  width: auto;
-  margin-left: 0.5em;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.prev {
-  left: 19em;
-}
-.next {
-  right: 19.4em;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.text {
-  color: black;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: black;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: black;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: white;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-.theHubWord {
-  width: 20%;
-  height: 50%;
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .cartImage {
@@ -296,7 +223,10 @@ img {
   color: #6b3b17;
   text-align: center;
 }
-
+.theHubWord {
+  width: 20%;
+  height: 50%;
+}
 .divBox1 {
   width: 300px;
   padding: 50px;
@@ -352,8 +282,96 @@ img {
 }
 
 .galleryBackground {
-  color: #83c7c0;
-  width: 300px;
+  background-color: pink;
+  width: 100%;
   padding: 50px;
-  margin-top: 100px;
+  margin-top: 300px;
 }
+
+/* slideshow */
+.mySlides {
+  display: none;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/*end of slideshow*/

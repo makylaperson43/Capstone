@@ -3,8 +3,13 @@ body {
   background-attachment: fixed;
   background-size: cover;
   margin: 0;
+  width: 100%;
 }
 
+html {
+  margin: 0;
+}
+/*nav bar*/
 #navBackground {
   background-color: #83c7c0;
   position: fixed;
@@ -20,29 +25,29 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   float: right;
+  font-size: 1.vw;
 }
-
-.navBackground {
-  overflow: visible;
-  background-color: #83c7c0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-@media only screen and (max-width: 600px) {
-  .navBackground {
-    width: 100%;
+/* @media only screen and (max-width: 2560px) {
+  #navBackground a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+    font-size: large;
   }
+} */
+.theHubWord {
+  width: 20%;
+  height: 50%;
 }
 
-.orderBack {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  padding: 2em;
-  margin: 5px;
+.cartImage {
+  width: 1.8em;
+  height: 16px;
 }
 
+/*hours*/
 .homehours {
   text-align: center;
   width: 16em;
@@ -103,13 +108,6 @@ body {
   }
 }
 
-.facebookImage {
-  height: 4.5em;
-  width: 7em;
-  margin-left: 8em;
-  margin-bottom: -1em;
-}
-
 .followus {
   color: white;
   margin-bottom: -2.5em;
@@ -125,13 +123,21 @@ body {
   margin-bottom: -1em;
 }
 
+.facebookImage {
+  height: 4.5em;
+  width: 7em;
+  margin-left: 8em;
+  margin-bottom: -1em;
+}
+
+/*what people say*/
+
 .reviewsBackground {
   background-color: #83c7c0;
   color: white;
   padding: 30px 0 120px 0;
   margin-top: 150px;
   margin-bottom: 200px;
-  width: 1500px;
 }
 @media only screen and (max-width: 1000px) {
   .reviewsBackground {
@@ -151,147 +157,6 @@ body {
   font-size: 46px;
   text-align: center;
 }
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #83c7c0;
-  text-align: center;
-}
-
-.mySlides {
-  display: none;
-}
-img {
-  overflow: hidden;
-  width: 700px;
-  height: 466px;
-  border-radius: 25px;
-}
-
-.slideshow-container {
-  bottom: 5em;
-  right: 23em;
-  max-width: 700px;
-  max-height: 200em;
-  background-color: #83c7c0;
-  margin-left: auto;
-  margin-right: auto;
-  position: fixed;
-  margin-top: 10em;
-  border: solid 2px black;
-  border-radius: 25px;
-}
-
-.galleryimg {
-  height: 40em;
-  overflow: visible;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-  position: fixed;
-  top: 50%;
-  border-radius: 25px;
-  width: auto;
-  margin-left: 0.5em;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.prev {
-  left: 19em;
-}
-.next {
-  right: 19.4em;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.text {
-  color: black;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: black;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: black;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: white;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-.theHubWord {
-  width: 20%;
-  height: 50%;
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.cartImage {
-  width: 1.8em;
-  height: 16px;
-}
-
-.loginBackground {
-  background-color: white;
-  background-image: none;
-}
-
-/*Cart Prototype stuff*/
-
 .reviewsName {
   color: #6b3b17;
   text-align: center;
@@ -342,6 +207,93 @@ img {
   margin-left: 100px;
 }
 
+/*our team*/
+.ourTeam {
+  color: #6b3b17;
+  font-size: 46px;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.ourTeamBackground img {
+  width: 60%;
+  height: 75%;
+  margin-left: 19%;
+  margin-bottom: -7%;
+}
+
+.ourTeamBackground {
+  background-color: #83c7c0;
+  color: white;
+  padding: 3px 0 120px 0;
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+.teamParagraph {
+  background-color: #6b3b17;
+  margin-left: 25%;
+  margin-right: 25%;
+  color: white;
+  font-size: 20px;
+  border-radius: 1%;
+  padding: 1%;
+}
+
+/*footer*/
+
+.contactAlignNumber {
+  margin-left: -950px;
+}
+
+.contactAlignEmail {
+  margin-left: 950px;
+  margin-top: -35px;
+}
+
+.contactAlignAddress {
+  margin-top: -35px;
+}
+.footer {
+  width: 100%;
+  padding-bottom: 1%;
+  background-color: #83c7c0;
+  text-align: center;
+}
+.footerWords {
+  color: white;
+}
+
+.copy {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .navBackground {
+    width: 100%;
+  }
+}
+
+.orderBack {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  margin: 5px;
+}
+
+img {
+  overflow: hidden;
+  width: 700px;
+  height: 466px;
+  border-radius: 25px;
+}
+
+.loginBackground {
+  background-color: white;
+  background-image: none;
+}
+
 .menuWord {
   font-size: 1000px;
 }
@@ -352,8 +304,95 @@ img {
 }
 
 .galleryBackground {
-  color: #83c7c0;
-  width: 300px;
+  background-color: pink;
+  width: 100%;
   padding: 50px;
-  margin-top: 100px;
+  margin-top: 300px;
+}
+
+/* slideshow */
+.mySlides {
+  display: none;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }

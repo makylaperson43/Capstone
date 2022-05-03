@@ -1,5 +1,6 @@
-{% extends 'base.html' %} {%block content%} {%load static %}
-
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>Login</title>
     <link rel="stylesheet" href="{% static 'login.css' %}" />
@@ -17,20 +18,10 @@
       crossorigin="anonymous"
     />
   </head>
+  <div id="navBackground">
+    <img class="theHubWord" src="/static/images/hub.png" />
+  </div>
   <body>
-    <div class="navBackground">
-      <img class="theHubWord" src="/static/images/hub.png" />
-
-      <a href="{%url 'logout'%}">Logout</a>
-      <a href="{%url 'register-page'%}">Register</a>
-      <a href="{%url 'login-page'%}">Login</a>
-      <a href="{%url 'gallery-page'%}">Gallery</a>
-
-      <a href="{%url 'cart-page'%}">Menu</a>
-
-      <a href="{%url 'about-page'%}">About Us</a>
-      <a href="{%url 'home-page'%}">Home</a>
-    </div>
       <div class="container h-100">
         <div class="box1">
           <div class="user_card_login">
@@ -81,5 +72,5 @@
     <p class="footerWords">The Hub Bistro & Coffee House</p>
     <p class="copy">©Makyla Person, Dylan Goad, and Justin Ashmore</p>
   </footer>
+</html>
 
-{% endblock content%}

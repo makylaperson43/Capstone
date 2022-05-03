@@ -57,8 +57,14 @@ html {
   width: 20%;
   height: 50%;
 }
+.footerWords {
+  color: white;
+}
 
-.navBackground {
+.copy {
+  color: white;
+}
+#navBackground {
   overflow: hidden;
   background-color: #83c7c0;
   position: fixed;

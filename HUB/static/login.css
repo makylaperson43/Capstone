@@ -69,7 +69,7 @@ html {
   height: 50%;
 }
 
-.navBackground {
+#navBackground {
   overflow: visible;
   background-color: #83c7c0;
   position: fixed;

@@ -6,28 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'cart.css' %}" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="{%static 'store.js' %}" async></script>
   </head>
   <div class="navBackground">
-    <img class="theHubWord" src="/static/images/hub.png" />
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <section class="container content-section">
+        <div class="cart-item">
+          <h2 class="section-header">CART</h2>
+          
+          <div class="cart-row"></div>
 
-    {% comment %}
-    <a href="{%url 'menu-page'%}"
-      ><img class="cartImage" src="/static/images/cart.png"
-    /></a>
-    {% endcomment %}
+          <div class="cart-items"></div>
 
-    <a href="{%url 'logout'%}">Logout</a>
-    {% comment %} <a href="{%url 'register-page'%}">Register</a> {% endcomment %}
-    {% comment %} <a href="{%url 'login-page'%}">Login</a> {% endcomment %}
-    <a href="{%url 'gallery-page'%}">Gallery</a>
+          <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <p class="cart-total-price">$0</p>
+          </div>
+          <button class="btn btn-primary btn-purchase" type="button">
+            PURCHASE
+          </button>
+        </div>
+      </section>
+    </div>
+    <div id="main">
+      <img class="theHubWord" src="/static/images/hub.png" />
 
-    <a href="{%url 'cart-page'%}">Menu</a>
+      <a href="{%url 'logout'%}">Logout</a>
 
-    <a href="{%url 'about-page'%}">About Us</a>
-    <a href="{%url 'home-page'%}">Home</a>
+      <a href="{%url 'register-page'%}">Register</a>
+      <a href="{%url 'login-page'%}">Login</a>
+      <a href="{%url 'gallery-page'%}">Gallery</a>
+      <a href="{%url 'cart-page'%}">Menu</a>
+      <a href="{%url 'home-page'%}">Home</a>
+    </div>
+
+    <span
+      style="
+        font-size: 30px;
+        margin-left: 40em;
+        margin-top: -3em;
+        cursor: pointer;
+      "
+      onclick="openNav()"
+      ><i class="fa fa-shopping-cart"></i
+    ></span>
   </div>
-  <script src="{%static 'store.js' %}" async></script>
+</div>
   <body>
     <div class="movecart">
       <button type="button" value="1" class="buttons">Breakfast</button>
@@ -45,24 +76,16 @@
     </div>
 
     <div id="divid"></div>
-
-    <section class="container content-section">
-      <div class="cart-item">
-        <h2 class="section-header">CART</h2>
-        <div class="cart-row"></div>
-
-        <div class="cart-items"></div>
-
-        <div class="cart-total">
-          <strong class="cart-total-title">Total</strong>
-          <span class="cart-total-price">$0</span>
-        </div>
-        <button class="btn btn-primary btn-purchase" type="button">
-          PURCHASE
-        </button>
-      </div>
-    </section>
   </body>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
   <footer class="footer">
     <p class="footerWords">The Hub Bistro & Coffee House</p>
     <p class="copy">©Makyla Person, Dylan Goad, and Justin Ashmore</p>

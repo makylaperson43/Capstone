@@ -10,7 +10,7 @@ function ready() {
     var button = removeCartItemButtons[i];
     button.addEventListener("click", removeCartItem);
   }
-  for (var i = 0; i <= 7; i++) {
+  for (var i = 0; i <= 8; i++) {
     var select = document.querySelectorAll("button")[i];
     select.addEventListener("click", runEvent);
   }
@@ -100,10 +100,10 @@ function runEvent(e) {
           var cartRowContents = ` 
         <div class="grid-item">
         <div class="shop-item">
-            <span class="shop-item-title">${d.name}</span>
+            <p class="shop-item-title">${d.name}</p>
             <p> ${d.desc} </p>
             <div class="shop-item-details">
-              <span class="shop-item-price">$${d.price}</span>
+              <p class="shop-item-price">$${d.price}</p>
               <button class="btn btn-primary shop-item-button" type="button">
                 ADD TO CART
               </button>
@@ -143,7 +143,7 @@ function runEvent(e) {
           var cartRowContents = ` 
           <div class="grid-item">
           <div class="shop-item">
-              <span class="shop-item-title">${d.name}</span>
+              <p class="shop-item-title">${d.name}</p>
               <p> ${d.desc} </p>
               <select class="shop-item-price">
               <option value="${d.s_price}"> Small</option>
@@ -187,10 +187,10 @@ function runEvent(e) {
           var cartRowContents = ` 
         <div class="grid-item">
         <div class="shop-item">
-            <span class="shop-item-title">${d.name}</span>
+            <p class="shop-item-title">${d.name}</p>
           
             <div class="shop-item-details">
-              <span class="shop-item-price">$${d.price}</span>
+              <p class="shop-item-price">$${d.price}</p>
               <button class="btn btn-primary shop-item-button" type="button">
                 ADD TO CART
               </button>
@@ -229,10 +229,10 @@ function runEvent(e) {
           var cartRowContents = ` 
         <div class="grid-item">
         <div class="shop-item">
-            <span class="shop-item-title">${d.name}</span>
+            <p class="shop-item-title">${d.name}</p>
             <p> ${d.desc} </p>
             <div class="shop-item-details">
-              <span class="shop-item-price">$${d.price}</span>
+              <p class="shop-item-price">$${d.price}</p>
               <button class="btn btn-primary shop-item-button" type="button">
                 ADD TO CART
               </button>
@@ -272,7 +272,7 @@ function runEvent(e) {
           var cartRowContents = ` 
           <div class="grid-item">
           <div class="shop-item">
-              <span class="shop-item-title">${d.name}</span>
+              <p class="shop-item-title">${d.name}</p>
               <p> ${d.desc} </p>
               <select class="shop-item-price">
               <option value="${d.s_price}"> Small</option>
@@ -317,7 +317,7 @@ function runEvent(e) {
           var cartRowContents = ` 
           <div class="grid-item">
           <div class="shop-item">
-              <span class="shop-item-title">${d.name}</span>
+              <p class="shop-item-title">${d.name}</p>
               <p> ${d.desc} </p>
               
               <select class="shop-item-price">
@@ -364,7 +364,7 @@ function runEvent(e) {
           var cartRowContents = ` 
           <div class="grid-item">
           <div class="shop-item">
-              <span class="shop-item-title">${d.name}</span>
+              <p class="shop-item-title">${d.name}</p>
               <p> ${d.desc} </p>
               <select class="shop-item-price">
               <option value="${d.s_price}"> Small</option>
@@ -409,7 +409,7 @@ function runEvent(e) {
           var cartRowContents = ` 
           <div class="grid-item">
           <div class="shop-item">
-              <span class="shop-item-title">${d.name}</span>
+              <p class="shop-item-title">${d.name}</p>
               <p> ${d.desc} </p>
               <select class="shop-item-price">
               <option value="${d.s_price}"> Small</option>
@@ -438,17 +438,35 @@ function runEvent(e) {
       });
   }
 }
-function purchaseClicked() {
-  // var priceElement = document.getElementsByClassName("cart-total-price")[0];
-  // var price = parseFloat(priceElement.innerText.replace("$", "")) * 100;
-  // stripeHandler.open({
-  //   amount: price,
-  // });
-  const data = [];
-  const items = document.getElementsByClassName("attachment");
-  for (let i = 0; i < items.length; i++) {
-    console.log(i);
+function purchaseClicked(event) {
+  alert("Thank you for your purchase");
+  const actuator = event.target.parentElement;
+  var allCartQuery = document.getElementsByClassName("attachment");
+  var cartItems = document.getElementsByClassName("cart-items")[0];
+  var itemPrices = actuator.querySelectorAll(".cart-price");
+  var itemTitles = actuator.querySelectorAll(".cart-item-title");
+  var itemQuantity = actuator.getElementsByClassName("cart-quantity-input");
+  var data = '{ "items" : [';
+  for (i = 0; i < allCartQuery.length; i++) {
+    data +=
+      '{ "title":"' +
+      itemTitles[i].innerText +
+      '", "price":"' +
+      itemPrices[i].innerText +
+      '", "quantity":' +
+      itemQuantity[i].value +
+      '", "extra":' +
+      "},";
   }
+  data += "]}";
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "/cart/", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(JSON.stringify(data));
+  while (cartItems.hasChildNodes()) {
+    cartItems.removeChild(cartItems.firstChild);
+  }
+  updateCartTotal();
 }
 
 function removeCartItem(event) {
@@ -465,9 +483,16 @@ function quantityChanged(event) {
   updateCartTotal();
 }
 
+function getCartItemInfo(event) {
+  const actuator = event.target;
+  var itemTitle = actuator.getAttribute("cart-item-title")[0].innerHTML;
+  console.log(itemTitle);
+}
+
 function addToCartClicked(event) {
   var button = event.target;
   var shopItem = button.parentElement.parentElement;
+  console.log(shopItem);
   var title = shopItem.getElementsByClassName("shop-item-title")[0].innerText;
 
   var price = shopItem.getElementsByClassName("shop-item-price")[0].innerText;
@@ -506,11 +531,12 @@ function addItemToCart(title, price) {
     <div class="attachment">
       <div class=" cart-column">
        
-          <span class="cart-item-title">${title}</span>
+          <p class="cart-item-title">${title}</p>
       </div>
-      <span class="cart-price cart-column">${price}</span>
+      <p class="cart-price cart-column">${price}</p>
       <div class="cart-quantity cart-column">
           <input class="cart-quantity-input" type="number" value="1">
+          <input type="input" placeholder="Add on"></input>
           <button class="btn btn-danger" type="button">REMOVE</button>
       </div>
     </div>`;

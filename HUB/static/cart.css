@@ -8,9 +8,17 @@ body {
   color: white;
   padding: 14px 16px;
   text-decoration: none;
+
   float: right;
 }
 
+.navBackground span {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: right;
+}
 .navBackground {
   overflow: visible;
   background-color: #83c7c0;
@@ -24,12 +32,16 @@ body {
   height: 50%;
 }
 
+.change {
+  margin-top: -10em;
+}
 .movecart {
-  margin-top: 10em;
+  margin-top: 8em;
   text-align: center;
   background-color: black;
   width: 90em;
-  position: fixed;
+
+  padding-left: 0em;
 }
 .footerWords {
   color: white;
@@ -39,13 +51,15 @@ body {
   color: white;
 }
 .buttons {
+  margin-left: 1.5px;
   color: #ffffff;
-  width: 12em;
+  width: 13.1em;
   height: 5em;
+
   background-color: black;
   border: none;
+  white-space: nowrap;
   border-right: solid 1px white;
-  border-left: solid 1px white;
 }
 .buttons:hover {
   background-color: #83c7c0;
@@ -59,13 +73,17 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto;
-
+  margin-top: 5em;
   height: fit-content;
   padding: 20px;
+  margin-top: -1em;
+  padding-bottom: 8em;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 2em;
+
   padding: 6px;
   font-size: 20px;
   text-align: center;
@@ -80,6 +98,7 @@ body {
 }
 
 .shop-item {
+  border-radius: 2em;
   border: solid 2px grey;
   text-align: center;
   background-color: black;
@@ -89,7 +108,8 @@ body {
 .container {
   background-color: black;
   color: white;
-  margin-top: 3em;
+  position: relative;
+  margin-top: 10em;
   border: solid 2px #ffffff;
   padding-right: 10em;
   padding-left: 10em;
@@ -108,10 +128,52 @@ body {
 }
 
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: #83c7c0;
   text-align: center;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  text-align: center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }

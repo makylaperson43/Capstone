@@ -1,5 +1,6 @@
 from django.urls import reverse
 import uuid
+import json
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views.decorators.csrf import csrf_exempt
@@ -20,7 +21,27 @@ def home(request):
     context = {}
     return render(request, 'home.html', context)
 
+@csrf_exempt
 def cart1(request):
+    #Forms
+    item_form = OrderItemForm()
+    
+    #POST
+    if request.method == "POST":
+        #JSON Data
+        data = json.loads(request.body)
+        
+        #Order Item Create
+        item_form = OrderItemForm(request.POST)
+        if item_form.is_valid():
+            instance = item_form.save()
+            instance.name = data.title
+            instance.price = data.price
+            instance.extra = data.extra
+            instance.quantity = data.quantity
+            instance.save()
+
+    
 
     context = {}
     return render(request, 'cart.html', context)
@@ -30,36 +51,13 @@ def gallery(request):
     context = {}
     return render(request, 'gallery.html', context)
 
-def about(request):
-    context = {}
-    return render(request, 'about.html', context)
+
 #-------------------
 #Paypal payments
 #-------------------
-@csrf_exempt
 def paypalPayments(request):
-    # host = request.get_host()
-    # paypal_dict = {
-    #     'business': settings.PAYPAL_RECEIVER_EMAIL,
-    #     'amount': '20.00',
-    #     'item_name': 'Product 1',
-    #     'invoice': str(uuid.uuid4()),
-    #     'currency_code': 'USD',
-    #     'notify_url': f'http://{host}{reverse("paypal-ipn")}',
-    #     'return_url': f'http://{host}{reverse("paypal-return")}',
-    #     'cancel_return': f'http://{host}{reverse("paypal-cancel")}',
-    # }
-    # form = PayPalPaymentsForm(initial=paypal_dict)
-    # context = {'payform': form}
+    
     return render(request, 'payment.html', context={})
-
-# def paypal_return(request):
-#     messages.success(request, "You made a payment!")
-#     return redirect('paypal-ipn')
-
-# def paypal_cancel(request):
-#     messages.success(request, "Your order was canceled")
-#     return redirect('paypal-ipn')
 #-------------------
 #User Authentication
 #-------------------

@@ -5,9 +5,9 @@ from django.conf import settings
 
 class OrderItem(models.Model):
     name = models.CharField(max_length=200)
-    desc = models.CharField(max_length=200)
     price = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
     extra = models.TextField(max_length=200, null=True)
+    quantity = models.IntegerField(default=1)
 
     def __str__(self):
         return self.name

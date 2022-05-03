@@ -3,12 +3,13 @@ body {
   background-attachment: fixed;
   background-size: cover;
   margin: 0;
+  width: 100%;
 }
 
 html {
   margin: 0;
 }
-
+/*nav bar*/
 #navBackground {
   background-color: #83c7c0;
   position: fixed;
@@ -24,38 +25,29 @@ html {
   padding: 14px 16px;
   text-decoration: none;
   float: right;
+  font-size: 1.vw;
 }
-
-.footerWords {
-  color: white;
-}
-
-.copy {
-  color: white;
-}
-
-.navBackground {
-  overflow: visible;
-  background-color: #83c7c0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-@media only screen and (max-width: 600px) {
-  .navBackground {
-    width: 100%;
+/* @media only screen and (max-width: 2560px) {
+  #navBackground a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+    font-size: large;
   }
+} */
+.theHubWord {
+  width: 20%;
+  height: 50%;
 }
 
-.orderBack {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  padding: 2em;
-  margin: 5px;
+.cartImage {
+  width: 1.8em;
+  height: 16px;
 }
 
+/*hours*/
 .homehours {
   text-align: center;
   width: 16em;
@@ -116,13 +108,6 @@ html {
   }
 }
 
-.facebookImage {
-  height: 4.5em;
-  width: 7em;
-  margin-left: 8em;
-  margin-bottom: -1em;
-}
-
 .followus {
   color: white;
   margin-bottom: -2.5em;
@@ -138,13 +123,21 @@ html {
   margin-bottom: -1em;
 }
 
+.facebookImage {
+  height: 4.5em;
+  width: 7em;
+  margin-left: 8em;
+  margin-bottom: -1em;
+}
+
+/*what people say*/
+
 .reviewsBackground {
   background-color: #83c7c0;
   color: white;
   padding: 30px 0 120px 0;
   margin-top: 150px;
   margin-bottom: 200px;
-  width: 1500px;
 }
 @media only screen and (max-width: 1000px) {
   .reviewsBackground {
@@ -164,69 +157,11 @@ html {
   font-size: 46px;
   text-align: center;
 }
-
-.ourTeam {
-  color: #6b3b17;
-  font-size: 46px;
-  text-align: center;
-}
-
-.ourTeamBackground img {
-  width: 60%;
-  height: 75%;
-  margin-left: 15%;
-}
-
-.ourTeamBackground {
-  background-color: #83c7c0;
-  color: white;
-  padding: 30px 0 120px 0;
-  margin-top: 150px;
-  margin-bottom: 200px;
-  width: 1500px;
-}
-
-.teamParagraph {
-  margin-left: 10%;
-  margin-right: 15%;
-  color: #6b3b17;
-  font-size: 20px;
-}
-
-.footer {
-  margin-bottom: 0;
-  width: 100%;
-  background-color: #83c7c0;
-  text-align: center;
-}
-
-img {
-  overflow: hidden;
-  width: 700px;
-  height: 466px;
-  border-radius: 25px;
-}
-
-.cartImage {
-  width: 1.8em;
-  height: 16px;
-}
-
-.loginBackground {
-  background-color: white;
-  background-image: none;
-}
-
-/*Cart Prototype stuff*/
-
 .reviewsName {
   color: #6b3b17;
   text-align: center;
 }
-.theHubWord {
-  width: 20%;
-  height: 50%;
-}
+
 .divBox1 {
   width: 300px;
   padding: 50px;
@@ -270,6 +205,93 @@ img {
   width: 60px;
   height: 50px;
   margin-left: 100px;
+}
+
+/*our team*/
+.ourTeam {
+  color: #6b3b17;
+  font-size: 46px;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.ourTeamBackground img {
+  width: 60%;
+  height: 75%;
+  margin-left: 19%;
+  margin-bottom: -7%;
+}
+
+.ourTeamBackground {
+  background-color: #83c7c0;
+  color: white;
+  padding: 3px 0 120px 0;
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+.teamParagraph {
+  background-color: #6b3b17;
+  margin-left: 25%;
+  margin-right: 25%;
+  color: white;
+  font-size: 20px;
+  border-radius: 1%;
+  padding: 1%;
+}
+
+/*footer*/
+
+.contactAlignNumber {
+  margin-left: -950px;
+}
+
+.contactAlignEmail {
+  margin-left: 950px;
+  margin-top: -35px;
+}
+
+.contactAlignAddress {
+  margin-top: -35px;
+}
+.footer {
+  width: 100%;
+  padding-bottom: 1%;
+  background-color: #83c7c0;
+  text-align: center;
+}
+.footerWords {
+  color: white;
+}
+
+.copy {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .navBackground {
+    width: 100%;
+  }
+}
+
+.orderBack {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  margin: 5px;
+}
+
+img {
+  overflow: hidden;
+  width: 700px;
+  height: 466px;
+  border-radius: 25px;
+}
+
+.loginBackground {
+  background-color: white;
+  background-image: none;
 }
 
 .menuWord {
@@ -374,4 +396,3 @@ img {
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-/*end of slideshow*/

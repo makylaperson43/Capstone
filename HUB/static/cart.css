@@ -26,6 +26,11 @@ body {
   top: 0;
   width: 100%;
 }
+@media only screen and (max-width: 600px) {
+  .navBackground {
+    width: 100%;
+  }
+}
 
 .theHubWord {
   width: 20%;
@@ -35,6 +40,7 @@ body {
 .change {
   margin-top: -10em;
 }
+
 .movecart {
   margin-top: 8em;
   text-align: center;
@@ -43,6 +49,12 @@ body {
 
   padding-left: 0em;
 }
+@media only screen and (max-width: 600px) {
+  .movecart {
+    width: 100%;
+  }
+}
+
 .buttons {
   margin-left: 1.5px;
   color: #ffffff;
@@ -51,8 +63,13 @@ body {
 
   background-color: black;
   border: none;
-  white-space: nowrap;
+
   border-right: solid 1px white;
+}
+@media only screen and (max-width: 600px) {
+  .buttons {
+    width: 6em;
+  }
 }
 .buttons:hover {
   background-color: #83c7c0;
@@ -119,9 +136,16 @@ body {
   padding: 1em;
   border-radius: 20px;
 }
+.shop-item-button {
+  color: white;
+  background-color: #56ccf2;
+  border: none;
+  border-radius: 5px;
+  width: 15em;
+}
 .cart-quantity-input {
   height: 34px;
-  width: 50px;
+  width: 80px;
   border-radius: 5px;
   border: 1px solid #56ccf2;
   background-color: #eee;
@@ -132,6 +156,49 @@ body {
   margin-right: 25px;
 }
 
+.shop-item-button:hover {
+  background-color: black;
+}
+.shop-item:hover {
+  background-color: #eee;
+  color: black;
+}
+.grid-item:hover {
+  background-color: black;
+}
+@media only screen and (max-width: 600px) {
+  .shop-item-select {
+    width: 3em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .shop-item-button {
+    width: 4em;
+  }
+}
+.shop-item-select {
+  background-color: #56ccf2;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn-danger {
+  color: white;
+  background-color: #eb5757;
+  border: none;
+  border-radius: 5px;
+  height: 34px;
+}
+.btn-danger:hover {
+  background-color: #cc4c4c;
+}
+
+.addon {
+  border: none;
+  height: 34px;
+  border-radius: 5px;
+}
 .footer {
   left: 0;
   bottom: 0;
@@ -139,6 +206,7 @@ body {
   background-color: #83c7c0;
   text-align: center;
 }
+
 .sidenav {
   height: 100%;
   width: 0;

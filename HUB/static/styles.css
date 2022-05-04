@@ -25,7 +25,7 @@ html {
   padding: 14px 16px;
   text-decoration: none;
   float: right;
-  font-size: 1.vw;
+  font-size: 1.4em;
 }
 /* @media only screen and (max-width: 2560px) {
   #navBackground a {
@@ -221,13 +221,25 @@ html {
   margin-left: 19%;
   margin-bottom: -7%;
 }
+.ourTeamBackground img {
+  width: 60%;
+  height: 75%;
+  margin-left: 19%;
+  margin-bottom: -7%;
+}
 
 .ourTeamBackground {
   background-color: #83c7c0;
+  width: 100%;
   color: white;
   padding: 3px 0 120px 0;
   margin-top: 150px;
   margin-bottom: 200px;
+}
+@media only screen and (max-width: 600px) {
+  .ourTeamBackground {
+    width: 150%;
+  }
 }
 
 .teamParagraph {
@@ -269,7 +281,7 @@ html {
 }
 
 @media only screen and (max-width: 600px) {
-  .navBackground {
+  #navBackground {
     width: 100%;
   }
 }
@@ -395,4 +407,35 @@ img {
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 2560px) and (min-width: 1440) {
+  /*nav bar*/
+  #navBackground {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+  }
+
+  #navBackground a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+    font-size: 10vw;
+  }
+
+  .theHubWord {
+    width: 20%;
+    height: 50%;
+  }
+
+  .cartImage {
+    width: 1.8em;
+    height: 16px;
+  }
 }

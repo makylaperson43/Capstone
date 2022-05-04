@@ -82,6 +82,7 @@ body {
 .cart-item {
   padding-bottom: 4em;
   text-align: center;
+  margin-left: 3em;
 }
 
 .grid-container {
@@ -148,7 +149,7 @@ body {
   width: 15em;
 }
 .cart-quantity {
-  width: 35%;
+  width: 20%;
 }
 
 .cart-quantity-input {
@@ -161,10 +162,11 @@ body {
   padding: 0;
   text-align: center;
   font-size: 1em;
-  margin-right: -10px;
+  margin-left: -19px;
 }
 .attachment {
   display: flex;
+  margin-left: 3em;
 }
 
 .cart-column {
@@ -177,10 +179,11 @@ body {
 }
 
 .cart-quantity {
-  width: 35%;
+  width: 25%;
 }
 .cart-row {
   display: flex;
+  margin-left: 6em;
 }
 .cart-price {
   align-items: center;
@@ -231,13 +234,15 @@ body {
   border-radius: 5px;
   color: white;
 }
-
+.quantity-head {
+  width: 10%;
+}
 .btn-danger {
   color: white;
   background-color: #eb5757;
   border: none;
   border-radius: 5px;
-  margin-left: 4em;
+  margin-left: 10em;
   height: 34px;
 }
 .btn-danger:hover {
@@ -248,7 +253,7 @@ body {
   border: none;
   height: 34px;
 
-  margin-left: 7em;
+  margin-left: 9em;
   border-radius: 5px;
 }
 .footer {

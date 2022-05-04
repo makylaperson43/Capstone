@@ -1,15 +1,10 @@
 
 from django.forms import ModelForm
 
-from HUB.models import OrderItem, Order
-
-class OrderItemForm(ModelForm):
-    class Meta:
-        model = OrderItem
-        fields = '__all__'
+from HUB.models import  Order
 
 class OrderForm(ModelForm):
     class Meta:
         model = Order
         fields = '__all__'
-        exclude = ['user']
+        exclude = ['total']

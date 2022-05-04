@@ -1,12 +1,15 @@
-from django.urls import reverse
-import uuid
+import imp
 import json
+import ast
+from marshal import loads
+from turtle import title
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views.decorators.csrf import csrf_exempt
 
 #Paypal imports
 from paypal.standard.forms import PayPalPaymentsForm
+from HUB import decorators
 
 from HUB.forms import *
 from HUB.models import *
@@ -24,24 +27,28 @@ def home(request):
 @csrf_exempt
 def cart1(request):
     #Forms
-    item_form = OrderItemForm()
+    order_form = OrderForm()
     
     #POST
     if request.method == "POST":
-        #JSON Data
-        data = json.loads(request.body)
-        
-        #Order Item Create
-        item_form = OrderItemForm(request.POST)
-        if item_form.is_valid():
-            instance = item_form.save()
-            instance.name = data.title
-            instance.price = data.price
-            instance.extra = data.extra
-            instance.quantity = data.quantity
-            instance.save()
+        orderF = OrderForm(request.POST)
+        if orderF.is_valid():
+            orderF.save()
 
-    
+        #JSON Data
+        data = request.body
+        new_data = ast.literal_eval(data.decode('utf-8'))
+
+        x = 0
+        while x < len(new_data.keys()):
+            obj_title = new_data[x]["title"]
+            obj_price = new_data[x]["price"]
+            obj_quantity = new_data[x]["quantity"]
+            obj_extra = new_data[x]["extra"]
+            m = OrderItem(title=obj_title, price=obj_price, quantity=obj_quantity, extra=obj_extra)
+            m.save()
+            x += 1
+        
 
     context = {}
     return render(request, 'cart.html', context)

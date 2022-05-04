@@ -26,6 +26,10 @@ body {
   top: 0;
   width: 100%;
 }
+
+.navBackground a {
+  font-size: 1.5vw;
+}
 @media only screen and (max-width: 600px) {
   .navBackground {
     width: 100%;
@@ -143,17 +147,62 @@ body {
   border-radius: 5px;
   width: 15em;
 }
+.cart-quantity {
+  width: 35%;
+}
+
 .cart-quantity-input {
   height: 34px;
-  width: 80px;
+  width: 100px;
   border-radius: 5px;
   border: 1px solid #56ccf2;
   background-color: #eee;
   color: #333;
   padding: 0;
   text-align: center;
+  font-size: 1em;
+  margin-right: -10px;
+}
+.attachment {
+  display: flex;
+}
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.cart-quantity {
+  width: 35%;
+}
+.cart-row {
+  display: flex;
+}
+.cart-price {
+  align-items: center;
+  width: 30%;
+  margin-bottom: -20px;
+  margin-left: -2.5em;
   font-size: 1.2em;
-  margin-right: 25px;
+  color: white;
+}
+
+.attachment:last-child {
+  border-bottom: 1px solid white;
+}
+
+.attachment:last-child .cart-column {
+  border: none;
+}
+
+.cart-total {
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .shop-item-button:hover {
@@ -188,6 +237,7 @@ body {
   background-color: #eb5757;
   border: none;
   border-radius: 5px;
+  margin-left: 4em;
   height: 34px;
 }
 .btn-danger:hover {
@@ -197,6 +247,8 @@ body {
 .addon {
   border: none;
   height: 34px;
+
+  margin-left: 7em;
   border-radius: 5px;
 }
 .footer {
@@ -249,4 +301,35 @@ body {
   .sidenav a {
     font-size: 18px;
   }
+}
+
+.contactAlignNumber {
+  margin-left: -950px;
+  font-size: large;
+  color: white;
+}
+
+.contactAlignEmail {
+  margin-left: 950px;
+  margin-top: -35px;
+  font-size: large;
+  color: white;
+}
+
+.contactAlignAddress {
+  margin-top: -35px;
+  font-size: large;
+  color: white;
+}
+.footer {
+  width: 100%;
+  padding-bottom: 0%;
+  background-color: #83c7c0;
+  text-align: center;
+  padding-top: 1%;
+}
+.footerWords {
+  color: white;
+  font-family: cursive;
+  margin-bottom: -0.2%;
 }

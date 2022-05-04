@@ -22,7 +22,12 @@
         <div class="cart-item">
           <h2 class="section-header">CART</h2>
 
-          <div class="cart-row"></div>
+          <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ORDER</span>
+            <span class="cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            <span class="cart-quantity cart-header cart-column">ADD</span>
+          </div>
           <div class="cart-items"></div>
 
           <div class="cart-total">
@@ -40,26 +45,21 @@
     </div>
     <div id="main">
       <img class="theHubWord" src="/static/images/hub.png" />
-
+      <span
+        style="
+          font-size: 30px;
+          margin-left: 0em;
+          margin-top: -0.2em;
+          cursor: pointer;
+        "
+        onclick="openNav()"
+        ><i class="fa fa-shopping-cart"></i
+      ></span>
       <a href="{%url 'logout'%}">Logout</a>
-
-      <a href="{%url 'register-page'%}">Register</a>
-      <a href="{%url 'login-page'%}">Login</a>
       <a href="{%url 'gallery-page'%}">Gallery</a>
       <a href="{%url 'cart-page'%}">Menu</a>
       <a href="{%url 'home-page'%}">Home</a>
     </div>
-
-    <span
-      style="
-        font-size: 30px;
-        margin-left: 40em;
-        margin-top: -3em;
-        cursor: pointer;
-      "
-      onclick="openNav()"
-      ><i class="fa fa-shopping-cart"></i
-    ></span>
   </div>
 
   <body>
@@ -142,7 +142,12 @@
     });
   </script>
   <footer class="footer">
+    <p class="contactAlignNumber">662-902-6889</p>
+    <p class="contactAlignAddress">
+      428 N Main St Water Valley Mississippi 38965
+    </p>
+    <p class="contactAlignEmail">thehubbistrowv@gmail.com</p>
     <p class="footerWords">The Hub Bistro & Coffee House</p>
-    <p class="copy">©Makyla Person, Dylan Goad, and Justin Ashmore</p>
+    <p class="footerWords">©Makyla Person, Dylan Goad, and Justin Ashmore</p>
   </footer>
 </html>

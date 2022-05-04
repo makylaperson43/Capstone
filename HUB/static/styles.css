@@ -25,7 +25,7 @@ html {
   padding: 14px 16px;
   text-decoration: none;
   float: right;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
 }
 /* @media only screen and (max-width: 2560px) {
   #navBackground a {
@@ -183,7 +183,7 @@ html {
   .divBox2 {
     margin: 60px 0 0 -50px;
   }
-} 
+}
 
 .divBox3 {
   width: 300px;
@@ -200,7 +200,7 @@ html {
   .divBox3 {
     margin: 60px 0 0 -50px;
   }
-}  
+}
 
 .quotationSize {
   width: 25%;
@@ -246,28 +246,33 @@ html {
 
 .contactAlignNumber {
   margin-left: -950px;
+  font-size: large;
+  color: white;
 }
 
 .contactAlignEmail {
   margin-left: 950px;
   margin-top: -35px;
+  font-size: large;
+  color: white;
 }
 
 .contactAlignAddress {
   margin-top: -35px;
+  font-size: large;
+  color: white;
 }
 .footer {
   width: 100%;
   padding-bottom: 1%;
   background-color: #83c7c0;
   text-align: center;
+  padding-top: 1%;
 }
 .footerWords {
   color: white;
-}
-
-.copy {
-  color: white;
+  font-family: cursive;
+  margin-bottom: -0.2%;
 }
 
 @media only screen and (max-width: 600px) {

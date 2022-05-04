@@ -25,7 +25,11 @@ html {
   padding: 14px 16px;
   text-decoration: none;
   float: right;
+<<<<<<< HEAD
   font-size: 1.4em;
+=======
+  font-size: 1.8vw;
+>>>>>>> aa587bf7d020deb6d0ea38c05e7650e92dec90dc
 }
 /* @media only screen and (max-width: 2560px) {
   #navBackground a {
@@ -50,11 +54,11 @@ html {
 /*hours*/
 .homehours {
   text-align: center;
-  width: 16em;
-  padding: 1em 1em;
+  width: 18%;
+  padding: 1.1% 1.1%;
   background-color: white;
-  margin-top: 18em;
-  margin-left: 950px;
+  margin-top: 22%;
+  margin-left: 60%;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -154,12 +158,13 @@ html {
 
 .whatPeopleSay {
   color: #6b3b17;
-  font-size: 46px;
+  font-size: 4vw;
   text-align: center;
 }
 .reviewsName {
   color: #6b3b17;
   text-align: center;
+  font-size: 1.2vw;
 }
 
 .divBox1 {
@@ -182,7 +187,7 @@ html {
   .divBox2 {
     margin: 60px 0 0 -50px;
   }
-}
+} 
 
 .divBox3 {
   width: 300px;
@@ -199,20 +204,21 @@ html {
   .divBox3 {
     margin: 60px 0 0 -50px;
   }
-}
+}  
 
 .quotationSize {
-  width: 60px;
-  height: 50px;
-  margin-left: 100px;
+  width: 25%;
+  height: 20%;
+  margin-left: 25%;
 }
 
 /*our team*/
 .ourTeam {
   color: #6b3b17;
-  font-size: 46px;
+  font-size: 4vw;
   text-align: center;
   margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .ourTeamBackground img {

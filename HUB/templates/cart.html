@@ -11,6 +11,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="{%static 'store.js' %}" async></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AXiFkUTWcLsiGKSRqfO8ZvReHhxDB7ua-0toXDNAG-x9JHojOk5TTtwReq6vKuWNucXXOsro5MBqqLcX&currency=USD"></script>
   </head>
   <div class="navBackground">
     <div id="mySidenav" class="sidenav">
@@ -21,16 +22,24 @@
         <div class="cart-item">
           <h2 class="section-header">CART</h2>
 
-          <div class="cart-row"></div>
+          <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ORDER</span>
+            <span class="cart-header cart-column">PRICE</span>
+            <span class="quantity-head cart-header cart-column">QUANTITY</span>
+            <span class="cart-quantity cart-header cart-column">ADD</span>
+          </div>
           <div class="cart-items"></div>
 
           <div class="cart-total">
             <strong class="cart-total-title">Total</strong>
             <p class="cart-total-price">$0</p>
           </div>
-          <button class="btn btn-primary btn-purchase" type="button">
+          <div id="paypal-button-container"></div>
+          {% comment %}
+          <button class="btn btn-primary btn-purchase" id="" type="button">
             PURCHASE
           </button>
+          {% endcomment %}
         </div>
       </section>
     </div>
@@ -79,6 +88,58 @@
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
     }
+  </script>
+  <script>
+    var finalTotal = document
+      .querySelector(".cart-total-price")
+      .replace("$", "");
+    const paypalButtonsComponent = paypal.Buttons({
+      // optional styling for buttons
+      // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
+      style: {
+        color: "gold",
+        shape: "pill",
+        layout: "vertical",
+      },
+
+      // set up the transaction
+      createOrder: (data, actions) => {
+        // pass in any options from the v2 orders create call:
+        // https://developer.paypal.com/api/orders/v2/#orders-create-request-body
+        const createOrderPayload = {
+          purchase_units: [
+            {
+              amount: {
+                value: finalTotal,
+              },
+            },
+          ],
+        };
+
+        return actions.order.create(createOrderPayload);
+      },
+
+      // finalize the transaction
+      onApprove: (data, actions) => {
+        const captureOrderHandler = (details) => {
+          const payerName = details.payer.name.given_name;
+          console.log("Transaction completed");
+        };
+
+        return actions.order.capture().then(captureOrderHandler);
+      },
+
+      // handle unrecoverable errors
+      onError: (err) => {
+        console.error(
+          "An error prevented the buyer from checking out with PayPal"
+        );
+      },
+    });
+
+    paypalButtonsComponent.render("#paypal-button-container").catch((err) => {
+      console.error("PayPal Buttons failed to render");
+    });
   </script>
   <footer class="footer">
     <p class="contactAlignNumber">662-902-6889</p>

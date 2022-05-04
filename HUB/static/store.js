@@ -15,9 +15,9 @@ function ready() {
     select.addEventListener("click", runEvent);
   }
 
-  var quantityInputs = document.getElementsByClassName("cart-quantity-input");
-  for (var i = 0; i < quantityInputs.length; i++) {
-    var input = quantityInputs[i];
+  var quanityInputs = document.getElementsByClassName("cart-quantity-input");
+  for (var i = 0; i < quanityInputs.length; i++) {
+    var input = quanityInputs[i];
     input.addEventListener("change", quantityChanged);
   }
 
@@ -480,8 +480,8 @@ function removeCartItem(event) {
   updateCartTotal();
 }
 
-function quantityChanged(event) {
-  var input = event.target;
+function quantityChanged(e) {
+  var input = e.target;
   if (isNaN(input.value) || input.value <= 0) {
     input.value = 1;
   }
@@ -538,11 +538,14 @@ function addItemToCart(title, price) {
   
   <p class="cart-item-title">${title}</p>
   </div>
-  <p class="cart-price cart-column">${price}</p>
+  <p class="cart-price  price">${price}</p>
   <div class="cart-quantity cart-column">
-  <input class="cart-quantity-input" type="number" value="1">
-  <input class="cart-adds" type="text" placeholder="Add on"></input>
+  
+    <input class="cart-quantity-input" type="number" value="1">
+    <input class="cart-adds addon" type="text" placeholder="Add on"></input>
+  
   <button class="btn btn-danger" type="button">REMOVE</button>
+  </div>
   </div>
   </div>`;
   cartRow.innerHTML = cartRowContents;

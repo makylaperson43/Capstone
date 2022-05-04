@@ -68,6 +68,24 @@ html {
     font-size: 10px;
   }
 }
+@media only screen and (max-width: 340px) {
+  .user_card_register {
+    width: 250px;
+  }
+}
+@media (max-width: 3000px) {
+  .login_btn {
+    height: 5em;
+    width: 15em;
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 1450px) {
+  .login_btn {
+    height: 3em;
+    width: 10em;
+  }
+}
 .container {
   margin-top: 10em;
   padding-bottom: 1em;
@@ -123,6 +141,11 @@ html {
 @media only screen and (max-width: 3000px) {
   .register_word {
     font-size: 1em;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .register_word {
+    font-size: 1.5em;
   }
 }
 .move {

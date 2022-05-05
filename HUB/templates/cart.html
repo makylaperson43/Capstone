@@ -90,16 +90,15 @@
     }
   </script>
   <script>
-    var finalTotal = document
-      .querySelector(".cart-total-price")
-      .replace("$", "");
+    var total = "{{user_order.get_order_total}}";
     const paypalButtonsComponent = paypal.Buttons({
       // optional styling for buttons
       // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
       style: {
-        color: "gold",
+        color: "blue",
         shape: "pill",
         layout: "vertical",
+        label: "checkout",
       },
 
       // set up the transaction
@@ -110,7 +109,7 @@
           purchase_units: [
             {
               amount: {
-                value: finalTotal,
+                value: parseFloat(total).toFixed(2),
               },
             },
           ],

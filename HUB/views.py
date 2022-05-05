@@ -24,17 +24,14 @@ def home(request):
 
 @csrf_exempt
 def cart1(request):
-    user = request.user
-    POST_COMPLETE = False
-    #POST
-    if request.method == "POST":
-        if user.is_anonymous:
-            HttpResponse("Please sign in.")
-            return redirect('login-page')
-        else:
-            user_order = Order(user=user)
-            user_order.save()
+    if request.user.is_authenticated:
 
+        customer = request.user
+        user_order = Order(user=customer)
+        user_order.save()
+
+        #POST
+        if request.method == "POST":
             #JSON Data
             data = request.body
             new_data = ast.literal_eval(data.decode('utf-8'))
@@ -51,7 +48,7 @@ def cart1(request):
                 m.save()
                 x += 1 
 
-    context = {}
+    context = {'user_order': user_order}
     return render(request, 'cart.html', context)
 
 def gallery(request):

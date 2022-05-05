@@ -439,7 +439,6 @@ function runEvent(e) {
   }
 }
 function purchaseClicked(event) {
-  alert("Thank you for your purchase");
   const actuator = event.target.parentElement;
   var allCartQuery = document.getElementsByClassName("attachment");
   var cartItems = document.getElementsByClassName("cart-items")[0];

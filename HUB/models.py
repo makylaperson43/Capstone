@@ -20,7 +20,7 @@ class Order(models.Model):
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, default="")
     title = models.CharField(max_length=200)
-    price = models.CharField(max_length=10, default=None)
+    price = models.FloatField()
     quantity = models.IntegerField(default=1)
     extra = models.TextField(max_length=200, null=True)
 

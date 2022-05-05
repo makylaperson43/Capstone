@@ -4,21 +4,26 @@
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="" />
+  <style></style>
   <body>
-    <!-- Set up a container element for the button -->
+    <h1>checkout page</h1>
     <div id="paypal-button-container"></div>
 
-    <!-- Include the PayPal JavaScript SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=AXiFkUTWcLsiGKSRqfO8ZvReHhxDB7ua-0toXDNAG-x9JHojOk5TTtwReq6vKuWNucXXOsro5MBqqLcX&currency=USD"></script>
-
     <script>
+      var total = document
+        .getElementById("cartTotal")
+        .innerHTML.replace("$", "");
+      var flTotal = parseFloat(total).toFixed(2);
+
       const paypalButtonsComponent = paypal.Buttons({
         // optional styling for buttons
         // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
         style: {
-          color: "gold",
+          color: "blue",
           shape: "pill",
           layout: "vertical",
+          label: "checkout",
         },
 
         // set up the transaction
@@ -29,7 +34,7 @@
             purchase_units: [
               {
                 amount: {
-                  value: "5.00",
+                  value: flTotal,
                 },
               },
             ],
@@ -51,7 +56,8 @@
         // handle unrecoverable errors
         onError: (err) => {
           console.error(
-            "An error prevented the buyer from checking out with PayPal"
+            "An error prevented the buyer from checking out with PayPal",
+            err
           );
         },
       });

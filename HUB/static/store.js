@@ -576,3 +576,32 @@ function updateCartTotal() {
   document.getElementsByClassName("cart-total-price")[0].innerText =
     "$" + total;
 }
+
+/*gallery */
+
+$(".portfolio-menu ul li").click(function () {
+  $(".portfolio-menu ul li").removeClass("active");
+  $(this).addClass("active");
+
+  var selector = $(this).attr("data-filter");
+  $(".portfolio-item").isotope({
+    filter: selector,
+  });
+  return false;
+});
+$(document).ready(function () {
+  var popup_btn = $(".popup-btn");
+  popup_btn.magnificPopup({
+    type: "image",
+    gallery: {
+      enabled: true,
+    },
+  });
+});
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", function onClick() {
+  btn.style.backgroundColor = "salmon";
+  btn.style.color = "white";
+});

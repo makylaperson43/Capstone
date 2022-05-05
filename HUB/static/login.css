@@ -11,10 +11,10 @@ html {
 }
 
 .user_card_login {
-  width: 400px;
-  background: #83c7c0;
-  margin-top: 85px;
-  margin-bottom: 4em;
+  width: 1000px;
+  background: white;
+  margin-top: 300px;
+
   padding: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -26,15 +26,16 @@ html {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  margin-left: 355px;
+  margin-left: 100px;
   color: black;
+  font-size: 2em;
 }
-@media only screen and (max-width: 3000px) {
+@media only screen and(max-width: 3000px) and (min-width: 2000px) {
   .user_card_login {
-    margin-top: 5em;
-    width: 2000px;
-    margin-left: -5.5em;
-    font-size: 5em;
+    margin-top: 10em;
+    width: 1000px;
+
+    font-size: 30em;
   }
 }
 @media only screen and (max-width: 1500px) {
@@ -88,7 +89,7 @@ html {
   top: 0;
   width: 100%;
 }
-@media (max-width: 3000px) {
+@media only screen and(max-width: 3000px) {
   .login_btn {
     height: 5em;
     width: 15em;
@@ -104,7 +105,7 @@ html {
 
 @media only screen and (max-width: 3000px) {
   .loginword {
-    font-size: 1em;
+    font-size: 0.5em;
   }
 }
 @media only screen and (max-width: 770px) {
@@ -186,4 +187,7 @@ html {
 .ml-2:hover {
   color: #83c7c0;
   text-decoration: none;
+}
+.move {
+  text-align: center;
 }

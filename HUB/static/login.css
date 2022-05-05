@@ -183,11 +183,18 @@ html {
 }
 .ml-2 {
   text-decoration: none;
+  margin-left: -9rem !important;
 }
 .ml-2:hover {
-  color: #83c7c0;
+  color: white;
   text-decoration: none;
 }
+<<<<<<< HEAD
 .move {
   text-align: center;
+=======
+
+.hoverAccount {
+  margin-top: 20%;
+>>>>>>> 98e4110a720b936e07b3f4d48d781986b2caeecc
 }

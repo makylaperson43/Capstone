@@ -439,7 +439,6 @@ function runEvent(e) {
   }
 }
 function purchaseClicked(event) {
-  alert("Thank you for your purchase");
   const actuator = event.target.parentElement;
   var allCartQuery = document.getElementsByClassName("attachment");
   var cartItems = document.getElementsByClassName("cart-items")[0];
@@ -597,4 +596,11 @@ $(document).ready(function () {
       enabled: true,
     },
   });
+});
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", function onClick() {
+  btn.style.backgroundColor = "salmon";
+  btn.style.color = "white";
 });

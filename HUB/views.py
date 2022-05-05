@@ -1,13 +1,12 @@
 import imp
 import json
 import ast
-from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
-from django.views.decorators.csrf import csrf_exempt
 from django.urls import reverse
-
+from django.views.decorators.csrf import csrf_exempt
 from HUB import decorators
+from django.http import HttpResponseRedirect
 
 from HUB.forms import *
 from HUB.models import *
@@ -24,21 +23,16 @@ def home(request):
 
 @csrf_exempt
 def cart1(request):
-    user = request.user
-    POST_COMPLETE = False
-    #POST
-    if request.method == "POST":
-        if user.is_anonymous:
-            HttpResponse("Please sign in.")
-            return redirect('login-page')
-        else:
-            user_order = Order(user=user)
-            user_order.save()
-
+    if request.user.is_authenticated:
+        #POST
+        if request.method == "POST":
             #JSON Data
             data = request.body
             new_data = ast.literal_eval(data.decode('utf-8'))
 
+            customer = request.user
+            user_order = Order(user=customer)
+            user_order.save()
 
             x = 0
             while x < len(new_data.keys()):
@@ -46,13 +40,19 @@ def cart1(request):
                 obj_price = new_data[x]["price"]
                 obj_quantity = new_data[x]["quantity"]
                 obj_extra = new_data[x]["extra"]
-                # total += float(obj_price.replace("$", ""))
-                m = OrderItem(order=user_order, title=obj_title, price=obj_price, quantity=obj_quantity, extra=obj_extra)
+                total = round(float(obj_price.replace("$", "")))
+                m = OrderItem(order=user_order, title=obj_title, price=total, quantity=obj_quantity, extra=obj_extra)
                 m.save()
-                x += 1 
+                x += 1
+            
+            return redirect('checkout-page')
+
+    return render(request, 'cart.html')
+
+def checkout(request):
 
     context = {}
-    return render(request, 'cart.html', context)
+    return render(request, 'checkout.html', context)
 
 def gallery(request):
 
@@ -60,13 +60,6 @@ def gallery(request):
     return render(request, 'gallery.html', context)
 
 
-#-------------------
-#Paypal payments
-#-------------------
-def paypalPayments(request, total):
-    
-    return render(request, 'payment.html', context={})
-#-------------------
 #User Authentication
 #-------------------
 @unauthenticated_user

@@ -182,8 +182,13 @@ html {
 }
 .ml-2 {
   text-decoration: none;
+  margin-left: -9rem !important;
 }
 .ml-2:hover {
-  color: #83c7c0;
+  color: white;
   text-decoration: none;
+}
+
+.hoverAccount {
+  margin-top: 20%;
 }

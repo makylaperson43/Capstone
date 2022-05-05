@@ -13,6 +13,7 @@ html {
   width: 100%;
   display: block;
   z-index: 3;
+
   /* transition: top 0.3s; */
 }
 
@@ -23,6 +24,7 @@ html {
   text-decoration: none;
   float: right;
   font-size: 1.5vw;
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 .theHubWord {
@@ -39,6 +41,7 @@ html {
   margin-left: -950px;
   font-size: large;
   color: white;
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 .contactAlignEmail {
@@ -46,24 +49,26 @@ html {
   margin-top: -35px;
   font-size: large;
   color: white;
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 .contactAlignAddress {
   margin-top: -35px;
   font-size: large;
   color: white;
+  font-family: "Times New Roman", Times, serif !important;
 }
 .footer {
   width: 100%;
-  padding-bottom: 1%;
+  padding-bottom: 1% !important;
   background-color: #83c7c0;
   text-align: center;
-  padding-top: 1%;
+  padding-top: 1% !important;
 }
 .footerWords {
   color: white;
   font-family: cursive;
-  margin-bottom: -0.2%;
+  margin-bottom: -0.2% !important;
 }
 
 /*gallery*/

@@ -36,6 +36,21 @@ body {
     width: 100%;
   }
 }
+@media only screen and (max-width: 770px) and (min-width: 600px) {
+  .navBackground a {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 500px) and (min-width: 400px) {
+  .navBackground a {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 400px) and (min-width: 290px) {
+  .navBackground a {
+    font-size: 25px;
+  }
+}
 
 .theHubWord {
   width: 20%;

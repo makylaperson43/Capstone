@@ -452,3 +452,15 @@ img {
     height: 16px;
   }
 }
+
+/* admin page */
+.orderContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.card {
+  flex: 0 1 24%;
+}

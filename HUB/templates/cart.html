@@ -20,6 +20,11 @@
       <section class="container content-section">
         <div class="cart-item">
           <h2 class="section-header">CART</h2>
+          <div class="messageDisplay">
+            {% for message in messages%}
+              <p id="messages">{{message}}</p>
+            {% endfor %}
+          <div>
 
           <div class="cart-row">
             <span class="cart-item cart-header cart-column">ORDER</span>

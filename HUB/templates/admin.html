@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Admin page</h1>
+      
+    <h2>Orders</h2>
+    <div class="orderContainer">
+        {% for order in all_orders %}
+        <section class="card">
+            <p class="custName">{{order.user.username}}</p>         
+            <div class="itemCont">
+                {%for item in order.orderitem_set.all%} 
+                <p class="itemInfo">{{item.title}}</p>
+                <p class="itemInfo">{{item.quantity}}</p>
+                <p class="itemInfo">{{item.extra}}</p>
+                {%endfor%}
+            </div>
+            <h3 class="orderTotal">Total: ${{order.get_order_total}}</h3>
+        </section>
+        {%endfor%}
+    </div>
+{% endblock %}

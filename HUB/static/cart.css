@@ -429,13 +429,13 @@ body {
     width: 260%;
   }
 }
-@media only screen and (max-width: 550px) and (min-width: 450px) {
-  .footer {
-    width: 265%;
-  }
-}
-@media only screen and (max-width: 425px) and (min-width: 375px) {
+@media only screen and (max-width: 550px) and (min-width: 425px) {
   .footer {
     width: 340%;
+  }
+}
+@media only screen and (max-width: 420px) and (min-width: 375px) {
+  .footer {
+    width: 385%;
   }
 }

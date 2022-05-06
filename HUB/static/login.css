@@ -35,7 +35,7 @@ html {
     margin-top: 10em;
     width: 1000px;
 
-    font-size: 30em;
+    font-size: 2em;
   }
 }
 @media only screen and (max-width: 1500px) {
@@ -105,7 +105,7 @@ html {
 
 @media only screen and (max-width: 3000px) {
   .loginword {
-    font-size: 0.5em;
+    font-size: 1em;
   }
 }
 @media only screen and (max-width: 770px) {
@@ -155,7 +155,9 @@ html {
   display: block;
   transition: top 0.3s;
 }
-
+.move {
+  text-align: center;
+}
 .navBackground a {
   display: block;
   color: white;

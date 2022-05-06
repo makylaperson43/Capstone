@@ -11,7 +11,7 @@ html {
 }
 
 .user_card_register {
-  width: 600px;
+  width: 800px;
   background: white;
   margin-top: 12.5em;
 
@@ -40,7 +40,7 @@ html {
 @media only screen and (max-width: 1500px) {
   .user_card_register {
     margin-top: 12.5em;
-    width: 1000px;
+    width: 40em;
 
     font-size: 1em;
   }
@@ -137,7 +137,7 @@ html {
 }
 @media only screen and (max-width: 3000px) {
   .register_word {
-    font-size: 0.5em;
+    font-size: 1em;
   }
 }
 @media only screen and (max-width: 770px) {

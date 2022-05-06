@@ -155,7 +155,9 @@ html {
   display: block;
   transition: top 0.3s;
 }
-
+.move {
+  text-align: center;
+}
 .navBackground a {
   display: block;
   color: white;

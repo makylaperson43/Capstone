@@ -111,6 +111,11 @@ body {
   text-align: center;
   margin-left: 3em;
 }
+@media only screen and (max-width: 350px) and (min-width: 200px) {
+  .buttons {
+    width: 12%;
+  }
+}
 
 .grid-container {
   display: grid;
@@ -139,6 +144,11 @@ body {
 @media only screen and (max-width: 425px) and (min-width: 375px) {
   .grid-container {
     width: 320%;
+  }
+}
+@media only screen and (max-width: 350px) and (min-width: 200px) {
+  .grid-container {
+    width: 370%;
   }
 }
 .grid-item {
@@ -190,6 +200,12 @@ body {
   .shop-item {
     width: 100%;
     height: 15em;
+  }
+}
+@media only screen and (max-width: 350px) and (min-width: 200px) {
+  .shop-item {
+    width: 100%;
+    height: 20em;
   }
 }
 .container {
@@ -435,6 +451,11 @@ body {
   }
 }
 @media only screen and (max-width: 420px) and (min-width: 375px) {
+  .footer {
+    width: 385%;
+  }
+}
+@media only screen and (max-width: 350px) and (min-width: 200px) {
   .footer {
     width: 385%;
   }

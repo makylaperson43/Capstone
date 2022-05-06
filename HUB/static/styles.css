@@ -527,3 +527,15 @@ img {
     margin-left: 25%;
   }
 }
+
+/* admin page */
+.orderContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.card {
+  flex: 0 1 24%;
+}

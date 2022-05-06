@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%block content%}
+    <h1>{{cust_orders.user.username}}'s, Dashboard</h1>
+
+    <h2>Your Orders:</h2>
+    <div class="ordersContainer">
+        {% for order in cust_orders %}
+        <section class="card">
+            <p class="custName">{{order.date}}</p>
+            <div class="itemCont">
+                {% for item in order.orderitem_set.all %}
+                <p class="itemInfo">{{item.title}}</p>
+                <p class="itemInfo">{{item.quantity}}</p>
+                <p class="itemInfo">{{item.extra}}</p>
+                {%endfor%}
+            </div>
+            <h3 class="orderTotal">Total: ${{order.get_order_total}}</h3>
+        </section
+        {%endfor%}
+    </div>
+{%endblock%}

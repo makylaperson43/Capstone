@@ -20,6 +20,11 @@
       <section class="container content-section">
         <div class="cart-item">
           <h2 class="section-header">CART</h2>
+          <div class="messageDisplay">
+            {% for message in messages%}
+              <p id="messages">{{message}}</p>
+            {% endfor %}
+          <div>
 
           <div class="cart-row">
             <span class="cart-item cart-header cart-column">ORDER</span>
@@ -77,15 +82,7 @@
     </div>
 
     <div id="divid">
-  <div class="grid-item">
-  <div class="shop-item">
-  <p class="shop-item-title">${d.name}</p>
-  <p> ${d.desc} </p>
-  <div class="shop-item-details">
-  <p class="shop-item-price">$${d.price}</p>
-  <button class="btn btn-primary shop-item-button" type="button">
-  ADD TO CART
-  </button>
+  
   
   </div>
   </div>`;

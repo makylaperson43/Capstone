@@ -31,6 +31,47 @@ function ready() {
     .getElementsByClassName("btn-purchase")[0]
     .addEventListener("click", purchaseClicked);
 }
+document.getElementById("divid").innerHTML = `<div class="grid-container">`;
+var sec = document.getElementById("");
+console.log(sec);
+fetch("/static/breakfast.json")
+  .then((response) => {
+    console.log("resolved", response);
+    return response.json();
+  })
+  .then((data) => {
+    Array.from(data).forEach(function (d) {
+      var item = document.createElement("div");
+      item.classList.add("shop-items");
+
+      var items = document.getElementsByClassName("grid-container")[0];
+      var cartRowContents = ` 
+<div class="grid-item">
+<div class="shop-item">
+<p class="shop-item-title">${d.name}</p>
+<p> ${d.desc} </p>
+<div class="shop-item-details">
+<p class="shop-item-price">$${d.price}</p>
+<button class="btn btn-primary shop-item-button" type="button">
+ADD TO CART
+</button>
+
+</div>
+</div>`;
+
+      item.innerHTML = cartRowContents;
+      items.append(item);
+      var addToCartBtn = document.getElementsByClassName("shop-item-button");
+      for (var i = 0; i < addToCartBtn.length; i++) {
+        var button = addToCartBtn[i];
+        button.addEventListener("click", addToCartClicked);
+      }
+    });
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log("rejected", err);
+  });
 // var stripeHandler = StripeCheckout.configure({
 // key: stripePublicKey,
 // locale: "en",
@@ -434,7 +475,7 @@ function runEvent(e) {
       .catch((err) => {
         console.log("rejected", err);
       });
-  } 
+  }
 }
 function purchaseClicked(event) {
   const actuator = event.target.parentElement;

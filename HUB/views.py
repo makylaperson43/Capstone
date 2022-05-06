@@ -7,12 +7,13 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 from HUB import decorators
 from django.http import HttpResponseRedirect
+from datetime import datetime
 
 from HUB.forms import *
 from HUB.models import *
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from HUB.decorators import unauthenticated_user
+from HUB.decorators import unauthenticated_user, allowed_users
 
 #Core Function Views
 #-------------------
@@ -44,15 +45,39 @@ def cart1(request):
                 m = OrderItem(order=user_order, title=obj_title, price=total, quantity=obj_quantity, extra=obj_extra)
                 m.save()
                 x += 1
-            
-            return redirect('checkout-page')
+
+            messages.info(request, 'Your order has been submitted!')
+    else:
+        messages.info(request, 'Please login (or register) to order.')
+        return redirect('login-page')
 
     return render(request, 'cart.html')
 
-def checkout(request):
+@allowed_users(allowed_roles=['Admin'])
+def adminpage(request):
 
-    context = {}
-    return render(request, 'checkout.html', context)
+    #Queries
+    #today's date logic
+    today = datetime.today()
+    year = today.year
+    month = today.month
+    day = today.day
+    #-----------------
+    all_orders = Order.objects.filter(date__year=year, date__month=month, date__day=day)
+
+    context = {'all_orders': all_orders}
+    return render(request, 'admin.html', context)
+
+def customer_dashboard(request):
+    if request.user.is_authenticated:
+        #Queries
+        cust_orders = Order.objects.filter(user=request.user)
+    else:
+        messages.info(request, 'Please login (or register) to view dashboard.')
+        return redirect('login-page')
+
+    context = {'cust_orders': cust_orders}
+    return render(request, 'dashboard.html', context)
 
 def gallery(request):
 
@@ -94,5 +119,5 @@ def loginPage(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('login-page')
+    return redirect('home-page')
 #-------------------

@@ -1,21 +1,66 @@
-{% extends 'base.html' %}
-{% block content %}
-    <h1>Admin page</h1>
-      
-    <h2>Orders</h2>
-    <div class="orderContainer">
-        {% for order in all_orders %}
-        <section class="card">
-            <p class="custName">{{order.user.username}}</p>         
-            <div class="itemCont">
-                {%for item in order.orderitem_set.all%} 
-                <p class="itemInfo">{{item.title}}</p>
-                <p class="itemInfo">{{item.quantity}}</p>
-                <p class="itemInfo">{{item.extra}}</p>
-                {%endfor%}
-            </div>
-            <h3 class="orderTotal">Total: ${{order.get_order_total}}</h3>
-        </section>
-        {%endfor%}
+{% extends 'base.html' %} {% block content %}
+<style>
+  .footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 1%;
+    background-color: #83c7c0;
+    text-align: center;
+    padding-top: 1%;
+  }
+  @media only screen and (max-width: 1100px) and (min-width: 770px) {
+    .footer {
+      width: 130%;
+      margin-bottom: -20em;
+      margin-left: 0em;
+    }
+  }
+  @media only screen and (max-width: 771px) and (min-width: 600px) {
+    .footer {
+      width: 151%;
+      margin-bottom: -23em;
+      margin-left: -1em;
+    }
+  }
+  @media only screen and (max-width: 500px) and (min-width: 400px) {
+    .footer {
+      width: 272%;
+      margin-bottom: -77em;
+      margin-left: -1em;
+    }
+  }
+  @media only screen and (max-width: 390px) and (min-width: 360px) {
+    .footer {
+      width: 308%;
+      margin-bottom: -77em;
+      margin-left: -1em;
+    }
+  }
+  @media only screen and (max-width: 360px) and (min-width: 310px) {
+    .footer {
+      width: 361%;
+      margin-bottom: -77em;
+      margin-left: -1em;
+    }
+  }
+</style>
+<h1 class="username">Admin page</h1>
+
+<h2 class="yourorders">Orders</h2>
+<div class="orderContainer">
+  {% for order in all_orders %}
+  <section class="card">
+    <p class="custName">{{order.user.username}}</p>
+    <div class="itemCont">
+      {%for item in order.orderitem_set.all%}
+      <p class="itemInfo">{{item.title}}</p>
+      <p class="itemInfo">{{item.quantity}}</p>
+      <p class="itemInfo">{{item.extra}}</p>
+      {%endfor%}
     </div>
+    <h3 class="orderTotal">Total: ${{order.get_order_total}}</h3>
+  </section>
+  {%endfor%}
+</div>
 {% endblock %}

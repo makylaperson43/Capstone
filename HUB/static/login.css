@@ -139,6 +139,13 @@ html {
 
 .footerWords {
   color: white;
+  font-family: cursive;
+  margin-top: 1%;
+}
+.copy {
+  color: white;
+  font-family: cursive;
+  margin-top: 1%;
 }
 .navBackground {
   background-color: #83c7c0;
@@ -186,15 +193,13 @@ html {
   margin-left: -9rem !important;
 }
 .ml-2:hover {
-  color: white;
+  color: #83c7c0;
   text-decoration: none;
 }
-<<<<<<< HEAD
-.move {
-  text-align: center;
-=======
 
 .hoverAccount {
   margin-top: 20%;
->>>>>>> 98e4110a720b936e07b3f4d48d781986b2caeecc
+}
+
+@media only screen and (max-width: 2560px) and (min-width: 1445px) {
 }

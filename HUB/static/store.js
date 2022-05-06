@@ -80,8 +80,6 @@ function ready() {
 // });
 
 function runEvent(e) {
-  console.log(e.target.value);
-
   if (e.target.value === "1") {
     document.getElementById("divid").innerHTML = `<div class="grid-container">`;
     var sec = document.getElementById("");
@@ -436,7 +434,7 @@ function runEvent(e) {
       .catch((err) => {
         console.log("rejected", err);
       });
-  }
+  } 
 }
 function purchaseClicked(event) {
   const actuator = event.target.parentElement;
@@ -596,11 +594,4 @@ $(document).ready(function () {
       enabled: true,
     },
   });
-});
-
-const btn = document.getElementById("btn");
-
-btn.addEventListener("click", function onClick() {
-  btn.style.backgroundColor = "salmon";
-  btn.style.color = "white";
 });

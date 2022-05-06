@@ -34,43 +34,44 @@ html {
 }
 
 @media only screen and (max-width: 3000px) {
-  /* .user_card_register {
-    margin-top: 7em;
+  .user_card_register {
+    margin-left: 26em;
+    margin-top: 12em;
     width: 1000px;
 
     font-size: 2em;
-  } */
+  }
 }
 @media only screen and (max-width: 1500px) {
-  /* .user_card_register {
+  .user_card_register {
     margin-top: 12.5em;
     width: 40em;
 
     font-size: 1em;
-  } */
+  }
 }
 
 @media only screen and (max-width: 1200px) {
-  /* .user_card_register {
+  .user_card_register {
     margin-top: 10em;
     margin-left: 11em;
     width: 500px;
     font-size: 1.5em;
-  } */
+  }
 }
 @media only screen and (max-width: 770px) {
-  /* .user_card_register {
+  .user_card_register {
     margin-left: 17em;
     width: 400px;
     font-size: 10px;
-  } */
+  }
 }
 @media only screen and (max-width: 600px) {
-  /* .user_card_register {
+  .user_card_register {
     margin-left: 4em;
     width: 300px;
     font-size: 10px;
-  } */
+  }
 }
 @media only screen and (max-width: 340px) {
   /* .user_card_register {

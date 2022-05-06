@@ -29,9 +29,7 @@
   </div>
   <body>
     <script src="https://checkout.stripe.com/checkout.js" defer></script>
-    <script>
-      var stripePublicKey = "<%= stripePublicKey %>";
-    </script>
+
     <script src="{%static 'store.js' %}" defer></script>
     {%block content%}{% endblock %}
   </body>

@@ -282,6 +282,7 @@ html {
 }
 .footer {
   width: 100%;
+
   padding-bottom: 1%;
   background-color: #83c7c0;
   text-align: center;
@@ -424,16 +425,83 @@ img {
 .orderContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: white;
+  border: solid 4px #83c7c0;
+  border-radius: 15px;
+}
+.ordersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: white;
+  border: solid 4px #83c7c0;
+  border-radius: 15px;
 }
 
 .card {
-  flex: 0 1 24%;
+  text-align: center;
 }
 .username {
-  text-align: center;
+  text-align: left;
   margin-top: 10%;
-  font-size: 5em;
+  font-size: 3em;
   color: white;
+}
+@media only screen and (max-width: 1100px) and (min-width: 770px) {
+  .username {
+    margin-top: 14%;
+  }
+}
+@media only screen and (max-width: 771px) and (min-width: 600px) {
+  .username {
+    margin-top: 14%;
+  }
+}
+@media only screen and (max-width: 500px) and (min-width: 300px) {
+  .username {
+    margin-top: 30%;
+    margin-left: 0em;
+  }
+  .ordersContainer {
+    width: 100%;
+    margin-left: 20em;
+    margin-right: 0;
+  }
+  .orderContainer {
+    width: 100%;
+    margin-left: 20em;
+    margin-right: 0;
+  }
+  .yourorders {
+    margin-left: 20em;
+  }
+}
+.yourorders {
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (max-width: 770px) and (min-width: 600px) {
+  #navBackground a {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 500px) and (min-width: 400px) {
+  #navBackground a {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 400px) and (min-width: 290px) {
+  #navBackground a {
+    font-size: 25px;
+  }
 }

@@ -1,4 +1,4 @@
-{%load static %}
+{%load static %} {% load auth_extras %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,8 +21,10 @@
     <a href="{%url 'cart-page'%}">Menu</a>
 
     <a href="{%url 'home-page'%}">Home</a>
-    {%if user.is_authenticated%}
+    {%if user.is_authenticated and not request.user|has_group:"Admin"%}
     <a href="{%url 'dashboard-page'%}">Dashboard</a>
+    {% endif %} {%if request.user|has_group:"Admin"%}
+    <a href="{%url 'admin-page'%}">Orders</a>
     {% endif %}
   </div>
   <body>

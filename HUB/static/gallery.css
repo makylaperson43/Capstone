@@ -75,7 +75,7 @@ html {
 }
 .footer {
   width: 100% !important;
-  padding-bottom: 2% !important;
+  padding-bottom: 1% !important;
   background-color: #83c7c0;
   text-align: center;
   padding-top: 1% !important;
@@ -83,7 +83,7 @@ html {
 .footerWords {
   color: white;
   font-family: cursive;
-  margin-bottom: 3% !important;
+  margin-bottom: 1% !important;
 }
 .footer {
   width: 100%;

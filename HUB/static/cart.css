@@ -30,6 +30,7 @@ body {
 .navBackground a {
   font-size: 1.5vw;
 }
+
 @media only screen and (max-width: 600px) {
   .navBackground {
     width: 100%;
@@ -50,13 +51,44 @@ body {
   margin-bottom: 2em;
   text-align: center;
   background-color: #6b3b17;
-  width: 90em;
+  width: 100%;
 
   padding-left: 0em;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 3000px) and (min-width: 2000px) {
+  .movecart {
+    width: 102%;
+    margin-top: 17em;
+  }
+}
+@media only screen and (max-width: 1600px) and (min-width: 1400px) {
   .movecart {
     width: 100%;
+    margin-top: 10em;
+  }
+}
+@media only screen and (max-width: 1050px) and (min-width: 800px) {
+  .movecart {
+    width: 141%;
+    margin-top: 10em;
+  }
+}
+@media only screen and (max-width: 770px) and (min-width: 600px) {
+  .movecart {
+    width: 188%;
+    margin-top: 10em;
+  }
+}
+@media only screen and (max-width: 500px) and (min-width: 400px) {
+  .movecart {
+    width: 340%;
+    margin-top: 10em;
+  }
+}
+@media only screen and (max-width: 400px) and (min-width: 290px) {
+  .movecart {
+    width: 384%;
+    margin-top: 10em;
   }
 }
 
@@ -69,11 +101,7 @@ body {
   border: none;
   border-right: solid 1px;
 }
-@media only screen and (max-width: 600px) {
-  .buttons {
-    width: 6em;
-  }
-}
+
 .buttons :hover {
   background-color: #83c7c0;
 }
@@ -93,6 +121,26 @@ body {
   padding-bottom: 8em;
   height: 20%;
 }
+@media only screen and (max-width: 3000px) and (min-width: 2000px) {
+  .grid-container {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1400px) and (min-width: 1000px) {
+  .grid-container {
+    width: 135%;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 700px) {
+  .grid-container {
+    width: 170%;
+  }
+}
+@media only screen and (max-width: 425px) and (min-width: 375px) {
+  .grid-container {
+    width: 320%;
+  }
+}
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   height: 100%;
@@ -100,6 +148,7 @@ body {
   font-size: 20px;
   text-align: center;
 }
+
 .btn-purchase {
   padding: 1em;
   border: none;
@@ -120,7 +169,29 @@ body {
 .shop-items {
   margin-bottom: 5%;
 }
-
+@media only screen and (max-width: 3000px) and (min-width: 2000px) {
+  .shop-item {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1400px) and (min-width: 1000px) {
+  .shop-item {
+    width: 100%;
+    height: 10em;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 700px) {
+  .shop-item {
+    width: 100%;
+    height: 10em;
+  }
+}
+@media only screen and (max-width: 425px) and (min-width: 375px) {
+  .shop-item {
+    width: 100%;
+    height: 15em;
+  }
+}
 .container {
   background-color: #83c7c0;
   color: #6b3b17;
@@ -257,13 +328,6 @@ body {
   margin-left: 9em;
   border-radius: 5px;
 }
-.footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #83c7c0;
-  text-align: center;
-}
 
 .sidenav {
   height: 100%;
@@ -327,6 +391,7 @@ body {
   font-size: large;
   color: white;
 }
+
 .footer {
   width: 100%;
   padding-bottom: 0%;
@@ -338,4 +403,39 @@ body {
   color: white;
   font-family: cursive;
   margin-bottom: -0.2%;
+}
+@media only screen and (max-width: 3000px) and (min-width: 2000px) {
+  .footer {
+    width: 102%;
+  }
+}
+@media only screen and (max-width: 1400px) and (min-width: 1000px) {
+  .footer {
+    width: 140.5%;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 700px) {
+  .footer {
+    width: 187.5%;
+  }
+}
+@media only screen and (max-width: 700px) and (min-width: 600px) {
+  .footer {
+    width: 235%;
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 550px) {
+  .footer {
+    width: 260%;
+  }
+}
+@media only screen and (max-width: 550px) and (min-width: 450px) {
+  .footer {
+    width: 265%;
+  }
+}
+@media only screen and (max-width: 425px) and (min-width: 375px) {
+  .footer {
+    width: 340%;
+  }
 }

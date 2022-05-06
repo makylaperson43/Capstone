@@ -378,7 +378,7 @@ img {
   .reviewsBackground {
     background-color: #83c7c0;
     color: white;
-    padding: 30px 0 120px 0;
+    padding: 30px 0 300px 0;
     margin-top: 150px;
     margin-bottom: 200px;
   }
@@ -398,25 +398,67 @@ img {
     width: 300px;
     padding: 50px;
     margin: -60px 0 0 200px !important;
-    font-size: 160% !important;
   }
 
   .divBox2 {
     width: 300px;
     padding: 50px;
-    margin: -364px 0 0 520px;
+    margin: -550px 0 0 1020px;
   }
 
   .divBox3 {
     width: 300px;
     padding: 50px;
-    margin: -457px 0 0 970px;
+    margin: -730px 0 0 1970px;
+  }
+
+  .tinaReviewParagraph {
+    font-size: 150%;
+  }
+  .katieReviewParagraph {
+    font-size: 140%;
+  }
+  .deanaReviewParagraph {
+    font-size: 150%;
   }
 
   .quotationSize {
     width: 25%;
     height: 20%;
     margin-left: 25%;
+  }
+
+  .ourTeam {
+    color: #6b3b17;
+    font-size: 4vw;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  .ourTeamBackground img {
+    width: 60%;
+    height: 55%;
+    margin-left: 19%;
+    margin-bottom: -1%;
+  }
+  .ourTeamBackground {
+    background-color: #83c7c0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 3px 0 100px 0;
+    margin-top: 150px;
+    margin-bottom: 500px;
+  }
+  .teamParagraph {
+    background-color: #6b3b17;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: white;
+    font-size: 30px;
+    border-radius: 1%;
+    padding: 1%;
   }
 }
 

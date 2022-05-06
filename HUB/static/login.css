@@ -203,3 +203,7 @@ html {
 
 @media only screen and (max-width: 2560px) and (min-width: 1445px) {
 }
+
+.loginword {
+  font-size: 130%;
+}

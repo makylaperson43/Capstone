@@ -48,8 +48,8 @@ def cart1(request):
                 m.save()
                 x += 1 
 
-    context = {'user_order': user_order}
-    return render(request, 'cart.html', context)
+    # context = {'user_order': user_order}
+    return render(request, 'cart.html')
 
 def gallery(request):
 

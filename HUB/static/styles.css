@@ -284,7 +284,6 @@ html {
 .footerWords {
   color: white;
   font-family: cursive;
-  margin-bottom: -0.2%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -416,10 +415,10 @@ img {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media screen and (max-width: 2560px) and (min-width: 1440) {
+@media only screen and (max-width: 2560px) and (min-width: 1445px) {
   /*nav bar*/
   #navBackground {
-    background-color: white;
+    background-color: #83c7c0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -433,7 +432,7 @@ img {
     padding: 14px 16px;
     text-decoration: none;
     float: right;
-    font-size: 10vw;
+    font-size: 1vw;
   }
 
   .theHubWord {
@@ -444,5 +443,81 @@ img {
   .cartImage {
     width: 1.8em;
     height: 16px;
+  }
+  /*hours*/
+  .homehours {
+    text-align: center;
+    width: 18%;
+    padding: 1.1% 1.1%;
+    background-color: white;
+    margin-top: 22%;
+    margin-left: 60%;
+    font-size: 190% !important;
+  }
+
+  .followus {
+    color: white;
+    margin-bottom: -2.5em;
+    margin-left: -4em;
+  }
+
+  .contactimage {
+    background-color: #83c7c0;
+    padding-left: 4em;
+    padding: 1em;
+    margin-left: -1em;
+    margin-right: -1em;
+    margin-bottom: -1em;
+  }
+
+  .facebookImage {
+    height: 4.5em;
+    width: 7em;
+    margin-left: 8em;
+    margin-bottom: -1em;
+  }
+
+  .reviewsBackground {
+    background-color: #83c7c0;
+    color: white;
+    padding: 30px 0 120px 0;
+    margin-top: 150px;
+    margin-bottom: 200px;
+  }
+
+  .whatPeopleSay {
+    color: #6b3b17;
+    font-size: 4vw;
+    text-align: center;
+  }
+  .reviewsName {
+    color: #6b3b17;
+    text-align: center;
+    font-size: 1.2vw;
+  }
+
+  .divBox1 {
+    width: 300px;
+    padding: 50px;
+    margin: -60px 0 0 200px !important;
+    font-size: 160% !important;
+  }
+
+  .divBox2 {
+    width: 300px;
+    padding: 50px;
+    margin: -364px 0 0 520px;
+  }
+
+  .divBox3 {
+    width: 300px;
+    padding: 50px;
+    margin: -457px 0 0 970px;
+  }
+
+  .quotationSize {
+    width: 25%;
+    height: 20%;
+    margin-left: 25%;
   }
 }

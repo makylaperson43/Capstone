@@ -11,11 +11,13 @@ html {
 }
 
 .user_card_login {
-  width: 400px;
-  background: #83c7c0;
-  margin-top: 85px;
-  margin-bottom: 4em;
-  padding: 50px;
+  background: white;
+  margin-top: 85%;
+  margin-bottom: 4%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 19%;
+  padding-right: 19%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -26,15 +28,15 @@ html {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  margin-left: 355px;
+  margin-left: 35%;
   color: black;
 }
-@media only screen and (max-width: 3000px) {
+@media only screen and (max-width: 2560px) {
   .user_card_login {
     margin-top: 5em;
     width: 2000px;
     margin-left: -5.5em;
-    font-size: 5em;
+    font-size: 5vw;
   }
 }
 @media only screen and (max-width: 1500px) {
@@ -138,6 +140,13 @@ html {
 
 .footerWords {
   color: white;
+  font-family: cursive;
+  margin-top: 1%;
+}
+.copy {
+  color: white;
+  font-family: cursive;
+  margin-top: 1%;
 }
 .navBackground {
   background-color: #83c7c0;
@@ -185,10 +194,13 @@ html {
   margin-left: -9rem !important;
 }
 .ml-2:hover {
-  color: white;
+  color: #83c7c0;
   text-decoration: none;
 }
 
 .hoverAccount {
   margin-top: 20%;
+}
+
+@media only screen and (max-width: 2560px) and (min-width: 1445px) {
 }

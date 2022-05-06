@@ -123,10 +123,13 @@ html {
 
 .footerWords {
   color: white;
+  font-family: cursive;
+  margin-top: 1%;
 }
-
 .copy {
   color: white;
+  font-family: cursive;
+  margin-top: 1%;
 }
 .ml-2 {
   text-decoration: none;
